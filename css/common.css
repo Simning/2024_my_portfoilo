@@ -1,0 +1,68 @@
+@import "/css/reset.css";
+@import "/css/style.css";
+
+* {font-family: 'Roc Grotesk', 'Pretendard', sans-serif; font-size: 62.5%; font-weight: 400; line-height: 1.5; color: #111;}
+
+:root {
+  /* header height */
+  --header-size: (53px);
+  
+  /* color  */
+  --color-black: rgba(17, 17, 17, 1);
+  --color-black-70op: rgba(17, 17, 17, .7);
+  --color-black-40op: rgba(17, 17, 17, .4);
+  --color-black-20op: rgba(17, 17, 17, .2);
+  --color-white: rgba(255, 255, 255, 1);
+
+  /* font-size */
+  --display-fs: 14rem;
+  --heading1-fs: 6rem;
+  --heading2-fs: 4rem;
+  --heading3-fs: 3.2rem;
+  --stit1-fs: 2.4rem;
+  --stit2-fs: 2.0rem;
+  --stit3-fs: 1.8rem;
+  --body1-fs: 1.8rem;
+  --body2-fs: 1.6rem;
+  --body3-fs: 1.4rem;
+  --btn-fs: 1.6rem;
+
+  /* font-weight */
+  --display-fw: 400;
+  --heading1-fw: 400;
+  --heading2-fw: 400;
+  --heading3-fw: 400;
+  --stit1-fw: 400;
+  --stit2-fw: 400;
+  --stit3-fw: 400;
+  --body1-fw: 400;
+  --body2-fw: 400;
+  --body3-fw: 400;
+  --btn-fw: 400;
+
+  /* line-height */
+  --display-lh: 1;
+  --heading1-lh: 1.2;
+  --heading2-lh: ;
+  --heading3-lh: ;
+  --stit1-lh: ;
+  --stit2-lh: ;
+  --stit3-lh: 1.5;
+  --body1-lh: 1.5;
+  --body2-lh: 1.5;
+  --body3-lh: 1.5;
+  --btn-lh: ;
+}
+
+header {position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 2.4rem 0; background: var(--color-white); z-index: 999;}
+header .headerWrap {padding: 0 0 0.8rem; border-bottom: 0.1rem solid var(--color-black);}
+header .headerWrap nav {display: flex; justify-content: space-between; align-items: center;}
+header .headerWrap nav .logo {font-size: var(--body2-fs); font-weight: var(--body2-fw);}
+header .headerWrap nav .copy {font-size: var(--body2-fs); font-weight: var(--body2-fw);}
+header .headerWrap nav .back {display: flex; justify-content: flex-start; align-items: flex-start;}
+header .headerWrap nav .back svg {margin: 0.2rem 0.4rem 0;}
+header .headerWrap nav .back p {font-size: var(--body2-fs); font-weight: var(--body2-fw);}
+header .headerWrap nav ul {position: absolute; display: flex; left: 50%; transform: translateX(-50%);}
+header .headerWrap nav ul li {margin: 0 2rem;}
+header .headerWrap nav ul li a {font-size: var(--body2-fs); font-weight: var(--body2-fw);}
+
