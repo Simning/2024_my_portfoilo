@@ -73,12 +73,7 @@ header {
             width: .8rem;
             height: .8rem;
             border-radius: 50%;
-          }
-          &.light::after {
-            background: #F6F2EF;
-          }
-          &.dark::after {
-            background: #2D312A;
+            background: #111;
           }
           svg {display: none;}
 

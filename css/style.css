@@ -187,11 +187,8 @@ header {
             display: block;
             width: .8rem;
             height: .8rem;
-            border-radius: 50%; }
-          header > .wrapper nav .modeWrap a.light::after {
-            background: #F6F2EF; }
-          header > .wrapper nav .modeWrap a.dark::after {
-            background: #2D312A; }
+            border-radius: 50%;
+            background: #111; }
           header > .wrapper nav .modeWrap a svg {
             display: none; }
           header > .wrapper nav .modeWrap a.active::after {
