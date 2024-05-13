@@ -2,10 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 ul, ol, li {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+button, input {
+  appearance: none;
+  -webkit-appearance: none;
 }

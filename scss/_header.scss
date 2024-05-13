@@ -1,0 +1,94 @@
+.projects header .logo {opacity: 0 !important;}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: .3s ease-in-out;
+
+  & > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 4rem;
+    
+    .logo {
+      max-height: 2.8rem;
+      opacity: 1;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      .gnbMenu {
+        display: flex;
+        margin: .2rem 0 0;
+        
+        li {
+          margin: 0 2rem;
+          cursor: pointer;
+
+          a {
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1;
+            color: var(--color-black);
+            transition: .3s ease-in-out;
+            cursor: pointer;
+
+            &::after {
+              content: url('../src/common/gnb_pin_icon.svg');
+              position: absolute;
+              display: none;
+              margin: -.8rem 0 0 .4rem;
+            }
+
+            &:hover {opacity: .4;}
+          }
+
+          &.active {
+            a::after {display: inline-block;}
+            a:hover {opacity: 1;}
+          }
+        }
+      }
+
+      .modeWrap {
+        display: flex;
+        margin: 0 0 0 2.8rem;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.4rem;
+          height: 2.4rem;
+
+          &::after {
+            content: '';
+            display: block;
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
+          }
+          &.light::after {
+            background: #F6F2EF;
+          }
+          &.dark::after {
+            background: #2D312A;
+          }
+          svg {display: none;}
+
+          &.active::after {
+            width: 0;
+            height: 0;
+          }
+          &.active svg {display: block;}
+        }
+      }
+    }
+  }
+}

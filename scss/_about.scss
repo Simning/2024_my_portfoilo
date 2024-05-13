@@ -1,0 +1,100 @@
+.about {
+  background: #f3f3f3;
+
+  & > .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: var(--header-size) 0 40vh;
+    padding: 2.4rem 4rem 12rem;
+    background: #f3f3f3;
+
+    .infoInner {
+      display: block;
+      width: 49.46%;
+
+      .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 8rem;
+
+        &:last-child {margin: 0};
+
+        h6 {
+          display: block;
+          width: 29rem;
+          margin: 0 2rem 0 0;
+          font-size: var(--fs-body1);
+          font-weight: var(--fw-body);
+          line-height: var(--lh-body1);
+          color: var(--color-black-40op);
+        }
+        .rightArea {
+          display: flex;
+          width: calc(100% - 31rem);
+
+          & > p {
+            font-size: var(--fs-body1);
+            font-weight: var(--fw-body);
+            line-height: var(--lh-body1);
+            color: var(--color-black);
+          }
+
+          & > ul {
+            width: 100%;
+
+            li {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 0 .8rem;
+
+              & > p {
+                font-size: var(--fs-body1);
+                font-weight: var(--fw-body);
+                line-height: var(--lh-body1);
+                color: var(--color-black);
+              }
+              & > span {
+                display: inline-block;
+                font-size: var(--fs-body1);
+                font-weight: var(--fs-body);
+                line-height: var(--lh-body1);
+                color: var(--color-black-70op);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .stickyInner {
+      position: sticky;
+      top: calc(var(--header-size) + 2.4rem);
+      width: 32.61%;
+
+      & > h3 {
+        margin: 0 0 4rem;
+        font-size: var(--fs-heading2);
+        font-weight: var(--fw-heading2);
+        line-height: var(--lh-heading2);
+        color: var(--color-black);
+
+        & .lightText {
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          color: var(--color-black-40op);
+        }
+      }
+      & > figure {
+        display: block;
+        width: 100%;
+        padding: 0 0 23.92%;
+        background: #d9d9d9;
+      }
+    }
+  }
+}

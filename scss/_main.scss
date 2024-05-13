@@ -1,0 +1,269 @@
+.main {
+  background: #f3f3f3;
+  & section {background: #f3f3f3;}
+
+  .hero {
+    height: calc(100vh - var(--header-size));
+
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin: var(--header-size) 0 0;
+      padding: 2.4rem 4rem 4.8rem;
+      
+      .topArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .txtWrap {
+          width: 32.61%;
+  
+          h3 {
+            font-family: 'Pretendard';
+            font-size: var(--fs-hightlight-body1);
+            line-height: var(--lh-hightlight-body1);
+            letter-spacing: var(--letter-spacing-kr);
+            color: var(--color-black);
+          }
+          p {
+            margin: 2.4rem 0 0;
+            font-size: var(--fs-body1);
+            line-height: 1;
+            color: var(--color-black-40op);
+          }
+        }
+  
+  
+        .imgWrap {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: calc(50% - var(--gutter-size));
+          
+          figure {
+            width: 20rem;
+            height: 20rem;
+            margin: 0 1.2rem 0 0;
+            background: #d9d9d9;
+            &:last-child {margin: 0;}
+          }
+        }
+      }
+  
+      .botArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+  
+        .txtWrap {
+          .status {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 0 2rem;
+            padding: .4rem .8rem;
+            background: var(--color-black);
+  
+            a {
+              display: flex;
+              align-items: center;
+              margin: .1rem 0 0;
+              font-size: var(--fs-body1);
+              color: var(--color-white);
+              line-height: 1;
+  
+              &::before {
+                content: '';
+                display: block;
+                margin: 0 .8rem 0 0;
+                width: .6rem;
+                height: .6rem;
+                background: #57CE3A;
+                border-radius: 50%;
+              }
+            }
+          }
+          p {
+            font-family: 'Pretendard';
+            font-size: var(--fs-hightlight-body2);
+            line-height: var(--lh-hightlight-body2);
+          }
+        }
+  
+        .largeLogo {
+          height: 18rem;  
+  
+          path {
+            fill: transparent;
+            stroke: var(--color-black);
+            stroke-width: 1;
+            stroke-dasharray: 550;
+            stroke-dashoffset: 550;
+            transition: stroke-dashoffset 2s .5s ease-in-out, fill 1.5s 1.5s ease-in-out;
+          }
+  
+          &.on {          
+            path {
+              fill: var(--color-black);
+              stroke-dashoffset: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .proj {
+    .wrapper {
+      margin: 0 0 40vh;
+      padding: 8rem 0 0;
+      
+      .topArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 2.8rem;
+        padding: 0 4rem;
+
+        & > h6 {
+          font-size: var(--fs-title3);
+          font-weight: var(--fw-title3);
+          color: var(--color-black);
+          line-height: 1;
+        }
+        & > a {
+          font-size: var(--fs-title3);
+          font-weight: var(--fw-title3);
+          color: var(--color-black);
+          line-height: 1;
+          transition: .3s ease-in-out;
+          opacity: 1;
+
+          &:hover {
+            opacity: .4;
+          }
+        }
+      }
+
+      .projInner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+  
+        .projItem {
+          position: relative;
+          width: 50%;
+          padding: 0 0 37.283%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          &:nth-child(1) {background-image: url('../src/main/kukjae_thumnail.png');}
+          &:nth-child(2) {background-image: url('../src/main/jungwoo_thumnail.png');}
+          &:nth-child(3) {background-image: url('../src/main/bsg_thumnail.png');}
+          &:nth-child(4) {background-image: url('../src/main/wegamer_thumnail.png');}
+          &:nth-child(5) {background-image: url('../src/main/azothbio_thumnail.png');}
+          &:nth-child(6) {background-image: url('../src/main/ul_materials_thumnail.png');}
+          &:nth-child(7) {background-image: url('../src/main/dowon_thumnail.png');}
+          &:nth-child(8) {background-image: url('../src/main/calmcalm_thumnail.png');}
+    
+          .thumbnail {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            visibility: hidden;
+            transform: scaleY(0);
+            transition: .4s ease-in-out;
+            background: var(--color-black);
+            z-index: 3;
+    
+            .wrap {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              padding: .4rem .8rem;
+    
+              h6 {
+                display: inline-block;
+                font-family: 'Pretendard';
+                font-size: var(--fs-title3);
+                font-weight: var(--fw-title3);
+                color: var(--color-white);
+                line-height: 1;
+              }
+              p {
+                display: inline-block;
+                font-size: var(--fs-title3);
+                font-weight: var(--fw-title3);
+                color: var(--color-white);
+                line-height: 1;
+              }
+            }
+          }
+        
+          &:hover .thumbnail {
+            visibility: visible;
+            transform: scaleY(1);
+          }
+        }
+      }
+  
+      .btnArea {
+        padding: 1.2rem 0;
+        margin: 4.8rem 0 0;
+        text-align: center;
+        .moreBtn {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          
+          .dot {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: -.1rem 0 0;
+            transition: .3s ease-in-out;
+    
+            span {
+              display: block;
+              width: .3rem;
+              height: .3rem;
+              margin: 0 .3rem;
+              border-radius: 50%;
+              background: var(--color-black);
+            }
+          }
+          p {
+            margin: 0 1.2rem;
+            font-size: var(--fs-btn);
+            font-weight: var(--fw-btn);
+            line-height: 1;
+            color: var(--color-black);
+            transition: .3s ease-in-out;
+          }
+    
+          &:hover {
+            .dot.before {margin: -.1rem .8rem 0 0;}
+            .dot.after {margin: -.1rem 0 0 .8rem;}
+            p {opacity: .4;}
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* 다크 모드 스타일 적용 */
+}

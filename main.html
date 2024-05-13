@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIMKI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer type="module" src="js/portfolio.js"></script>
+  <!-- <script defer src="js/loadExternalHTML.js"></script> -->
+</head>
+
+
+
+<body class="main">
+  <!-- <div id="headerPlaceholder"></div>
+  <script>
+      // JavaScript를 사용하여 Header 불러오기
+      window.addEventListener('DOMContentLoaded', () => {
+          loadHeader();
+      });
+  </script> -->
+  <header>
+    <div class="wrapper">
+      <a href="./main.html" class="logo">
+        <svg width="139" height="28" viewBox="0 0 139 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 28V0H13.13V28H0ZM15.12 28V13.78C15.36 13.78 15.64 13.74 15.89 13.74C23.58 13.74 29.75 20.15 29.75 28H15.13H15.12ZM20.36 0.69C22.86 0.69 24.87 2.7 24.87 5.2C24.87 7.7 22.86 9.67 20.36 9.67C17.86 9.67 15.89 7.7 15.89 5.2C15.89 2.7 17.86 0.69 20.36 0.69Z"
+            fill="#2D312A" />
+          <path d="M31.8 28V0H44.93V28H31.8Z" fill="#2D312A" />
+          <path
+            d="M60.07 0C68.17 0 74.69 6.57 74.69 14.67V28H60.07V0ZM76.7 2.42C84.8 2.42 91.32 8.99 91.32 17.09V28.01H76.7V2.42ZM46.93 0V28H58.07V2C58.07 0.9 58.96 0 60.07 0H46.93Z"
+            fill="#2D312A" />
+          <path
+            d="M93.32 28V0H106.45V28H93.32ZM108.5 28V13.78C108.74 13.78 109.02 13.74 109.26 13.74C116.96 13.74 123.12 20.15 123.12 28H108.5ZM113.73 0.69C116.23 0.69 118.24 2.7 118.24 5.2C118.24 7.7 116.23 9.67 113.73 9.67C111.23 9.67 109.26 7.7 109.26 5.2C109.26 2.7 111.23 0.69 113.73 0.69Z"
+            fill="#2D312A" />
+          <path d="M125.12 28V0H138.25V28H125.12Z" fill="#2D312A" />
+        </svg>
+      </a>
+  
+      <nav>
+        <ul class="gnbMenu">
+          <li class="active"><a href="./main.html">HOME</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./archive.html">ARCHIVE</a></li>
+          <li><a href="mailto:bobo9710@gmail.com.com">CONTACT</a></li>
+        </ul>
+        <div class="modeWrap">
+          <a href="javascript:void(0)" class="light active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_385_422)">
+              <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#E67F70"/>
+              <path d="M12 2V6" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 4.92999L7.75969 7.75999" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M2 12H6" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 19.07L7.75969 16.24" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M12 22V18" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 19.07L16.2402 16.24" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M22 12H18" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 4.92999L16.2402 7.75999" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              </g>
+            </svg>
+          </a>
+          <a href="javascript:void(0)" class="dark">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_385_422)">
+              <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#E67F70"/>
+              <path d="M12 2V6" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 4.92999L7.75969 7.75999" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M2 12H6" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 19.07L7.75969 16.24" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M12 22V18" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 19.07L16.2402 16.24" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M22 12H18" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 4.92999L16.2402 7.75999" stroke="#E67F70" stroke-width="2" stroke-miterlimit="10"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrapper">
+      <div class="topArea">
+        <div class="txtWrap">
+          <h3>
+            쉽고 직관적인 UI와 신경쓴 UX를 통해 고객이 쉽게 원하는 니즈에 도달할 수 있는 디자인을 하고 있습니다.<br />
+            체계적인 프로세스를 통해 분명한 목적을 가지고 고객에게 닿기 위해서 디자인의 본질에 다가가려고 합니다.
+          </h3>
+          <p>( SCROLL DOWN )</p>
+        </div>
+
+        <div class="imgWrap">
+          <figure><img src="" alt=""></figure>
+          <figure><img src="" alt=""></figure>
+          <figure><img src="" alt=""></figure>
+        </div>
+      </div>
+
+      <div class="botArea">
+        <div class="txtWrap">
+          <div class="status">
+            <a href="mailto:bobo9710@gmail.com">AVAILBLE FOR WORK</a>
+          </div>
+          <p>
+            디자인과 함께 퍼블리싱하는 일을 하고 있습니다.<br />
+            제안해 주실 내용이 있다면 언제든지 연락해 주세요.
+          </p>
+        </div>
+
+        <div class="largeLogo">
+          <svg width="904" height="180" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_372_215)">
+              <path d="M0 180V0H84.6251V180H0ZM97.451 180V88.5857C98.9979 88.5857 100.803 88.3286 102.414 88.3286C151.977 88.3286 191.744 129.536 191.744 180H97.5155H97.451ZM131.224 4.43571C147.337 4.43571 160.291 17.3571 160.291 33.4286C160.291 49.5 147.337 62.1643 131.224 62.1643C115.111 62.1643 102.414 49.5 102.414 33.4286C102.414 17.3571 115.111 4.43571 131.224 4.43571Z"/>
+              <path d="M204.957 180V0H289.582V180H204.957Z"/>
+              <path d="M400.052 0C452.258 0 494.28 42.2357 494.28 94.3071V180H400.052V0ZM507.235 15.5571C559.441 15.5571 601.464 57.7929 601.464 109.864V180.064H507.235V15.5571ZM302.472 0V180H387.162V12.8571C387.162 5.78571 392.898 0 400.052 0H302.472Z"/>
+              <path d="M614.354 180V0H698.979V180H614.354ZM712.192 180V88.5857C713.739 88.5857 715.543 88.3286 717.09 88.3286C766.718 88.3286 806.42 129.536 806.42 180H712.192ZM745.9 4.43571C762.013 4.43571 774.968 17.3571 774.968 33.4286C774.968 49.5 762.013 62.1643 745.9 62.1643C729.787 62.1643 717.09 49.5 717.09 33.4286C717.09 17.3571 729.787 4.43571 745.9 4.43571Z"/>
+              <path d="M819.311 180V0H903.936V180H819.311Z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj">
+    <div class="wrapper">
+      <div class="topArea">
+        <h6>SELECTED PROJECTS</h6>
+        <a href="./project.html">ALL PROJECTS</a>
+      </div>
+      <div class="projInner"> 
+
+        <!-- item 01 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>국제산공</h6>
+              <p>WEB DESIGN</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- item 02 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>정우컴퍼니</h6>
+              <p>WEB DESIGN</p>
+            </div>  
+          </div>
+        </a>
+
+        <!-- item 03 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>BSG머티리얼즈</h6>
+              <p>WEB DESIGN</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- item 04 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>위게이머</h6>
+              <p>APP CONCEPT DESIGN</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- item 05 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>에이조스바이오</h6>
+              <p>WEB DESIGN</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- item 06 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>UL Materials</h6>
+              <p>WEB DESIGN</p>
+            </div>  
+          </div>
+        </a>
+
+        <!-- item 07 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>도원엔지니어링건축사사무소</h6>
+              <p>WEB DESIGN</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- item 08 -->
+        <a href="" class="projItem">
+          <div class="thumbnail">
+            <div class="wrap">
+              <h6>BSG머티리얼즈</h6>
+              <p>WEB DESIGN</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- <div class="btnArea">
+        <div class="moreBtn">
+          <div class="dot before"><span></span><span></span><span></span></div>
+          <p>MORE PROJECT</p>
+          <div class="dot after"><span></span><span></span><span></span></div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrapper">
+      <div class="topFlex">
+        <div class="info">
+          <div class="item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.807 12.02C14.807 13.4933 13.6136 14.6867 12.1403 14.6867C6.24697 14.6867 1.47363 9.91333 1.47363 4.02C1.47363 2.54667 2.66697 1.35333 4.1403 1.35333C4.29363 1.35333 4.4403 1.36667 4.5803 1.39333C4.73363 1.42 4.8803 1.45333 5.02697 1.50667L6.02697 5.90667L4.58697 6.64667C5.38697 8.95333 7.21363 10.7733 9.51363 11.5733L10.2603 10.1333L14.6603 11.1333C14.7136 11.2733 14.747 11.4267 14.7736 11.58C14.8003 11.7267 14.8136 11.8733 14.8136 12.02H14.807Z" fill="#E6E6E6"/>
+            </svg>
+            <p>010-2100-7893</p>
+          </div>
+          <div class="item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_385_661)">
+              <path d="M14.6663 2.66669V3.92002L7.99967 7.25335L1.33301 3.92002V2.66669H14.6663Z" fill="#E6E6E6"/>
+              <path d="M7.99967 8.74666L14.6663 5.41333V13.3333H1.33301V5.41333L7.99967 8.74666Z" fill="#E6E6E6"/>
+              </g>
+            </svg>
+            <p>bobo9710@gmail.com</p>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="topBtn">( SCROLL TO TOP )</a>
+      </div>
+
+      <div class="botFlex">
+        <div class="linkWrap">
+          <div class="item">
+            <a href="#">
+              <p>INSTAGRAM</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_485_2179)">
+                <path d="M1.33333 8H13.3333" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                <path d="M9.33333 4C9.33333 4 9.83333 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83333 10.5 9.33333 12 9.33333 12" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <p>GITHUB</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_485_2179)">
+                <path d="M1.33333 8H13.3333" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                <path d="M9.33333 4C9.33333 4 9.83333 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83333 10.5 9.33333 12 9.33333 12" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
