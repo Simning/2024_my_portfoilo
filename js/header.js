@@ -28,7 +28,7 @@ class HeaderManager {
     const path = window.location.pathname;
     const navItems = document.querySelectorAll('.gnbMenu li');
     console.log(path);
-    
+    ~
     navItems.forEach(item => {
         if (item.querySelector('a').getAttribute('href') === '.' + path) {
             item.classList.add('active'); // 현재 페이지와 링크 주소가 일치하면 활성 클래스를 추가합니다.
