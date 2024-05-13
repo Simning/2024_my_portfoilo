@@ -28,7 +28,7 @@ class HeaderManager {
     const currentPath = window.location.pathname;
     document.querySelectorAll('.navLink').forEach(link => {
       const linkPath = link.getAttribute('href').replace('./', '/');
-      if (linkPath === currentPath) {
+      if (linkPath === currentPath || (linkPath === '/' && currentPath === '/2024_my_portfoilo/')) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
