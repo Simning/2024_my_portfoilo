@@ -25,18 +25,13 @@ class HeaderManager {
 
   /////* 페이지 내비게이션을 설정 */////
   setupNavigation() {
-    const path = window.location.pathname;
-    const navItems = document.querySelectorAll('.gnbMenu li');
-    console.log(path);
-  
-    navItems.forEach(item => {
-      const itemPath = item.querySelector('a').getAttribute('href');
-      if (itemPath === path || itemPath === '.' + path) {
-        item.classList.add('active');
-        console.log('active');
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.navLink').forEach(link => {
+      const linkPath = link.getAttribute('href').replace('./', '/');
+      if (linkPath === currentPath) {
+        link.classList.add('active');
       } else {
-        item.classList.remove('active');
-        console.log('remove');
+        link.classList.remove('active');
       }
     });
   }

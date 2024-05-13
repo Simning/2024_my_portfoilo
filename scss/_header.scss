@@ -30,7 +30,7 @@ header {
           margin: 0 2rem;
           cursor: pointer;
 
-          a {
+          .navLink {
             position: relative;
             font-size: 1.6rem;
             font-weight: 400;
@@ -45,14 +45,14 @@ header {
               display: none;
               margin: -.8rem 0 0 .4rem;
             }
-
             &:hover {opacity: .4;}
+            &.active {
+              &::after {display: inline-block;}
+              &:hover {opacity: 1;}
+            }
           }
 
-          &.active {
-            a::after {display: inline-block;}
-            a:hover {opacity: 1;}
-          }
+
         }
       }
 

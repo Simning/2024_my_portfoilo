@@ -154,7 +154,7 @@ header {
         header > .wrapper nav .gnbMenu li {
           margin: 0 2rem;
           cursor: pointer; }
-          header > .wrapper nav .gnbMenu li a {
+          header > .wrapper nav .gnbMenu li .navLink {
             position: relative;
             font-size: 1.6rem;
             font-weight: 400;
@@ -162,17 +162,17 @@ header {
             color: var(--color-black);
             transition: .3s ease-in-out;
             cursor: pointer; }
-            header > .wrapper nav .gnbMenu li a::after {
+            header > .wrapper nav .gnbMenu li .navLink::after {
               content: url("../src/common/gnb_pin_icon.svg");
               position: absolute;
               display: none;
               margin: -.8rem 0 0 .4rem; }
-            header > .wrapper nav .gnbMenu li a:hover {
+            header > .wrapper nav .gnbMenu li .navLink:hover {
               opacity: .4; }
-          header > .wrapper nav .gnbMenu li.active a::after {
-            display: inline-block; }
-          header > .wrapper nav .gnbMenu li.active a:hover {
-            opacity: 1; }
+            header > .wrapper nav .gnbMenu li .navLink.active::after {
+              display: inline-block; }
+            header > .wrapper nav .gnbMenu li .navLink.active:hover {
+              opacity: 1; }
       header > .wrapper nav .modeWrap {
         display: flex;
         margin: 0 0 0 2.8rem; }
