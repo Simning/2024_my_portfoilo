@@ -26,6 +26,9 @@ class HeaderManager {
   /////* 페이지 내비게이션을 설정 */////
   setupNavigation() {
     const currentPath = window.location.pathname;
+    console.log(`currentPath = ${currentPath}`);
+
+
     document.querySelectorAll('.navLink').forEach(link => {
       const linkPath = link.getAttribute('href').replace('./', '/');
       if (linkPath === currentPath || (linkPath === '/' && currentPath === '/2024_my_portfoilo/')) {
@@ -33,6 +36,8 @@ class HeaderManager {
       } else {
         link.classList.remove('active');
       }
+      console.log(`linkPath = ${linkPath}`);
+      console.log(`link = ${link}`);
     });
   }
 
