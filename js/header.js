@@ -27,6 +27,7 @@ class HeaderManager {
   setupNavigation() {
     const path = window.location.pathname;
     const navItems = document.querySelectorAll('.gnbMenu li');
+    console.log(path);
     
     navItems.forEach(item => {
         if (item.querySelector('a').getAttribute('href') === '.' + path) {
