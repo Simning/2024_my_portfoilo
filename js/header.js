@@ -26,18 +26,19 @@ class HeaderManager {
   /////* 페이지 내비게이션을 설정 */////
   setupNavigation() {
     const currentPath = window.location.pathname;
-    console.log(`currentPath = ${currentPath}`);
-
-
+    const currentFileName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    console.log(`currentFileName = ${currentFileName}`);
+  
     document.querySelectorAll('.navLink').forEach(link => {
       const linkPath = link.getAttribute('href').replace('./', '/');
-      if (linkPath === currentPath || (linkPath === '/' && currentPath === '/2024_my_portfoilo/')) {
+      const linkFileName = linkPath.substring(linkPath.lastIndexOf('/') + 1);
+      console.log(`linkFileName = ${linkFileName}`);
+  
+      if (linkFileName === currentFileName || (linkFileName === '' && currentFileName === 'index.html')) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
       }
-      console.log(`linkPath = ${linkPath}`);
-      console.log(`link = ${link}`);
     });
   }
 
