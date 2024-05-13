@@ -28,15 +28,16 @@ class HeaderManager {
     const path = window.location.pathname;
     const navItems = document.querySelectorAll('.gnbMenu li');
     console.log(path);
-    ~
+  
     navItems.forEach(item => {
-        if (item.querySelector('a').getAttribute('href') === '.' + path) {
-            item.classList.add('active'); // 현재 페이지와 링크 주소가 일치하면 활성 클래스를 추가합니다.
-            console.log('active')
-        } else {
-            item.classList.remove('active'); // 일치하지 않으면 활성 클래스를 제거합니다.
-            console.log('remove')
-        }
+      const itemPath = item.querySelector('a').getAttribute('href');
+      if (itemPath === path || itemPath === '.' + path) {
+        item.classList.add('active');
+        console.log('active');
+      } else {
+        item.classList.remove('active');
+        console.log('remove');
+      }
     });
   }
 
