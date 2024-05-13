@@ -1,8 +1,8 @@
 // portfolio.js
-import HeaderManager from './_header.js';
-import mainLayout from './_main.js';
-import TabManager from './_archive.js';
-import FooterManager from './_footer.js';
+import HeaderManager from './header.js';
+import mainLayout from './main.js';
+import TabManager from './archive.js';
+import FooterManager from './footer.js';
 
 new HeaderManager();
 new mainLayout();
