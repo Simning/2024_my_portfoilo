@@ -61,7 +61,6 @@ class HeaderManager {
     
     // 밝은 모드 버튼 클릭 시 이벤트 처리
     lightModeBtn.addEventListener('click', e => {
-      e.preventDefault();
       lightModeBtn.classList.add('active'); // 밝은 모드 버튼에 활성 클래스 추가
       darkModeBtn.classList.remove('active'); // 어두운 모드 버튼의 활성 클래스 제거
       document.body.classList.remove('dark-mode'); // 다크 모드 클래스 제거
@@ -69,7 +68,6 @@ class HeaderManager {
     
     // 어두운 모드 버튼 클릭 시 이벤트 처리
     darkModeBtn.addEventListener('click', e => {
-      e.preventDefault();
       darkModeBtn.classList.add('active'); // 어두운 모드 버튼에 활성 클래스 추가
       lightModeBtn.classList.remove('active'); // 밝은 모드 버튼의 활성 클래스 제거
       document.body.classList.add('dark-mode'); // 다크 모드 클래스 추가

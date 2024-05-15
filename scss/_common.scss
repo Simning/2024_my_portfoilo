@@ -10,7 +10,12 @@
   --color-black: rgb(17, 17, 17);
   --color-black-70op: rgba(17, 17, 17, .7);
   --color-black-40op: rgba(17, 17, 17, .4);
-  --color-white: rgb(230, 230, 230);
+  --color-white: rgb(243, 243, 243);
+  --color-white-70op: rgb(243, 243, 243, .7);
+  --color-white-40op: rgb(243, 243, 243, .4);
+  --color-gray1: #ededed;
+  --color-gray2: ;
+  --color-gray3: ;
 
   /* font-size */
   --fs-heading1: 6rem;
@@ -21,9 +26,9 @@
   --fs-title3: 1.6rem;
   --fs-body1: 1.6rem;
   --fs-body2: 1.4rem;
-  --fs-body3: ;
-  --fs-hightlight-body1: 2.8rem;
-  --fs-hightlight-body2: 2rem;
+  --fs-body3: 1.2rem;
+  --fs-highlight-body1: 2.8rem;
+  --fs-highlight-body2: 2rem;
   --fs-copy: 1.4rem;
   --fs-btn: 1.5rem;
 
@@ -35,27 +40,25 @@
     --fw-title2: 500;
     --fw-title3: 500;
     --fw-body: 400;
-    --fw-hightlight-body1: 400;
-    --fw-hightlight-body2: 400;
+    --fw-highlight-body1: 400;
+    --fw-highlight-body2: 400;
     --fw-copy: 400;
     --fw-btn: 500;
 
-  /* line-height */
-  --lh-heading1: 1.2;
-  --lh-heading2: 1.3;
-  --lh-heading3: ;
-  --lh-title1: ;
-  --lh-title2: ;
-  --lh-title3: ;
-  --lh-body1: 1.5;
-  --lh-body2: 1.5;
-  --lh-body3: ;
-  --lh-hightlight-body1: 1.4;
-  --lh-hightlight-body2: 1.5;
-  --lh-copy: 1.5;
+    /* line-height */
+    --lh-heading1: 1.2;
+    --lh-heading2: 1.3;
+    --lh-heading3: ;
+    --lh-title1: ;
+    --lh-title2: ;
+    --lh-title3: 1.3;
+    --lh-body: 1.5;
+    --lh-highlight-body1: 1.4;
+    --lh-highlight-body2: 1.5;
+    --lh-copy: 1.5;
 
-  /* letter-spacing */
-  --letter-spacing-kr: -0.025em;
+    /* letter-spacing */
+    --letter-spacing-kr: -0.025em;
 
 
 }
@@ -67,6 +70,4 @@
   line-height: 1.5;
   color: var(--color-black);
 }
-html {
-  scroll-behavior: smooth;
-}
+figure {font-size: 0;}

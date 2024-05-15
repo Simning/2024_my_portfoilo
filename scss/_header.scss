@@ -11,7 +11,7 @@ header {
   & > .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 2.4rem 4rem;
+    padding: 2.4rem 2.8rem;
     
     .logo {
       max-height: 2.8rem;
@@ -32,8 +32,8 @@ header {
 
           .navLink {
             position: relative;
-            font-size: 1.6rem;
-            font-weight: 400;
+            font-size: var(--fs-title3);
+            font-weight: var(--fw-title3);
             line-height: 1;
             color: var(--color-black);
             transition: .3s ease-in-out;

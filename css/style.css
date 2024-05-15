@@ -74,7 +74,12 @@ button, input {
   --color-black: rgb(17, 17, 17);
   --color-black-70op: rgba(17, 17, 17, .7);
   --color-black-40op: rgba(17, 17, 17, .4);
-  --color-white: rgb(230, 230, 230);
+  --color-white: rgb(243, 243, 243);
+  --color-white-70op: rgb(243, 243, 243, .7);
+  --color-white-40op: rgb(243, 243, 243, .4);
+  --color-gray1: #ededed;
+  --color-gray2: ;
+  --color-gray3: ;
   /* font-size */
   --fs-heading1: 6rem;
   --fs-heading2: 4rem;
@@ -84,9 +89,9 @@ button, input {
   --fs-title3: 1.6rem;
   --fs-body1: 1.6rem;
   --fs-body2: 1.4rem;
-  --fs-body3: ;
-  --fs-hightlight-body1: 2.8rem;
-  --fs-hightlight-body2: 2rem;
+  --fs-body3: 1.2rem;
+  --fs-highlight-body1: 2.8rem;
+  --fs-highlight-body2: 2rem;
   --fs-copy: 1.4rem;
   --fs-btn: 1.5rem;
   /* font-weight */
@@ -97,8 +102,8 @@ button, input {
   --fw-title2: 500;
   --fw-title3: 500;
   --fw-body: 400;
-  --fw-hightlight-body1: 400;
-  --fw-hightlight-body2: 400;
+  --fw-highlight-body1: 400;
+  --fw-highlight-body2: 400;
   --fw-copy: 400;
   --fw-btn: 500;
   /* line-height */
@@ -107,12 +112,10 @@ button, input {
   --lh-heading3: ;
   --lh-title1: ;
   --lh-title2: ;
-  --lh-title3: ;
-  --lh-body1: 1.5;
-  --lh-body2: 1.5;
-  --lh-body3: ;
-  --lh-hightlight-body1: 1.4;
-  --lh-hightlight-body2: 1.5;
+  --lh-title3: 1.3;
+  --lh-body: 1.5;
+  --lh-highlight-body1: 1.4;
+  --lh-highlight-body2: 1.5;
   --lh-copy: 1.5;
   /* letter-spacing */
   --letter-spacing-kr: -0.025em; }
@@ -124,8 +127,8 @@ button, input {
   line-height: 1.5;
   color: var(--color-black); }
 
-html {
-  scroll-behavior: smooth; }
+figure {
+  font-size: 0; }
 
 .projects header .logo {
   opacity: 0 !important; }
@@ -140,7 +143,7 @@ header {
   header > .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 2.4rem 4rem; }
+    padding: 2.4rem 2.8rem; }
     header > .wrapper .logo {
       max-height: 2.8rem;
       opacity: 1; }
@@ -155,8 +158,8 @@ header {
           cursor: pointer; }
           header > .wrapper nav .gnbMenu li .navLink {
             position: relative;
-            font-size: 1.6rem;
-            font-weight: 400;
+            font-size: var(--fs-title3);
+            font-weight: var(--fw-title3);
             line-height: 1;
             color: var(--color-black);
             transition: .3s ease-in-out;
@@ -197,9 +200,9 @@ header {
             display: block; }
 
 .main {
-  background: #f3f3f3; }
+  background: var(--color-white); }
   .main section {
-    background: #f3f3f3; }
+    background: var(--color-white); }
   .main .hero {
     height: calc(100vh - var(--header-size)); }
     .main .hero .wrapper {
@@ -209,17 +212,17 @@ header {
       justify-content: space-between;
       height: 100%;
       margin: var(--header-size) 0 0;
-      padding: 2.4rem 4rem 4.8rem; }
+      padding: 2.4rem 2.8rem 4.8rem; }
       .main .hero .wrapper .topArea {
         display: flex;
         justify-content: space-between;
         align-items: flex-start; }
         .main .hero .wrapper .topArea .txtWrap {
-          width: 32.61%; }
+          width: 32.62%; }
           .main .hero .wrapper .topArea .txtWrap h3 {
             font-family: 'Pretendard';
-            font-size: var(--fs-hightlight-body1);
-            line-height: var(--lh-hightlight-body1);
+            font-size: var(--fs-highlight-body1);
+            line-height: var(--lh-highlight-body1);
             letter-spacing: var(--letter-spacing-kr);
             color: var(--color-black); }
           .main .hero .wrapper .topArea .txtWrap p {
@@ -267,8 +270,8 @@ header {
               border-radius: 50%; }
         .main .hero .wrapper .botArea .txtWrap p {
           font-family: 'Pretendard';
-          font-size: var(--fs-hightlight-body2);
-          line-height: var(--lh-hightlight-body2); }
+          font-size: var(--fs-highlight-body2);
+          line-height: var(--lh-highlight-body2); }
         .main .hero .wrapper .botArea .largeLogo {
           height: 18rem; }
           .main .hero .wrapper .botArea .largeLogo path {
@@ -405,18 +408,19 @@ header {
           opacity: .4; }
 
 .about {
-  background: #f3f3f3; }
+  background: var(--color-white); }
   .about > .wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    min-height: 100vh;
     margin: var(--header-size) 0 40vh;
-    padding: 2.4rem 4rem 12rem;
-    background: #f3f3f3; }
+    padding: 2.4rem 2.8rem 12rem;
+    background: var(--color-white); }
     .about > .wrapper .infoInner {
       display: block;
-      width: 49.46%; }
+      width: 49.47%; }
       .about > .wrapper .infoInner .content {
         display: flex;
         justify-content: flex-start;
@@ -430,7 +434,7 @@ header {
           margin: 0 2rem 0 0;
           font-size: var(--fs-body1);
           font-weight: var(--fw-body);
-          line-height: var(--lh-body1);
+          line-height: var(--lh-body);
           color: var(--color-black-40op); }
         .about > .wrapper .infoInner .content .rightArea {
           display: flex;
@@ -438,7 +442,7 @@ header {
           .about > .wrapper .infoInner .content .rightArea > p {
             font-size: var(--fs-body1);
             font-weight: var(--fw-body);
-            line-height: var(--lh-body1);
+            line-height: var(--lh-body);
             color: var(--color-black); }
           .about > .wrapper .infoInner .content .rightArea > ul {
             width: 100%; }
@@ -450,18 +454,18 @@ header {
               .about > .wrapper .infoInner .content .rightArea > ul li > p {
                 font-size: var(--fs-body1);
                 font-weight: var(--fw-body);
-                line-height: var(--lh-body1);
+                line-height: var(--lh-body);
                 color: var(--color-black); }
               .about > .wrapper .infoInner .content .rightArea > ul li > span {
                 display: inline-block;
                 font-size: var(--fs-body1);
                 font-weight: var(--fs-body);
-                line-height: var(--lh-body1);
+                line-height: var(--lh-body);
                 color: var(--color-black-70op); }
     .about > .wrapper .stickyInner {
       position: sticky;
       top: calc(var(--header-size) + 2.4rem);
-      width: 32.61%; }
+      width: 32.62%; }
       .about > .wrapper .stickyInner > h3 {
         margin: 0 0 4rem;
         font-size: var(--fs-heading2);
@@ -480,11 +484,12 @@ header {
         background: #d9d9d9; }
 
 .archive {
-  background: #f3f3f3; }
+  background: var(--color-white); }
   .archive > .wrapper {
+    min-height: 100vh;
     margin: var(--header-size) 0 40vh;
-    padding: 2.4rem 4rem 12rem;
-    background: #f3f3f3; }
+    padding: 2.4rem 2.8rem 12rem;
+    background: var(--color-white); }
     .archive > .wrapper > h3 {
       margin: 0 0 6rem -.4rem;
       font-size: var(--fs-heading2);
@@ -519,26 +524,35 @@ header {
         flex-wrap: wrap;
         width: 100%;
         gap: 4rem var(--gutter-size); }
-        .archive > .wrapper .gallery .inner .item {
+        .archive > .wrapper .gallery .inner .listItem {
           width: calc((100% - (var(--gutter-size) * 5)) / 6); }
-          .archive > .wrapper .gallery .inner .item a > figure {
+          .archive > .wrapper .gallery .inner .listItem > a > figure {
             position: relative;
             background: #fff; }
-            .archive > .wrapper .gallery .inner .item a > figure .label {
+            .archive > .wrapper .gallery .inner .listItem > a > figure .label {
               position: absolute;
-              bottom: .8rem;
-              right: .8rem; }
-          .archive > .wrapper .gallery .inner .item a > h6 {
-            margin: 1.6rem 0 .8rem;
+              display: inline-block;
+              bottom: 0;
+              right: 0;
+              padding: .3rem .4rem .1rem;
+              font-size: var(--fs-body3);
+              font-weight: var(--fw-body);
+              color: var(--color-black-70op);
+              line-height: 1;
+              background: var(--color-white); }
+          .archive > .wrapper .gallery .inner .listItem > a > h6 {
+            margin: 1.2rem 0 .2rem;
             font-family: 'Pretendard';
             font-size: var(--fs-title3);
             font-weight: var(--fw-title3);
-            line-height: 1;
+            line-height: var(--lh-title3);
             color: var(--color-black); }
-          .archive > .wrapper .gallery .inner .item a > p {
-            font-size: var(--fs-body1);
+          .archive > .wrapper .gallery .inner .listItem > a > p {
+            font-family: 'Pretendard';
+            font-size: var(--fs-body2);
             font-weight: var(--fw-body);
-            line-height: 1;
+            letter-spacing: var(--letter-spacing-kr);
+            line-height: var(--lh-body);
             color: var(--color-black-70op); }
 
 footer {
@@ -552,7 +566,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    padding: 4rem 4rem 2.4rem;
+    padding: 4rem 2.8rem 2.4rem;
     height: 40vh;
     background: var(--color-black); }
     footer > .wrapper .topFlex {

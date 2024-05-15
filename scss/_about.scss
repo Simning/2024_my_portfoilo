@@ -1,18 +1,19 @@
 .about {
-  background: #f3f3f3;
+  background: var(--color-white);
 
   & > .wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    min-height: 100vh;
     margin: var(--header-size) 0 40vh;
-    padding: 2.4rem 4rem 12rem;
-    background: #f3f3f3;
+    padding: 2.4rem 2.8rem 12rem;
+    background: var(--color-white);
 
     .infoInner {
       display: block;
-      width: 49.46%;
+      width: 49.47%;
 
       .content {
         display: flex;
@@ -28,7 +29,7 @@
           margin: 0 2rem 0 0;
           font-size: var(--fs-body1);
           font-weight: var(--fw-body);
-          line-height: var(--lh-body1);
+          line-height: var(--lh-body);
           color: var(--color-black-40op);
         }
         .rightArea {
@@ -38,7 +39,7 @@
           & > p {
             font-size: var(--fs-body1);
             font-weight: var(--fw-body);
-            line-height: var(--lh-body1);
+            line-height: var(--lh-body);
             color: var(--color-black);
           }
 
@@ -54,14 +55,14 @@
               & > p {
                 font-size: var(--fs-body1);
                 font-weight: var(--fw-body);
-                line-height: var(--lh-body1);
+                line-height: var(--lh-body);
                 color: var(--color-black);
               }
               & > span {
                 display: inline-block;
                 font-size: var(--fs-body1);
                 font-weight: var(--fs-body);
-                line-height: var(--lh-body1);
+                line-height: var(--lh-body);
                 color: var(--color-black-70op);
               }
             }
@@ -73,7 +74,7 @@
     .stickyInner {
       position: sticky;
       top: calc(var(--header-size) + 2.4rem);
-      width: 32.61%;
+      width: 32.62%;
 
       & > h3 {
         margin: 0 0 4rem;

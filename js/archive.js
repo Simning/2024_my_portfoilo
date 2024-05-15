@@ -1,7 +1,7 @@
 class TabManager {
   constructor() {
     this.tabs = document.querySelectorAll('.tab');
-    this.items = document.querySelectorAll('.item');
+    this.items = document.querySelectorAll('.listItem');
     this.tabs.forEach(tab => {
       tab.addEventListener('click', () => this.toggleTab(tab));
     });

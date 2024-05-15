@@ -1,10 +1,11 @@
 .archive {
-  background: #f3f3f3;
+  background: var(--color-white);
 
   & > .wrapper {
+    min-height: 100vh;
     margin: var(--header-size) 0 40vh;
-    padding: 2.4rem 4rem 12rem;
-    background: #f3f3f3;
+    padding: 2.4rem 2.8rem 12rem;
+    background: var(--color-white);
 
     & > h3 {
       margin: 0 0 6rem -.4rem;
@@ -48,31 +49,41 @@
         width: 100%;
         gap: 4rem var(--gutter-size); 
         
-        .item {
+        .listItem {
           width: calc((100% - (var(--gutter-size) * 5)) / 6);
-          a {
+
+          & > a {
             & > figure {
               position: relative;
               background: #fff;
 
               .label {
                 position: absolute;
-                bottom: .8rem;
-                right: .8rem;
+                display: inline-block;
+                bottom: 0;
+                right: 0;
+                padding: .3rem .4rem .1rem;
+                font-size: var(--fs-body3);
+                font-weight: var(--fw-body);
+                color: var(--color-black-70op);
+                line-height: 1;
+                background: var(--color-white);
               }
             }
             & > h6 {
-              margin: 1.6rem 0 .8rem;
+              margin: 1.2rem 0 .2rem;
               font-family: 'Pretendard';
               font-size: var(--fs-title3);
               font-weight: var(--fw-title3);
-              line-height: 1;
+              line-height: var(--lh-title3);
               color: var(--color-black);
             }
             & > p {
-              font-size: var(--fs-body1);
+              font-family: 'Pretendard';
+              font-size: var(--fs-body2);
               font-weight: var(--fw-body);
-              line-height: 1;
+              letter-spacing: var(--letter-spacing-kr);
+              line-height: var(--lh-body);
               color: var(--color-black-70op);
             }
           }

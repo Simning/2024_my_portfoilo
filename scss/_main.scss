@@ -1,6 +1,6 @@
 .main {
-  background: #f3f3f3;
-  & section {background: #f3f3f3;}
+  background: var(--color-white);
+  & section {background: var(--color-white);}
 
   .hero {
     height: calc(100vh - var(--header-size));
@@ -12,7 +12,7 @@
       justify-content: space-between;
       height: 100%;
       margin: var(--header-size) 0 0;
-      padding: 2.4rem 4rem 4.8rem;
+      padding: 2.4rem 2.8rem 4.8rem;
       
       .topArea {
         display: flex;
@@ -20,12 +20,12 @@
         align-items: flex-start;
         
         .txtWrap {
-          width: 32.61%;
+          width: 32.62%;
   
           h3 {
             font-family: 'Pretendard';
-            font-size: var(--fs-hightlight-body1);
-            line-height: var(--lh-hightlight-body1);
+            font-size: var(--fs-highlight-body1);
+            line-height: var(--lh-highlight-body1);
             letter-spacing: var(--letter-spacing-kr);
             color: var(--color-black);
           }
@@ -89,8 +89,8 @@
           }
           p {
             font-family: 'Pretendard';
-            font-size: var(--fs-hightlight-body2);
-            line-height: var(--lh-hightlight-body2);
+            font-size: var(--fs-highlight-body2);
+            line-height: var(--lh-highlight-body2);
           }
         }
   
