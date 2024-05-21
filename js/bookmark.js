@@ -1,4 +1,4 @@
-class TabManager {
+class BookmarkLayout {
   constructor() {
     this.tabs = document.querySelectorAll('.tab');
     this.items = document.querySelectorAll('.listItem');
@@ -6,8 +6,8 @@ class TabManager {
       tab.addEventListener('click', () => this.toggleTab(tab));
     });
   }
-
-  // 클릭된 탭을 받아 해당 탭을 활성화하고, 관련된 항목을 표시
+  
+  //////////* 탭을 활성화 *//////////
   toggleTab(clickedTab) {
     // 현재 활성화된 탭을 비활성화
     document.querySelector('.tab.active').classList.remove('active');
@@ -39,5 +39,5 @@ class TabManager {
   }
 }
 
-new TabManager();
-export default TabManager;
+new BookmarkLayout();
+export default BookmarkLayout;

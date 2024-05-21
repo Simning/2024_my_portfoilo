@@ -16,11 +16,9 @@ function loadHeader() {
 
 class HeaderManager {
   constructor() {
-    window.addEventListener('DOMContentLoaded', () => {
-      this.setupNavigation();
-      this.setupDarkMode();
-      this.setupHeaderScroll();
-    });
+    this.setupNavigation();
+    this.setupDarkMode();
+    this.setupHeaderScroll();
   }
 
   /////* 페이지 내비게이션을 설정 */////

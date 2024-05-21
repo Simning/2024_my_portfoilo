@@ -1,17 +1,15 @@
-.projects header .logo {opacity: 0 !important;}
-
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: .3s ease-in-out;
+  transition: all .3s ease-in-out;
 
-  & > .wrapper {
+  .headerWrapper {
     display: flex;
     justify-content: space-between;
-    padding: 2.4rem 2.8rem;
+    padding: 2.4rem 4rem;
     
     .logo {
       max-height: 2.8rem;
@@ -32,11 +30,11 @@ header {
 
           .navLink {
             position: relative;
-            font-size: var(--fs-title3);
-            font-weight: var(--fw-title3);
+            font-size: var(--fs-sub-title3);
+            font-weight: var(--fw-sub-title3);
             line-height: 1;
             color: var(--color-black);
-            transition: .3s ease-in-out;
+            transition: all .3s ease-in-out;
             cursor: pointer;
 
             &::after {
@@ -51,8 +49,6 @@ header {
               &:hover {opacity: 1;}
             }
           }
-
-
         }
       }
 

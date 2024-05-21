@@ -11,7 +11,7 @@
 
 <body class="about">
   <header>
-    <div class="wrapper">
+    <div class="headerWrapper">
       <a href="./index.html" class="logo">
         <svg width="139" height="28" viewBox="0 0 139 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -33,7 +33,7 @@
           <li><a href="./index.html" class="navLink">HOME</a></li>
           <li><a href="./project.html" class="navLink">PROJECTS</a></li>
           <li><a href="./about.html" class="navLink">ABOUT</a></li>
-          <li><a href="./archive.html" class="navLink">ARCHIVE</a></li>
+          <li><a href="./bookmark.html" class="navLink">BOOKMARK</a></li>
           <li><a href="mailto:bobo9710@gmail.com.com" class="navLink">CONTACT</a></li>
         </ul>
         <div class="modeWrap">
@@ -64,33 +64,42 @@
     </div>
   </header>
 
-  <section class="wrapper">  
-    <div class="infoInner">
-      <div class="content">
+  <section class="introduction footerMargin">
+    <div class="stickyInner">
+      <h3>
+        HELLO!<br />
+        <span class="lightText">MY NAME IS </span>MINGI KIM<br />
+        <span class="lightText">I’M </span>WEB & UX/UI DESIGNER
+      </h3>
+      <figure></figure>
+    </div>
+
+    <div class="introInner">
+      <article class="content">
         <h6>ABOUT</h6>
         <div class="rightArea">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          <p class="korLs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.</p>
         </div>
-      </div>
+      </article>
   
-      <div class="content">
+      <article class="content">
         <h6>CAREER</h6>
         <div class="rightArea">
           <ul>
             <li>
-              <p>(주)이프론트 웹디자이너</p>
+              <p class="korLs">(주)이프론트 웹디자이너</p>
               <span>( 2023-2024 )</span>
             </li>
           </ul>
         </div>
-      </div>
+      </article>
   
-      <div class="content">
+      <article class="content">
         <h6>SOFTWARES</h6>
         <div class="rightArea">
           <ul>
@@ -193,9 +202,9 @@
             </li>
           </ul>
         </div>
-      </div>
+      </article>
   
-      <div class="content">
+      <article class="content">
         <h6>CONTACT</h6>
         <div class="rightArea">
           <ul>
@@ -207,46 +216,34 @@
             </li>
           </ul>
         </div>
-      </div>
-    </div>
-
-    <div class="stickyInner">
-      <h3>
-        HELLO!<br />
-        <span class="lightText">MY NAME IS </span>MINGI KIM<br />
-        <span class="lightText">I’M </span>WEB & UX/UI DESIGNER
-      </h3>
-      <figure></figure>
+      </article>
     </div>
   </section>
 
-  <footer>
-    <div class="wrapper">
-      <div class="topFlex">
-        <div class="info">
-          <div class="item">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.807 12.02C14.807 13.4933 13.6136 14.6867 12.1403 14.6867C6.24697 14.6867 1.47363 9.91333 1.47363 4.02C1.47363 2.54667 2.66697 1.35333 4.1403 1.35333C4.29363 1.35333 4.4403 1.36667 4.5803 1.39333C4.73363 1.42 4.8803 1.45333 5.02697 1.50667L6.02697 5.90667L4.58697 6.64667C5.38697 8.95333 7.21363 10.7733 9.51363 11.5733L10.2603 10.1333L14.6603 11.1333C14.7136 11.2733 14.747 11.4267 14.7736 11.58C14.8003 11.7267 14.8136 11.8733 14.8136 12.02H14.807Z" fill="#E6E6E6"/>
-            </svg>
-            <p>010-2100-7893</p>
-          </div>
-          <div class="item">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_385_661)">
-              <path d="M14.6663 2.66669V3.92002L7.99967 7.25335L1.33301 3.92002V2.66669H14.6663Z" fill="#E6E6E6"/>
-              <path d="M7.99967 8.74666L14.6663 5.41333V13.3333H1.33301V5.41333L7.99967 8.74666Z" fill="#E6E6E6"/>
-              </g>
-            </svg>
-            <p>bobo9710@gmail.com</p>
-          </div>
-        </div>
-        <a href="javascript:void(0)" class="topBtn">( SCROLL TO TOP )</a>
-      </div>
+  <footer id="footer">
+    <div class="footWrapper">
+      <div class="footFlexInner">
+        <h2>GET IN TOUCH</h2>
 
-      <div class="botFlex">
-        <div class="linkWrap">
-          <div class="item">
-            <a href="#">
+        <article class="footRightArea">
+          <div class="connectItemWrap">
+            <h6>CONNECT</h6>
+            <div class="item"><p>bobo9710@gmail.com</p></div>
+            <div class="item"><p>010-2100-7893</p></div>
+          </div>
+
+          <div class="connectItemWrap">
+            <h6>SOCIAL</h6>
+            <a href="#" target="_blank" class="item">
+              <p>GITHUB</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_485_2179)">
+                <path d="M1.33333 8H13.3333" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                <path d="M9.33333 4C9.33333 4 9.83333 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83333 10.5 9.33333 12 9.33333 12" stroke="#E6E6E6" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="item">
               <p>INSTAGRAM</p>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_485_2179)">
@@ -256,20 +253,11 @@
               </svg>
             </a>
           </div>
-          <div class="item">
-            <a href="#">
-              <p>GITHUB</p>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_485_2179)">
-                <path d="M1.33333 8H13.3333" stroke="#E6E6E6" stroke-miterlimit="10"/>
-                <path d="M9.33333 4C9.33333 4 9.83333 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83333 10.5 9.33333 12 9.33333 12" stroke="#E6E6E6" stroke-miterlimit="10"/>
-                </g>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
+
+          <a href="javascript:void(0)" class="topBtn"><span>SCROLL TO TOP</span></a>
+        </article>
       </div>
+      <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
     </div>
   </footer>
 </body>

@@ -1,4 +1,4 @@
-class mainLayout {
+class MainLayout {
   constructor() {
     // 페이지가 로드될 때 svg 로고 애니메이션을 초기화
     this.initSvgLogoAnimation();
@@ -66,5 +66,5 @@ class mainLayout {
   } */
 }
 
-new mainLayout();
-export default mainLayout;
+new MainLayout();
+export default MainLayout;

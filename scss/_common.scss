@@ -10,20 +10,18 @@
   --color-black: rgb(17, 17, 17);
   --color-black-70op: rgba(17, 17, 17, .7);
   --color-black-40op: rgba(17, 17, 17, .4);
+  --color-black-20op: rgba(17, 17, 17, .2);
   --color-white: rgb(243, 243, 243);
   --color-white-70op: rgb(243, 243, 243, .7);
   --color-white-40op: rgb(243, 243, 243, .4);
-  --color-gray1: #ededed;
-  --color-gray2: ;
-  --color-gray3: ;
 
   /* font-size */
-  --fs-heading1: 6rem;
+  --fs-heading1: 12rem;
   --fs-heading2: 4rem;
-  --fs-heading3: 2.8rem;
-  --fs-title1: ;
-  --fs-title2: 2rem;
-  --fs-title3: 1.6rem;
+  --fs-heading3: 3.2rem;
+  --fs-sub-title1: 2.4rem;
+  --fs-sub-title2: 2rem;
+  --fs-sub-title3: 1.6rem;
   --fs-body1: 1.6rem;
   --fs-body2: 1.4rem;
   --fs-body3: 1.2rem;
@@ -32,42 +30,47 @@
   --fs-copy: 1.4rem;
   --fs-btn: 1.5rem;
 
-    /* font-weight */
-    --fw-heading1: 400;
-    --fw-heading2: 400;
-    --fw-heading3: 400;
-    --fw-title1: ;
-    --fw-title2: 500;
-    --fw-title3: 500;
-    --fw-body: 400;
-    --fw-highlight-body1: 400;
-    --fw-highlight-body2: 400;
-    --fw-copy: 400;
-    --fw-btn: 500;
+  /* font-weight */
+  --fw-heading1: 300;
+  --fw-heading2: 400;
+  --fw-heading3: 400;
+  --fw-sub-title1: 500;
+  --fw-sub-title2: 500;
+  --fw-sub-title3: 500;
+  --fw-body: 400;
+  --fw-highlight-body1: 400;
+  --fw-highlight-body2: 400;
+  --fw-copy: 400;
+  --fw-btn: 500;
 
-    /* line-height */
-    --lh-heading1: 1.2;
-    --lh-heading2: 1.3;
-    --lh-heading3: ;
-    --lh-title1: ;
-    --lh-title2: ;
-    --lh-title3: 1.3;
-    --lh-body: 1.5;
-    --lh-highlight-body1: 1.4;
-    --lh-highlight-body2: 1.5;
-    --lh-copy: 1.5;
+  /* line-height */
+  --lh-heading1: 1.05;
+  --lh-heading2: 1.3;
+  --lh-heading3: ;
+  --lh-sub-title1: 1.3;
+  --lh-sub-title2: 1.3;
+  --lh-sub-title3: 1.3;
+  --lh-body: 1.5;
+  --lh-highlight-body1: 1.4;
+  --lh-highlight-body2: 1.5;
+  --lh-copy: 1.5;
 
-    /* letter-spacing */
-    --letter-spacing-kr: -0.025em;
-
-
+  /* letter-spacing */
+  --letter-spacing-kr: -0.025em;
 }
 
 * {
-  font-family: 'Roc Grotesk', 'Pretendard', sans-serif;
+  font-family: 'roc-grotesk', 'Pretendard', sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-black);
 }
+body {
+  background: var(--color-white);
+}
 figure {font-size: 0;}
+
+.korLs {
+  letter-spacing: var(--letter-spacing-kr);
+}
