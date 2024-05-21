@@ -22,7 +22,6 @@
           width: 32.62%;
   
           h5 {
-            font-family: 'Pretendard';
             font-size: var(--fs-highlight-body1);
             line-height: var(--lh-highlight-body1);
             color: var(--color-black);
@@ -157,7 +156,6 @@
           position: relative;
           width: calc(50% - .2rem);
           padding: 0 0 37.4%;
-          transition: background-size .3s ease-in-out;
 
           &:nth-child(1) {background: url('../src/main/kukjae_thumnail.png') no-repeat center center / cover;}
           &:nth-child(2) {background: url('../src/main/jungwoo_thumnail.png') no-repeat center center / cover;}
@@ -175,10 +173,9 @@
             align-items: center;
             top: 50%;
             left: 0;
-            transform: translateY(-50%);
+            transform: translateY(-50%) scaleY(0);
             width: 100%;
             visibility: hidden;
-            transform: scaleY(0);
             transition: all .3s ease-in-out;
             background: var(--color-black);
     
@@ -209,8 +206,6 @@
           }
           
           &:hover {
-            background-size: 150%;
-            
             .thumbnail {
               visibility: visible;
               transform: scaleY(1);

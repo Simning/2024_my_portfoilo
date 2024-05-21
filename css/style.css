@@ -219,7 +219,6 @@ header {
       .main .hero .wrapper .topArea .txtWrap {
         width: 32.62%; }
         .main .hero .wrapper .topArea .txtWrap h5 {
-          font-family: 'Pretendard';
           font-size: var(--fs-highlight-body1);
           line-height: var(--lh-highlight-body1);
           color: var(--color-black); }
@@ -313,8 +312,7 @@ header {
     .main .projFrame .wrapper .projInner .projItem {
       position: relative;
       width: calc(50% - .2rem);
-      padding: 0 0 37.4%;
-      transition: background-size .3s ease-in-out; }
+      padding: 0 0 37.4%; }
       .main .projFrame .wrapper .projInner .projItem:nth-child(1) {
         background: url("../src/main/kukjae_thumnail.png") no-repeat center center/cover; }
       .main .projFrame .wrapper .projInner .projItem:nth-child(2) {
@@ -338,10 +336,9 @@ header {
         align-items: center;
         top: 50%;
         left: 0;
-        transform: translateY(-50%);
+        transform: translateY(-50%) scaleY(0);
         width: 100%;
         visibility: hidden;
-        transform: scaleY(0);
         transition: all .3s ease-in-out;
         background: var(--color-black); }
         .main .projFrame .wrapper .projInner .projItem .thumbnail .txtWrap {
@@ -364,11 +361,9 @@ header {
             font-weight: var(--fw-sub-title3);
             color: var(--color-white);
             line-height: 1; }
-      .main .projFrame .wrapper .projInner .projItem:hover {
-        background-size: 150%; }
-        .main .projFrame .wrapper .projInner .projItem:hover .thumbnail {
-          visibility: visible;
-          transform: scaleY(1); }
+      .main .projFrame .wrapper .projInner .projItem:hover .thumbnail {
+        visibility: visible;
+        transform: scaleY(1); }
   .main .projFrame .wrapper .btnArea {
     padding: 1.2rem 0;
     margin: 4.8rem 0 0;
@@ -524,77 +519,89 @@ header {
 
 .about .introduction {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   min-height: 100vh;
   margin: var(--header-size) 0 0;
   padding: 2.4rem 4rem 8rem;
   background: var(--color-white); }
-  .about .introduction .introInner {
-    display: block;
-    width: 49.47%; }
-    .about .introduction .introInner .content {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin: 0 0 8rem; }
-      .about .introduction .introInner .content:last-child {
-        margin: 0; }
-      .about .introduction .introInner .content h6 {
+  .about .introduction .headingTxt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 6rem -.8rem; }
+    .about .introduction .headingTxt h2 {
+      font-family: 'roc-grotesk-wide';
+      font-size: var(--fs-heading1);
+      font-weight: var(--fw-heading1);
+      line-height: var(--lh-heading1);
+      color: var(--color-black); }
+  .about .introduction .introductionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .about .introduction .introductionWrapper .stickyInner {
+      position: sticky;
+      top: calc(var(--header-size) + 2.4rem);
+      width: 32.62%; }
+      .about .introduction .introductionWrapper .stickyInner > h3 {
+        margin: 0 0 4rem;
+        font-size: var(--fs-sub-title1);
+        font-weight: var(--fw-sub-title1);
+        line-height: var(--lh-sub-title1);
+        color: var(--color-black); }
+        .about .introduction .introductionWrapper .stickyInner > h3 .lightText {
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          color: var(--color-black-40op); }
+      .about .introduction .introductionWrapper .stickyInner > figure {
         display: block;
-        width: 29rem;
-        margin: 0 2rem 0 0;
-        font-size: var(--fs-body1);
-        font-weight: var(--fw-body);
-        line-height: var(--lh-body);
-        color: var(--color-black-40op); }
-      .about .introduction .introInner .content .rightArea {
+        width: 100%;
+        padding: 0 0 73.92%;
+        background: #d9d9d9; }
+    .about .introduction .introductionWrapper .introInner {
+      display: block;
+      width: 49.47%; }
+      .about .introduction .introductionWrapper .introInner .content {
         display: flex;
-        width: calc(100% - 31rem); }
-        .about .introduction .introInner .content .rightArea > p {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 8rem; }
+        .about .introduction .introductionWrapper .introInner .content:last-child {
+          margin: 0; }
+        .about .introduction .introductionWrapper .introInner .content h6 {
+          display: block;
+          width: 29rem;
+          margin: 0 2rem 0 0;
           font-size: var(--fs-body1);
           font-weight: var(--fw-body);
           line-height: var(--lh-body);
-          color: var(--color-black); }
-        .about .introduction .introInner .content .rightArea > ul {
-          width: 100%; }
-          .about .introduction .introInner .content .rightArea > ul li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0 0 .8rem; }
-            .about .introduction .introInner .content .rightArea > ul li > p {
-              font-size: var(--fs-body1);
-              font-weight: var(--fw-body);
-              line-height: var(--lh-body);
-              color: var(--color-black); }
-            .about .introduction .introInner .content .rightArea > ul li > span {
-              display: inline-block;
-              font-size: var(--fs-body1);
-              font-weight: var(--fs-body);
-              line-height: var(--lh-body);
-              color: var(--color-black-70op); }
-  .about .introduction .stickyInner {
-    position: sticky;
-    top: calc(var(--header-size) + 2.4rem);
-    width: 32.62%; }
-    .about .introduction .stickyInner > h3 {
-      margin: 0 0 4rem;
-      font-size: var(--fs-heading2);
-      font-weight: var(--fw-heading2);
-      line-height: var(--lh-heading2);
-      color: var(--color-black); }
-      .about .introduction .stickyInner > h3 .lightText {
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        color: var(--color-black-40op); }
-    .about .introduction .stickyInner > figure {
-      display: block;
-      width: 100%;
-      padding: 0 0 23.92%;
-      background: #d9d9d9; }
+          color: var(--color-black-40op); }
+        .about .introduction .introductionWrapper .introInner .content .rightArea {
+          display: flex;
+          width: calc(100% - 31rem); }
+          .about .introduction .introductionWrapper .introInner .content .rightArea > p {
+            font-size: var(--fs-body1);
+            font-weight: var(--fw-body);
+            line-height: var(--lh-body);
+            color: var(--color-black); }
+          .about .introduction .introductionWrapper .introInner .content .rightArea > ul {
+            width: 100%; }
+            .about .introduction .introductionWrapper .introInner .content .rightArea > ul li {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 0 .8rem; }
+              .about .introduction .introductionWrapper .introInner .content .rightArea > ul li > p {
+                font-size: var(--fs-body1);
+                font-weight: var(--fw-body);
+                line-height: var(--lh-body);
+                color: var(--color-black); }
+              .about .introduction .introductionWrapper .introInner .content .rightArea > ul li > span {
+                display: inline-block;
+                font-size: var(--fs-body1);
+                font-weight: var(--fs-body);
+                line-height: var(--lh-body);
+                color: var(--color-black-70op); }
 
 .bookmark .bookmarkWrapper {
   min-height: 100vh;
