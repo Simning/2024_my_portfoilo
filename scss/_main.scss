@@ -208,7 +208,7 @@
           &:hover {
             .thumbnail {
               visibility: visible;
-              transform: scaleY(1);
+              transform: translateY(-50%) scaleY(1);
             }
           }
         }
