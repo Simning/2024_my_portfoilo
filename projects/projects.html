@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIMKI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/portfolio.js" type="module"></script>
+</head>
+
+<body class="projects">
+  <header>
+    <div class="headerWrapper">
+      <a href="../index.html" class="logo">
+        <svg width="139" height="28" viewBox="0 0 139 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 28V0H13.13V28H0ZM15.12 28V13.78C15.36 13.78 15.64 13.74 15.89 13.74C23.58 13.74 29.75 20.15 29.75 28H15.13H15.12ZM20.36 0.69C22.86 0.69 24.87 2.7 24.87 5.2C24.87 7.7 22.86 9.67 20.36 9.67C17.86 9.67 15.89 7.7 15.89 5.2C15.89 2.7 17.86 0.69 20.36 0.69Z"
+            fill="#2D312A" />
+          <path d="M31.8 28V0H44.93V28H31.8Z" fill="#2D312A" />
+          <path
+            d="M60.07 0C68.17 0 74.69 6.57 74.69 14.67V28H60.07V0ZM76.7 2.42C84.8 2.42 91.32 8.99 91.32 17.09V28.01H76.7V2.42ZM46.93 0V28H58.07V2C58.07 0.9 58.96 0 60.07 0H46.93Z"
+            fill="#2D312A" />
+          <path
+            d="M93.32 28V0H106.45V28H93.32ZM108.5 28V13.78C108.74 13.78 109.02 13.74 109.26 13.74C116.96 13.74 123.12 20.15 123.12 28H108.5ZM113.73 0.69C116.23 0.69 118.24 2.7 118.24 5.2C118.24 7.7 116.23 9.67 113.73 9.67C111.23 9.67 109.26 7.7 109.26 5.2C109.26 2.7 111.23 0.69 113.73 0.69Z"
+            fill="#2D312A" />
+          <path d="M125.12 28V0H138.25V28H125.12Z" fill="#2D312A" />
+        </svg>  
+      </a>
+
+      <nav>
+        <ul class="gnbMenu">
+          <li><a href="../index.html" class="navLink active">HOME</a></li>
+          <li><a href="./projects.html" class="navLink">PROJECTS</a></li>
+          <li><a href="../about/about.html" class="navLink">ABOUT</a></li>
+          <li><a href="../bookmark/bookmark.html" class="navLink">BOOKMARK</a></li>
+          <li><a href="mailto:bobo9710@gmail.com.com" class="navLink">CONTACT</a></li>
+        </ul>
+        <div class="modeWrap">
+          <a href="javascript:void(0)" class="light">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_385_422)">
+              <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" fill="#2D312A" stroke="#2D312A"/>
+              <path d="M12 2V6" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 4.93L7.75969 7.76" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M2 12H6" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 19.07L7.75969 16.24" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M12 22V18" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 19.07L16.2402 16.24" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M22 12H18" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 4.93L16.2402 7.76" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              </g>
+            </svg>
+          </a>
+          <a href="javascript:void(0)" class="dark">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_748_3273)">
+              <path d="M16.0498 14.69C11.6298 14.69 8.0498 11.11 8.0498 6.69C8.0498 5.48 8.3298 4.33 8.8098 3.3C5.43981 4.6 3.0498 7.86 3.0498 11.69C3.0498 16.66 7.0798 20.69 12.0498 20.69C16.5698 20.69 20.2998 17.35 20.9398 13.01C19.5898 14.06 17.8898 14.69 16.0498 14.69Z" fill="#A6A999"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="toggleMenu"><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="projectsSection footerMargin">
+    <div class="headingTxt scrollIn">
+      <h2>PROJECTS</h2>
+      <span></span>
+    </div>
+    
+    <div class="tableWrapper scrollIn" data-delay=".5">
+      <div class="tHead">
+        <div class="cell num">
+          <h6>NUMBER</h6>
+        </div>
+        <div class="cell proj">
+          <h6>PROJECT TITLE</h6>
+        </div>
+        <div class="cell cate">
+          <h6>CATEGORIES</h6>
+        </div>
+        <div class="cell year">
+          <h6>YEAR</h6>
+        </div>
+      </div>
+
+      <div class="tBody">
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">삼다푸드</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2024</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=dowon" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">도원엔지니어링건축사사무소</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2024</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=kukjae" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">국제산공</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">세인금속</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=bsgm" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p>BSG Materials</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=ztsecu" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">지티시큐</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">지아이골프 메인페이지 리뉴얼</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">와이즈보험중개</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">야코</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=jungwooCompany" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">정우컴퍼니</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">울산대학교 의과대학 소화기병연구소</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">코시스테크</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=ulNewMaterials" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p>UL New Materials</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">미건비아이</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">에이조스바이오</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">서광시스템</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">팝업 배너 제작</p>
+          </div>
+          <div class="cell cate">
+            <p>Popup Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023 ~ 2024</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">동림피엔디</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p>TEXAS SKY</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">한양대 한국법사학연구센터</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">이선생맥주</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">스튜디오 장독대</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Design</p>
+          </div>
+          <div class="cell year">
+            <p>2023</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=calmcalm" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">CalmCalm</p>
+          </div>
+          <div class="cell cate">
+            <p>Web Concept Design</p>
+          </div>
+          <div class="cell year">
+            <p>2022</p>
+          </div>
+        </a>
+
+        <a href="./projView.html?id=wegamer" class="row">
+          <div class="cell num">
+            <p></p>
+          </div>
+          <div class="cell proj">
+            <p class="korLs">위게이머</p>
+          </div>
+          <div class="cell cate">
+            <p>App Concept Design</p>
+          </div>
+          <div class="cell year">
+            <p>2022</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="btnArea scrollIn">
+      <div class="moreBtn">
+        <div class="dot before"><span></span><span></span><span></span></div>
+        <p>MORE PROJECT</p>
+        <div class="dot after"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footWrapper">
+      <div class="footInner">
+        <h2>GET IN TOUCH</h2>
+
+        <article class="footRightArea">
+          <div class="connectItemWrap">
+            <h6>CONNECT</h6>
+            <div class="item"><p>bobo9710@gmail.com</p></div>
+            <div class="item"><p>010-2100-7893</p></div>
+          </div>
+
+          <div class="connectItemWrap">
+            <h6>SOCIAL</h6>
+            <a href="#" target="_blank" class="item">
+              <p>GITHUB</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_745_2622)">
+                <path d="M1.33325 8H13.3333" stroke="#2D312A" stroke-miterlimit="10"/>
+                <path d="M9.33325 4C9.33325 4 9.83325 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83325 10.5 9.33325 12 9.33325 12" stroke="#2D312A" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="item">
+              <p>INSTAGRAM</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_745_2622)">
+                <path d="M1.33325 8H13.3333" stroke="#2D312A" stroke-miterlimit="10"/>
+                <path d="M9.33325 4C9.33325 4 9.83325 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83325 10.5 9.33325 12 9.33325 12" stroke="#2D312A" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <a href="javascript:void(0)" class="topBtn"><span>SCROLL TO TOP</span></a>
+        </article>
+      </div>
+      <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
+    </div>
+  </footer>
+</body>

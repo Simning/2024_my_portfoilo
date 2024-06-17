@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIMKI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/portfolio.js" type="module"></script>
+</head>
+
+<body class="bookmark">
+  <header>
+    <div class="headerWrapper">
+      <a href="../index.html" class="logo">
+        <svg width="139" height="28" viewBox="0 0 139 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 28V0H13.13V28H0ZM15.12 28V13.78C15.36 13.78 15.64 13.74 15.89 13.74C23.58 13.74 29.75 20.15 29.75 28H15.13H15.12ZM20.36 0.69C22.86 0.69 24.87 2.7 24.87 5.2C24.87 7.7 22.86 9.67 20.36 9.67C17.86 9.67 15.89 7.7 15.89 5.2C15.89 2.7 17.86 0.69 20.36 0.69Z"
+            fill="#2D312A" />
+          <path d="M31.8 28V0H44.93V28H31.8Z" fill="#2D312A" />
+          <path
+            d="M60.07 0C68.17 0 74.69 6.57 74.69 14.67V28H60.07V0ZM76.7 2.42C84.8 2.42 91.32 8.99 91.32 17.09V28.01H76.7V2.42ZM46.93 0V28H58.07V2C58.07 0.9 58.96 0 60.07 0H46.93Z"
+            fill="#2D312A" />
+          <path
+            d="M93.32 28V0H106.45V28H93.32ZM108.5 28V13.78C108.74 13.78 109.02 13.74 109.26 13.74C116.96 13.74 123.12 20.15 123.12 28H108.5ZM113.73 0.69C116.23 0.69 118.24 2.7 118.24 5.2C118.24 7.7 116.23 9.67 113.73 9.67C111.23 9.67 109.26 7.7 109.26 5.2C109.26 2.7 111.23 0.69 113.73 0.69Z"
+            fill="#2D312A" />
+          <path d="M125.12 28V0H138.25V28H125.12Z" fill="#2D312A" />
+        </svg>
+      </a>
+
+      <nav>
+        <ul class="gnbMenu">
+          <li><a href="../index.html" class="navLink active">HOME</a></li>
+          <li><a href="../projects/projects.html" class="navLink">PROJECTS</a></li>
+          <li><a href="../about/about.html" class="navLink">ABOUT</a></li>
+          <li><a href="./bookmark.html" class="navLink">BOOKMARK</a></li>
+          <li><a href="mailto:bobo9710@gmail.com.com" class="navLink">CONTACT</a></li>
+        </ul>
+        <div class="modeWrap">
+          <a href="javascript:void(0)" class="light">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_385_422)">
+              <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" fill="#2D312A" stroke="#2D312A"/>
+              <path d="M12 2V6" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 4.93L7.75969 7.76" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M2 12H6" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M4.92969 19.07L7.75969 16.24" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M12 22V18" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 19.07L16.2402 16.24" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M22 12H18" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M19.0702 4.93L16.2402 7.76" stroke="#2D312A" stroke-width="2" stroke-miterlimit="10"/>
+              </g>
+            </svg>
+          </a>
+          <a href="javascript:void(0)" class="dark">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_748_3273)">
+              <path d="M16.0498 14.69C11.6298 14.69 8.0498 11.11 8.0498 6.69C8.0498 5.48 8.3298 4.33 8.8098 3.3C5.43981 4.6 3.0498 7.86 3.0498 11.69C3.0498 16.66 7.0798 20.69 12.0498 20.69C16.5698 20.69 20.2998 17.35 20.9398 13.01C19.5898 14.06 17.8898 14.69 16.0498 14.69Z" fill="#A6A999"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="toggleMenu"><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bookmarkSection footerMargin">
+    <div class="headingTxt scrollIn">
+      <h2>BOOKMARK</h2>
+    </div>
+
+    <ul class="tabs scrollIn" data-delay=".5">
+      <li class="tab active">ALL</li>
+      <li class="tab">REFERENCE</li>
+      <li class="tab">IMAGE</li>
+      <li class="tab">GRAPHIC</li>
+      <li class="tab">MOCKUP</li>
+      <li class="tab">COLOR</li>
+      <li class="tab">FONT</li>
+      <li class="tab">DESIGN SYSTEM</li>
+      <li class="tab">AI</li>
+    </ul>
+
+    <article class="listWrapper scrollIn" data-delay="1">
+      <ul class="itemsInner">
+
+        <!-------------------------------------- Reference -------------------------------------->
+        <li class="listItem">
+          <a href="https://www.awwwards.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.awwwards.com/" alt="Awwwards favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Awwwards</h6>
+            <p class="korLs">해외 위주 웹사이트 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.gdweb.co.kr/main/index.asp" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.gdweb.co.kr/main/index.asp" alt="GDWEB favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>GDWEB</h6>
+            <p class="korLs">국내 위주 웹사이트 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.cssdesignawards.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.cssdesignawards.com/" alt="Css Design Awards favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Css Design Awards</h6>
+            <p class="korLs">CSS 웹사이트 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.behance.net/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.behance.net/" alt="Behance favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Behance</h6>
+            <p class="korLs">종합 디자인 포트폴리오</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.pinterest.co.kr/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.pinterest.co.kr/" alt="Pinterest favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Pinterest</h6>
+            <p class="korLs">종합 디자인 검색 및 수집</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://dribbble.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://dribbble.com/" alt="Dribbble favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Dribbble</h6>
+            <p class="korLs">디자인 포트폴리오 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://theinspirationgrid.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://theinspirationgrid.com/" alt="Inspiration Grid favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Inspiration Grid</h6>
+            <p class="korLs">아트웍, 일러스트 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://uigarage.net/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://uigarage.net/" alt="UI Garage favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>UI Garage</h6>
+            <p class="korLs">UI 분류 및 검색</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://collectui.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://collectui.com/" alt="Collect UI favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Collect UI</h6>
+            <p class="korLs">UI 케이스 분류</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.manypixels.co/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.manypixels.co/" alt="ManyPixels favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>ManyPixels</h6>
+            <p class="korLs">다양한 디자인 리소스 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://mobbin.com/browse/ios/apps" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://mobbin.com/browse/ios/apps" alt="Mobbin favicon">
+              <span class="cate">REFERENCE</span>
+            </figure>
+            <h6>Mobbin</h6>
+            <p>IOS App UI</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Image -------------------------------------->
+        <li class="listItem">
+          <a href="https://unsplash.com/ko" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://unsplash.com/ko" alt="Unsplash favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Unsplash</h6>
+            <p class="korLs">고품질 무료 사진 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.pexels.com/ko-kr/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.pexels.com/ko-kr/" alt="Pexels favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Pexels</h6>
+            <p class="korLs">무료 고품질 사진과 비디오 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.lifeofpix.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.lifeofpix.com/" alt="Life of Pix favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Life of Pix</h6>
+            <p class="korLs">무료 고품질 사진과 비디오 라이브러리</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.foodiesfeed.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.foodiesfeed.com/" alt="Foodiesfeed favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Foodiesfeed</h6>
+            <p class="korLs">무료 음식 사진 컬렉션</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://artvee.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://artvee.com/" alt="Artvee favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Artvee</h6>
+            <p class="korLs">고전 명화 무료 이미지</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://gratisography.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://gratisography.com/" alt="Gratisography favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Gratisography</h6>
+            <p class="korLs">창의적인 무료 사진</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://pixabay.com/ko/f" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://pixabay.com/ko/f" alt="Pixabay favicon">
+              <span class="cate">IMAGE</span>
+            </figure>
+            <h6>Pixabay</h6>
+            <p class="korLs">무료 이미지 및 동영상 플랫폼</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Graphic -------------------------------------->
+        <li class="listItem">
+          <a href="https://www.freepik.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.freepik.com/" alt="Freepik favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>Freepik</h6>
+            <p class="korLs">무료 및 유료 그래픽 리소스</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.flaticon.com/kr/" target="_blank" >
+            <figure>  
+              <img src="http://www.google.com/s2/favicons?domain=https://www.flaticon.com/kr/" alt="Flaticon favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>Flaticon</h6>
+            <p class="korLs">다양한 아이콘 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://drawkit.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://drawkit.com/" alt="Drawkit favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>Drawkit</h6>
+            <p class="korLs">고품질 벡터 일러스트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.iconfinder.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.iconfinder.com/" alt="Iconfinder favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>Iconfinder</h6>
+            <p class="korLs">아이콘과 일러스트레이션</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://iconmonstr.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://iconmonstr.com/" alt="iconmonstr favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>iconmonstr</h6>
+            <p class="korLs">고품질 무료 아이콘 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://undraw.co/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://undraw.co/" alt="unDraw favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>unDraw</h6>
+            <p class="korLs">오픈 소스 일러스트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://thenounproject.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://thenounproject.com/" alt="The Noun Project favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>The Noun Project</h6>
+            <p class="korLs">수백만 개의 아이콘</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://fonts.google.com/icons" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://fonts.google.com/icons" alt="Google favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>Material Symbol</h6>
+            <p class="korLs">구글 머티리얼 아이콘</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.svgrepo.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.svgrepo.com/" alt="SVG Repo favicon">
+              <span class="cate">GRAPHIC</span>
+            </figure>
+            <h6>SVG Repo</h6>
+            <p class="korLs">수천 개의 SVG 아이콘</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Mockup -------------------------------------->
+        <li class="listItem">
+          <a href="https://design.facebook.com/toolsandresources/devices/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://design.facebook.com/toolsandresources/devices/" alt="Facebook Devices favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Facebook Devices</h6>
+            <p class="korLs">다양한 기기 목업</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://mockuphunt.co/collections/free-mockups" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://mockuphunt.co/collections/free-mockups" alt="Mockup Hunt favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Mockup Hunt</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://weenidy.com/resource/list?category=1" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://weenidy.com/resource/list?category=1" alt="weenidy favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>weenidy</h6>
+            <p class="korLs">무료/유료 목업 (국내)</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://creatoom.com/product-category/scene-mockups/free-mockups-s/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://creatoom.com/product-category/scene-mockups/free-mockups-s/" alt="creatoom favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>creatoom</h6>
+              <p class="korLs">무료 목업 모음</p>
+            </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.graphberry.com/category/mock-ups" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.graphberry.com/category/mock-ups" alt="Graphberry favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Graphberry</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://shots.so/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://shots.so/" alt="shots.so favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>shots.so</h6>
+            <p class="korLs">목업 제작 편집</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.pixeden.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.pixeden.com/" alt="Pixeden favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Pixeden</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.free-mockup.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.free-mockup.com/" alt="Free Mockups favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Free Mockups</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://cssauthor.com/mockups/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://cssauthor.com/mockups/" alt="Css author favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Css author</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://vexus.digital/collections/spline-mockups" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://vexus.digital/collections/spline-mockups" alt="vesus favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>vesus</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://unblast.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://unblast.com/" alt="unblast favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>unblast</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://mockups-design.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://mockups-design.com/" alt="MOCKUPS-DESIGN favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>MOCKUPS-DESIGN</h6>
+            <p>무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.psdmockups.com/category/design/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.psdmockups.com/category/design/  " alt="PSD Mockups favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>PSD Mockups</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.graphicsegg.com/category/mockups/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.graphicsegg.com/category/mockups/" alt="Graphicsegg favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Graphicsegg</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://craftwork.design/downloads/category/graphics/mockups-templates/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://craftwork.design/downloads/category/graphics/mockups-templates/" alt="Craftwork favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Craftwork</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://goodmockups.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://goodmockups.com/" alt="Good Mockups favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>Good Mockups</h6>
+            <p class="korLs">고퀄리티 목업 블로그</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://zippypixels.com/products/mockups/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://zippypixels.com/products/mockups/" alt="zippypixels favicon">
+              <span class="cate">MOCKUP</span>
+            </figure>
+            <h6>zippypixels</h6>
+            <p class="korLs">무료 목업 모음</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Color -------------------------------------->
+        <li class="listItem">
+          <a href="https://uigradients.com/#Selenium" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://uigradients.com/#Selenium" alt="Uigradients favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>uiGradients</h6>
+            <p class="korLs">그라데이션 팔레트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://color.adobe.com/ko/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://color.adobe.com/ko/" alt="Adobe Color favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Adobe Color</h6>
+            <p class="korLs">Adobe의 컬러 도구</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.colorhexa.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.colorhexa.com/" alt="Colorhexa favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Colorhexa</h6>
+            <p class="korLs">컬러 정보 제공</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://webgradients.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://webgradients.com/" alt="Webgradients favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>WebGradients</h6>
+            <p class="korLs">웹용 그라데이션</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://colinkeany.com/blend/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://colinkeany.com/blend/" alt="Blend favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Blend</h6>
+            <p class="korLs">그라데이션 디자인 리소스</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://gradienthunt.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=" alt="Gradient Hunt favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Gradient Hunt</h6>
+            <p class="korLs">그라데이션 팔레트 공유</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://palettemaker.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://palettemaker.com/" alt="PaletteMaker favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Palettemaker</h6>
+            <p class="korLs">팔레트 생성 도구</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://2colors.colorion.co/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://2colors.colorion.co/" alt="Two Color combinations favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Two Color combinations</h6>
+            <p class="korLs">2개 컬러 조합</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://paletton.com/#uid=11T0u0kllllaFw0g0qFqFg0w0aF" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://paletton.com/#uid=11T0u0kllllaFw0g0qFqFg0w0aF" alt="Paletton favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Paletton</h6>
+            <p class="korLs">보색, 유사색 참고</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.design-seeds.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.design-seeds.com/" alt="Design Seeds favicon">
+              <span class="cate">COLOR</span>
+            </figure>
+            <h6>Design Seeds</h6>
+            <p class="korLs">이미지 컬러 추출</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Font -------------------------------------->
+        <li class="listItem">
+          <a href="https://fonts.google.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://fonts.google.com/" alt="Google favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>Google Fonts</h6>
+            <p class="korLs">임베딩 가능한 무료 폰트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://noonnu.cc/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://noonnu.cc/" alt="눈누 favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>눈누</h6>
+            <p class="korLs">무료 폰트 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://clova.ai/handwriting/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://clova.ai/handwriting/" alt="Clova favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>Naver Clova</h6>
+            <p class="korLs">손글씨 모음</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://fonts.adobe.com/?locale=ko-KR" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://fonts.adobe.com/?locale=ko-KR" alt="Adobe Fonts favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>Adobe Fonts</h6>
+            <p class="korLs">구독형 폰트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://spoqa.github.io/spoqa-han-sans/ko-KR/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://spoqa.github.io/spoqa-han-sans/ko-KR/" alt="Spoqa favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>Spoqa Han Sans</h6>
+            <p class="korLs">스포카 한 산스 폰트</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://cactus.tistory.com/306" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://cactus.tistory.com/306" alt="Pretendard favicon">
+              <span class="cate">FONT</span>
+            </figure>
+            <h6>Pretendard</h6>
+            <p class="korLs">프리텐다드 폰트</p>
+          </a>
+        </li>
+
+        <!-------------------------------------- Design System -------------------------------------->
+        <li class="listItem">
+          <a href="https://developers.kakao.com/docs/latest/ko/index" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://developers.kakao.com/docs/latest/ko/index" alt="kakao developers favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>kakao developers</h6>
+            <p class="korLs">카카오 플랫폼 디자인 시스템</p>
+          </a>
+        </li>
+        
+        <li class="listItem">
+          <a href="https://toss.im/slash-22/sessions/1-3" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://toss.im/slash-22/sessions/1-3" alt="Toss - SLASH 22 favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Toss - SLASH 22</h6>
+            <p class="korLs">UX&DX 디자인 시스템 발표자료</p>
+          </a>
+        </li>
+        
+        <li class="listItem">
+          <a href="https://designsystem.line.me/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://designsystem.line.me/" alt="LINE Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>LINE Design System</h6>
+            <p class="korLs">라인 메신저의 UI/UX 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://design.socar.kr/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://design.socar.kr/" alt="SOCAR favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>SOCAR 브랜드 디자인 가이드</h6>
+            <p class="korLs">쏘카 브랜드 아이덴티티 가이드라인</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://bi.spoqa.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://bi.spoqa.com/" alt="Spoqa favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Spoqa Design Guideline</h6>
+            <p class="korLs">스포카의 서비스 UI/UX 가이드라인</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://remain.co.kr/page/designsystem/index.php" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://remain.co.kr/page/designsystem/index.php" alt="Remain Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Remain Design System</h6>
+            <p>리메인 앱의 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://developer.samsung.com/one-ui" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://developer.samsung.com/one-ui" alt="Samsung Develeper favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Samsung Develeper</h6>
+            <p class="korLs">삼성 개발자 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://design.buzzvil.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://design.buzzvil.com/" alt="Buzzvil Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Buzzvil Design System</h6>
+            <p class="korLs">버즈빌 UI/UX 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://m3.material.io/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://m3.material.io/" alt="Google favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Material Design</h6>
+            <p class="korLs">구글 안드로이드&웹 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://developer.apple.com/design/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://developer.apple.com/design/" alt="Apple Developer favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Apple Developer</h6>
+            <p class="korLs">애플 개발자 디자인 가이드 및 리소스</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://base.uber.com/6d2425e9f/p/294ab4-base-design-system" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://base.uber.com/6d2425e9f/p/294ab4-base-design-system" alt="Base Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Base Design System</h6>
+            <p class="korLs">베이스 UI/UX 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://creative.starbucks.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://creative.starbucks.com/" alt="Starbucks favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Starbucks Creative Expression</h6>
+            <p class="korLs">스타벅스 브랜드 표현 가이드</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://spectrum.adobe.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://spectrum.adobe.com/" alt="Adobe Design System Spectrum favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Adobe Design System Spectrum</h6>
+            <p class="korLs">어도비 UI/UX 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://airbnb.design/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://airbnb.design/" alt="Airbnb Design favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Airbnb Design</h6>
+            <p class="korLs">에어비앤비의 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://spotify.design/stories/design/design-systems" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://spotify.design/stories/design/design-systems" alt="Spotify Design favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Spotify Design</h6>
+            <p class="korLs">스포티파이 UI/UX 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://dropboxdesignstandards.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://dropboxdesignstandards.com/" alt="Dropbox Design Standards favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Dropbox Design Standards</h6>
+            <p class="korLs">드롭박스 UI/UX 가이드라인</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://atlassian.design/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://atlassian.design/" alt="Atlassian Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Atlassian Design System</h6>
+            <p class="korLs">업무 협업 도구 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://polaris.shopify.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://polaris.shopify.com/" alt="Shopify Polaris favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Shopify Polaris</h6>
+            <p class="korLs">전자상거래 플랫폼 UI/UX 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://brand.hudl.com/d/6DPwv1M8NxdQ/design#/overview/how-to-look-like- target="_blank">
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://brand.hudl.com/d/6DPwv1M8NxdQ/design#/overview/how-to-look-like-hudl" alt="Hudl favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Hudl Brand Guidelines</h6>
+            <p class="korLs">허들 디자인 개발 가이드</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://fluent2.microsoft.design/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://fluent2.microsoft.design/" alt="Fluent 2 Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Fluent 2 Design System</h6>
+            <p class="korLs">마이크로소프트 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://canvas.workday.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://canvas.workday.com/" alt="Workday Canvas Design System favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Workday Canvas Design System</h6>
+            <p class="korLs">Workday 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://carbondesignsystem.com/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://carbondesignsystem.com/" alt="">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Carbon Design System</h6>
+            <p class="korLs">IBM UI/UX 디자인 시스템</p>
+          </a>
+        </li>
+
+        <li class="listItem">
+          <a href="https://www.skyscanner.design/latest/welcome-to-backpack-Mtf5OEo4" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://www.skyscanner.design/latest/welcome-to-backpack-Mtf5OEo4" alt="Skyscanner Backpack favicon">
+              <span class="cate">DESIGN SYSTEM</span>
+            </figure>
+            <h6>Skyscanner Backpack</h6>
+            <p class="korLs">스카이스캐너 UI/UX 디자인 시스템</p> 
+          </a>
+        </li>
+
+        <!-------------------------------------- AI -------------------------------------->
+        <li class="listItem">
+          <a href="https://lumenor.ai/" target="_blank" >
+            <figure>
+              <img src="http://www.google.com/s2/favicons?domain=https://lumenor.ai/" alt="lumenor.ai favicon">
+              <span class="cate">AI</span>
+            </figure>
+            <h6>lumenor.ai</h6>
+            <p class="korLs">이미지 갤러시 및 생성</p> 
+          </a>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <footer id="footer">
+    <div class="footWrapper">
+      <div class="footInner">
+        <h2>GET IN TOUCH</h2>
+
+        <article class="footRightArea">
+          <div class="connectItemWrap">
+            <h6>CONNECT</h6>
+            <div class="item"><p>bobo9710@gmail.com</p></div>
+            <div class="item"><p>010-2100-7893</p></div>
+          </div>
+
+          <div class="connectItemWrap">
+            <h6>SOCIAL</h6>
+            <a href="#" target="_blank" class="item">
+              <p>GITHUB</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_745_2622)">
+                <path d="M1.33325 8H13.3333" stroke="#2D312A" stroke-miterlimit="10"/>
+                <path d="M9.33325 4C9.33325 4 9.83325 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83325 10.5 9.33325 12 9.33325 12" stroke="#2D312A" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="item">
+              <p>INSTAGRAM</p>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_745_2622)">
+                <path d="M1.33325 8H13.3333" stroke="#2D312A" stroke-miterlimit="10"/>
+                <path d="M9.33325 4C9.33325 4 9.83325 5.5 10.8333 6.5C11.8333 7.5 13.3333 8 13.3333 8C13.3333 8 11.8333 8.5 10.8333 9.5C9.83325 10.5 9.33325 12 9.33325 12" stroke="#2D312A" stroke-miterlimit="10"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <a href="javascript:void(0)" class="topBtn"><span>SCROLL TO TOP</span></a>
+        </article>
+      </div>
+      <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.scrollIn {
+  opacity: 0;
+  transform: translateY(20px); /* 초기 위치 조정 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 변환 효과 추가 */
+}
+
+.scrollIn.inView {
+  opacity: 1;
+  transform: translateY(0); /* 스크롤 인 뷰일 때의 위치 조정 */
+}

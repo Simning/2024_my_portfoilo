@@ -9,10 +9,11 @@ header {
   .headerWrapper {
     display: flex;
     justify-content: space-between;
-    padding: 2.4rem 4rem;
+    align-items: center;
+    padding: 1.6rem var(--grid-margin-size);
     
     .logo {
-      max-height: 2.8rem;
+      height: 2.8rem;
       opacity: 1;
     }
 
@@ -33,12 +34,12 @@ header {
             font-size: var(--fs-sub-title3);
             font-weight: var(--fw-sub-title3);
             line-height: 1;
-            color: var(--color-black);
+            color: var(--color-primary);
             transition: all .3s ease-in-out;
             cursor: pointer;
 
             &::after {
-              content: url('../src/common/gnb_pin_icon.svg');
+              content: url('../src/common/gnb_pin_icon_primary.svg');
               position: absolute;
               display: none;
               margin: -.8rem 0 0 .4rem;
@@ -54,7 +55,7 @@ header {
 
       .modeWrap {
         display: flex;
-        margin: 0 0 0 2.8rem;
+        margin: 0 0 0 2rem;
 
         a {
           display: flex;
@@ -69,7 +70,7 @@ header {
             width: .8rem;
             height: .8rem;
             border-radius: 50%;
-            background: #111;
+            background: var(--color-primary);
           }
           svg {display: none;}
 
@@ -80,6 +81,104 @@ header {
           &.active svg {display: block;}
         }
       }
+
+      .toggleMenu {
+        position: relative;
+        display: none;
+        width: 2.4rem;
+        height: 2.4rem;
+        cursor: pointer;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &::before {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: .2rem;
+            background: var(--color-primary);
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: .2rem;
+            margin: .6rem 0 0;
+            background: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-mode header {
+  .headerWrapper {
+    .logo {
+      max-height: 2.8rem;
+      opacity: 1;
+      path {
+        fill: var(--color-secondary);
+      }
+    }
+
+    nav {
+      .gnbMenu {
+        li {
+          .navLink {
+            color: var(--color-secondary);
+
+            &::after {
+              content: url('../src/common/gnb_pin_icon_secondary.svg');
+            }
+          }
+        }
+      }
+
+      .modeWrap {
+        a {
+          &::after {
+            background: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  header {
+    .headerWrapper {
+      padding: 1.2rem var(--grid-margin-size);
+      
+      .logo {
+        height: 2rem;
+
+        svg {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      nav {
+        .gnbMenu {display: none;}
+        .modeWrap {display: none;}
+        .toggleMenu {display: block;}
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  header {
+    .headerWrapper {
+      padding: 1.2rem var(--grid-margin-size);
+      
+      .logo {max-height: 2rem;}
     }
   }
 }

@@ -2,29 +2,31 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: var(--color-black);
+  background: var(--color-secondary);
   z-index: -1;
   overflow: hidden;
 
   .footWrapper {
     position: relative;
-    padding: 4.8rem 4rem 4rem;
+    padding: 4.8rem var(--grid-margin-size) 4rem;
 
-    .footFlexInner {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+    .footInner {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 0 var(--grid-gutter-size);
 
       & > h2 {
+        grid-column: 1 / span 9;
         font-family: 'roc-grotesk-wide';
         font-size: var(--fs-heading1);
         font-weight: var(--fw-heading1);
         line-height: var(--lh-heading1);
-        color: var(--color-white);
+        color: var(--color-primary);
       }
 
       .footRightArea {
-        width: 44.5rem;
+        grid-column: 10 / span 3;
+        width: 100%;
 
         .connectItemWrap {
           margin: 0 0 4rem;
@@ -35,7 +37,7 @@ footer {
             font-size: var(--fs-sub-title3);
             font-weight: var(--fw-sub-title3);
             line-height: var(--lh-sub-title3);
-            color: var(--color-white-40op);
+            color: var(--color-primary-40op);
           }
           .item {
             display: flex;
@@ -48,9 +50,13 @@ footer {
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
-              color: var(--color-white);
+              color: var(--color-primary);
             }
             svg {
+              max-width: 1.6rem;
+              max-height: 1.6rem;
+              min-width: 1.2rem;
+              min-height: 1.2rem;
               width: 1.6rem;
               height: 1.6rem;
               margin: -.1rem 0 0 .4rem;
@@ -60,10 +66,10 @@ footer {
         .topBtn {
           position: relative;
           display: block;
-          width: calc(100% + 4rem);
+          width: calc(100% + var(--grid-margin-size));
           margin: 8rem 0 0;
           padding: .5rem .8rem .3rem;
-          background: var(--color-white);
+          background: var(--color-primary);
           transition: all .3s ease-in-out;
 
           & > span {
@@ -71,7 +77,7 @@ footer {
             font-size: var(--fs-btn);
             font-weight: var(--fw-btn);
             line-height: 1;
-            color: var(--color-black);
+            color: var(--color-secondary);
             transition: all .3s ease-in-out;
             z-index: 3;
           }
@@ -84,7 +90,7 @@ footer {
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--color-black);
+            background: var(--color-secondary);
             transform: translateX(100%);
             transition: all .3s ease-in-out;
             z-index: 1;
@@ -94,7 +100,7 @@ footer {
             padding: .5rem 0rem .3rem;
 
             span {
-              color: var(--color-white);
+              color: var(--color-primary);
             }
             &::before {
               transform: translateX(0);
@@ -108,10 +114,215 @@ footer {
   .copy {
     position: absolute;
     bottom: 4rem;
-    left: 4rem;
+    left: var(--grid-margin-size);
     font-size: var(--fs-copy);
     font-weight: var(--fw-copy);
     line-height: 1;
-    color: var(--color-white-40op);
+    color: var(--color-primary-40op);
+  }
+}
+
+.dark-mode footer {
+  background: var(--color-primary);
+
+  .footWrapper {
+    .footInner {
+      & > h2 {
+        color: var(--color-secondary);
+      }
+
+      .footRightArea {
+        .connectItemWrap {
+          &:last-of-type {margin: 0;}
+          & > h6 {
+            color: var(--color-secondary-40op);
+          }
+
+          .item {
+            p {
+              color: var(--color-secondary);
+            }
+          }
+        }
+        .topBtn {
+          background: var(--color-secondary);
+
+          & > span {
+            color: var(--color-primary);
+          }
+
+          &::before {
+            background: var(--color-primary);
+          }
+
+          &:hover {
+            span {
+              color: var(--color-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copy {
+    color: var(--color-secondary-40op);
+  }
+}
+
+@media (max-width: 1440px){
+  footer {
+    .footWrapper {
+      .footInner {
+        & > h2 {grid-column: 1 / span 8;}
+
+        .footRightArea {grid-column: 9 / span 4;}
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px){
+  footer {
+    .footWrapper {
+      padding: 4rem var(--grid-margin-size) 3.2rem;
+  
+      .footInner {
+        & > h2 {grid-column: 1 / span 8;}
+  
+        .footRightArea {
+          grid-column: 9 / span 4;
+  
+          .connectItemWrap {margin: 0 0 3.2rem;}
+
+          .topBtn {
+            width: calc(100% + var(--grid-margin-size));
+            margin: 7.2rem 0 0;
+          }
+        }
+      }
+    }
+  
+    .copy {
+      bottom: 3.2rem;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  footer {
+    .footWrapper {
+      padding: 3.2rem var(--grid-margin-size) 2.4rem;
+  
+      .footInner {
+        grid-template-columns: repeat(8, 1fr);
+  
+        & > h2 {grid-column: 1 / span 5;}
+  
+        .footRightArea {
+          grid-column: 6 / span 3;
+
+          .connectItemWrap {margin: 0 0 2.8rem;}
+
+          .topBtn {
+            width: calc(100% + var(--grid-margin-size));
+            margin: 6rem 0 0;
+          }
+        }
+      }
+    }
+  
+    .copy {
+      bottom: 2.4rem;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  footer {
+    .footWrapper {
+      position: relative;
+      padding: clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) var(--grid-margin-size) 2rem;
+  
+      .footInner {
+        display: block;
+        width: 100%;
+  
+        & > h2 {
+          width: 100%;
+          margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
+        }
+  
+        .footRightArea {
+          width: 100%;
+  
+          .connectItemWrap {
+            margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
+
+            & > h6 {
+              margin: 0 0 clamp(.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
+              
+            }
+            .item {
+              margin: 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);
+
+              svg {
+                width: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
+                height: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
+                margin: -.1rem 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);
+              }
+            }
+          }
+          .topBtn {
+            position: relative;
+            display: block;
+            margin: clamp(3.2rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem) 0 0;
+            padding: .5rem .8rem .3rem;
+
+            &:hover {padding: .5rem 0rem .3rem;}
+          }
+        }
+      }
+    }
+  
+    .copy {
+      position: relative;
+      display: block;
+      margin: clamp(6rem, calc((80 / var(--viewportWidth)) * 100vw), 8rem) 0 0;
+      bottom: auto;
+      left: auto;
+    }
+  }
+}
+
+@media (max-width: 375px){
+  footer {
+    .footWrapper {
+      position: relative;
+      padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) 2rem;
+  
+      .footInner {
+        & > h2 {
+          width: 100%;
+          margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
+        }
+  
+        .footRightArea {
+          width: 100%;
+  
+          .connectItemWrap {
+            margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
+          }
+          .topBtn {margin: clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) 0 0;}
+        }
+      }
+    }
+  
+    .copy {
+      position: block;
+      margin: clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+      bottom: auto;
+      left: auto;
+    }
   }
 }

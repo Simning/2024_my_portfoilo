@@ -30,8 +30,8 @@ class BookmarkLayout {
       // 그렇지 않으면, 각 항목의 레이블 텍스트를 가져와서 대문자로 변환
       // 해당 카테고리를 포함하는 경우 해당 항목을 표시
       this.items.forEach(item => {
-        const label = item.querySelector('.label').textContent.toUpperCase();
-        if (label.includes(category)) {
+        const cate = item.querySelector('.cate').textContent.toUpperCase();
+        if (cate.includes(category)) {
           item.style.display = 'block';
         }
       });

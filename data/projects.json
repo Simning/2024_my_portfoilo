@@ -1,0 +1,145 @@
+[
+  {
+    "id": "wegamer",
+    "title": "위게이머",
+    "overview": "게임 외 환경에서도 활발한 소통을 원하는 유저가 많습니다. 사람들은 소통할 수 있는 플랫폼에 접근하기 쉽고, 명확한 특징을 가진 모임을 찾는 것을 번거롭게 느낍니다.\n위게이머는 공통된 관심사를 가진 사람들이 소통할 수 있도록 연결해주는 커뮤니티 앱입니다. 위게이머는 그룹을 쉽게 운영할 수 있게 도와주며, 같은 목적을 가진 높은 결속력의 그룹을 쉽게 찾을 수 있도록 디자인되었습니다.",
+    "client": "None Client",
+    "category": "App Concept Design",
+    "year": "2022",
+    "images": [
+      {"src": "wegamer_section01_img_full.png", "type": "full"},
+      {"src": "wegamer_section02_img_full.png", "type": "full"},
+      {"src": "wegamer_section03_img_left_half.png", "type": "half"},
+      {"src": "wegamer_section03_img_right_half.png", "type": "half"},
+      {"src": "wegamer_section04_img_full.png", "type": "full"},
+      {"src": "wegamer_section05_img_left_half.png", "type": "half"},
+      {"src": "wegamer_section05_img_right_half.png", "type": "half"},
+      {"src": "wegamer_section06_img_full.png", "type": "full"},
+      {"src": "wegamer_section07_img_full.png", "type": "full"},
+      {"src": "wegamer_section08_img_full.png", "type": "full"},
+      {"src": "wegamer_section09_img_full.png", "type": "full"},
+      {"src": "wegamer_section10_img_full.png", "type": "full"},
+      {"src": "wegamer_section11_img_left_half.png", "type": "half"},
+      {"src": "wegamer_section11_img_right_half.png", "type": "half"}
+    ]
+  },
+  {
+    "id": "calmcalm",
+    "title": "CalmCalm",
+    "overview": "전문적인 가구 제작 및 판매하는 E-Commerce 컨셉 웹사이트입니다 낮은 채도와 아늑하고 차분한 비주얼로, 사용자들에게 편안한 분위기를 제공하도록 디자인하였습니다.\nCalmCalm은 브랜드 아이덴티티를 강조할 뿐만 아니라, 다양한 프로모션과 VR 기술 컨텐츠를 통해 E-Commerce로서의 기능을 최대한 살리기 위해 노력했습니다. 이를 통해 고객들이 더욱 몰입감 있는 쇼핑 경험을 할 수 있도록 설계되었습니다.",
+    "client": "None Client",
+    "category": "Web Concept Design",
+    "year": "2022",
+    "images": [
+      {"src": "calmcalm_section01_img_full.png", "type": "full"},
+      {"src": "calmcalm_section02_img_full.png", "type": "full"},
+      {"src": "calmcalm_section03_img_full.png", "type": "full"},
+      {"src": "calmcalm_section04_img_full.png", "type": "full"},
+      {"src": "calmcalm_section05_img_left_half.png", "type": "half"},
+      {"src": "calmcalm_section05_img_right_half.png", "type": "half"},
+      {"src": "calmcalm_section06_img_full.png", "type": "full"},
+      {"src": "calmcalm_section07_img_full.png", "type": "full"},
+      {"src": "calmcalm_section08_img_full.png", "type": "full"},
+      {"src": "calmcalm_section09_img_full.png", "type": "full"},
+      {"src": "calmcalm_section10_img_full.png", "type": "full"}
+
+    ]
+  },
+  {
+    "id": "ulNewMaterials",
+    "title": "UL New Materials",
+    "overview": "국제산공은 발전소, 석유화학, 정유, 시멘트, 저장탱크 등의 보온 및 보냉 단열시공을 전문으로 하는 플랜트설비 전문건설회사입니다. 30년 이상의 업력을 바탕으로, 국내외에서 다양한 프로젝트를 성공적으로 수행해왔습니다.\n국제산공은 글로벌 시장에서의 기반을 다지고자 웹사이트를 리뉴얼했습니다. 이미지를 활용한 풀페이지 스크롤 형식을 채택하여 사용자의 몰입도를 높였습니다. 직관적인 콘텐츠 구성을 통해 회사의 전문성과 신뢰성을 명확히 전달하며, 효과적인 기업 홍보를 목표로 하였습니다.",
+    "client": "UL New Materials",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "ul_new_materials_section01_img_full.png", "type": "full"},
+      {"src": "ul_new_materials_section02_img_full.png", "type": "full"},
+      {"src": "ul_new_materials_section03_img_full.png", "type": "full"},
+      {"src": "ul_new_materials_section04_img_full.png", "type": "full"},
+      {"src": "ul_new_materials_section05_img_full.png", "type": "full"},
+      {"src": "ul_new_materials_section06_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "jungwooCompany",
+    "title": "정우컴퍼니",
+    "overview": "",
+    "client": "정우컴퍼니",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "jungwoo_company_section01_img_full.png", "type": "full"},
+      {"src": "jungwoo_company_section02_img_full.png", "type": "full"},
+      {"src": "jungwoo_company_section03_img_full.png", "type": "full"},
+      {"src": "jungwoo_company_section04_img_full.png", "type": "full"},
+      {"src": "jungwoo_company_section05_img_full.png", "type": "full"},
+      {"src": "jungwoo_company_section06_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "ztsecu",
+    "title": "지티시큐",
+    "overview": "",
+    "client": "(주)지티시큐",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "ztsecu_section01_img_full.png", "type": "full"},
+      {"src": "ztsecu_section02_img_full.png", "type": "full"},
+      {"src": "ztsecu_section03_img_full.png", "type": "full"},
+      {"src": "ztsecu_section04_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "bsgm",
+    "title": "BSG Materials",
+    "overview": "",
+    "client": "BSG Materials",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "bsg_materials_section01_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section02_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section03_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section04_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section05_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section06_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section07_img_full.png", "type": "full"},
+      {"src": "bsg_materials_section08_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "kukjae",
+    "title": "국제산공",
+    "overview": "국제산공은 발전소, 석유화학, 정유, 시멘트, 저장탱크 등의 보온 및 보냉 단열시공을 전문으로 하는 플랜트설비 전문건설회사입니다. 30년 이상의 업력을 바탕으로, 국내외에서 다양한 프로젝트를 성공적으로 수행해왔습니다.\n국제산공은 글로벌 시장에서의 기반을 다지고자 웹사이트를 리뉴얼했습니다. 이미지를 활용한 풀페이지 스크롤 형식을 채택하여 사용자의 몰입도를 높였습니다. 직관적인 콘텐츠 구성을 통해 회사의 전문성과 신뢰성을 명확히 전달하며, 효과적인 기업 홍보를 목표로 하였습니다.",
+    "client": "국제산공(주)",
+    "category": "Web Design",
+    "year": "2024",
+    "images": [
+      {"src": "kukjae_section01_img_full.png", "type": "full"},
+      {"src": "kukjae_section02_img_full.png", "type": "full"},
+      {"src": "kukjae_section03_img_full.png", "type": "full"},
+      {"src": "kukjae_section04_img_full.png", "type": "full"},
+      {"src": "kukjae_section05_img_full.png", "type": "full"},
+      {"src": "kukjae_section06_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "dowon",
+    "title": "도원엔지니어링 건축사사무소",
+    "overview": "전문성과 경험을 바탕으로 건축 설계와 감리 서비스를 제공하는 도원엔지니어링 건축사사무소를 새롭게 리뉴얼하였습니다. 기존 사이트의 브랜드 정보와 서비스를 더욱 쉽게 탐색할 수 있도록 변경하고, 정돈된 디자인으로 전문성과 신뢰도를 더욱 부각시켰습니다.",
+    "client": "도원엔지니어링건축사사무소",
+    "category": "Web Design",
+    "year": "2024",
+    "images": [
+      {"src": "dowon_section01_img_full.png", "type": "full"},
+      {"src": "dowon_section02_img_full.png", "type": "full"},
+      {"src": "dowon_section03_img_full.png", "type": "full"},
+      {"src": "dowon_section04_img_full.png", "type": "full"},
+      {"src": "dowon_section05_img_full.png", "type": "full"},
+      {"src": "dowon_section06_img_full.png", "type": "full"},
+      {"src": "dowon_section07_img_full.png", "type": "full"}
+    ]
+  }
+]

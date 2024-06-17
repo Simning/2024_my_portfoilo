@@ -5,7 +5,7 @@ class ProjectsLayout {
       this.spanElement = document.querySelector('.headingTxt span'); // 카운트를 표시할 span 요소 선택
       this.importRowIndex(); // 로드된 테이블 행 수를 표시하는 메서드 호출
       this.updateRowNumbers(); // 각 행의 순서를 업데이트하는 메서드 호출
-      this.initializeShowMoreRows(); // 'MORE PROJECT' 버튼 클릭 시 실행되는 함수 초기화
+      this.initializeShowMoreRows(); // 'MORE PROJECT' 버튼 클릭 시 실행되는 함수 호출
     });
   }
 
@@ -20,11 +20,11 @@ class ProjectsLayout {
   //////////* 각 행의 순서를 업데이트하는 메서드 *//////////
   updateRowNumbers() {
     if (this.tBody) {
-      const rows = Array.from(this.tBody.querySelectorAll('.row')).reverse(); // 행들을 역순으로 배열로 변환
+      const rows = this.tBody.querySelectorAll('.row');
       rows.forEach((row, index) => {
         const numCell = row.querySelector('.cell.num p');
         if (numCell) {
-          const order = (index + 1).toString().padStart(2, '0'); // 두 자리 수 형식으로 변환
+          const order = (rows.length - index).toString().padStart(2, '0'); // 두 자리 수 형식으로 변환
           numCell.textContent = order;
         }
       });
@@ -39,16 +39,21 @@ class ProjectsLayout {
 
     const showMoreRows = () => { // 함수를 화살표 함수로 변경
       const rows = this.tBody.querySelectorAll('.row'); // 모든 행 선택
+      const isSmallScreen = window.matchMedia("(max-width: 1024px)").matches;
+      
       for (let i = visibleRows; i < visibleRows + rowsPerPage; i++) {
         if (rows[i]) {
-          rows[i].style.display = 'flex'; // 다음 페이지에 해당하는 행들을 보이도록 설정
+          rows[i].style.display = isSmallScreen ? 'block' : 'grid';
         } else {
-          // 더 이상 추가할 행이 없는 경우 'MORE PROJECT' 버튼 영역을 숨김
-          moreBtn.style.display = 'none';
           break;
         }
       }
       visibleRows += rowsPerPage; // 보이는 행 개수 업데이트
+
+      // 모든 행이 보이는 경우 'MORE PROJECT' 버튼 영역을 숨김
+      if (visibleRows >= rows.length) {
+        moreBtn.style.display = 'none';
+      }
     };
 
     // 초기에는 추가 행을 보이지 않도록 설정
@@ -62,6 +67,5 @@ class ProjectsLayout {
   }
 }
 
-// 클래스의 인스턴스 생성 및 내보내기
 new ProjectsLayout();
 export default ProjectsLayout;

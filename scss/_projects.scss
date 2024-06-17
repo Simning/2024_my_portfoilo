@@ -1,8 +1,8 @@
 .projects {
-  .projWrapper {
+  .projectsSection {
     min-height: 100vh;
     margin: var(--header-size) 0 0;
-    padding: 2.4rem 4rem 8rem;
+    padding: 2.4rem var(--grid-margin-size) 8rem;
     background: var(--color-white);
 
     .headingTxt {
@@ -16,7 +16,7 @@
         font-size: var(--fs-heading1);
         font-weight: var(--fw-heading1);
         line-height: var(--lh-heading1);
-        color: var(--color-black);
+        color: var(--color-primary);
       }
       span {
         display: inline-block;
@@ -24,34 +24,46 @@
         font-size: var(--fs-body1);
         font-weight: var(--fw-body);
         line-height: 1;
-        color: var(--color-black);
+        color: var(--color-primary);
       }
     }
 
     .tableWrapper {
       .tHead {
-        display: flex;
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 0 var(--grid-gutter-size);
         align-items: center;
-        padding: 0 2rem;
-        border: 1px solid var(--color-black);
+        border: 1px solid var(--color-primary);
 
         .cell {
-          margin: 0 2rem 0 0;
+          position: relative;
           padding: 1.2rem 0;
-          border-bottom: 2px solid var(--color-black);
-          &:last-child {margin: 0;}
 
-          &.num {width: 15.53%}
-          &.proj {width: 43.44%;}
-          &.cate {width: 25.6%;}
-          &.year {width: 15.52%;}
+          &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--color-primary);
+          }
+
+          &:first-child {margin: 0 0 0 2rem;}
+          &:last-child {margin: 0 2rem 0 0;}
+
+          &.num {grid-column: 1 / span 2;}
+          &.proj {grid-column: 3 / span 5;}
+          &.cate {grid-column: 8 / span 3;}
+          &.year {grid-column: 11 / span 2;}
 
           & > h6 {
             font-size: var(--fs-sub-title3);
             font-weight: var(--fw-sub-title3);
             line-height: var(--lh-sub-title3);
-            color: var(--color-black);
+            color: var(--color-primary);
           }
         }
       }
@@ -60,39 +72,96 @@
         margin: 2rem 0 0;
 
         .row {
-          display: flex;
-          justify-content: flex-start;
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-gap: 0 var(--grid-gutter-size);
           align-items: center;
-          padding: 0 2rem;
-          border-bottom: 1px solid var(--color-black-20op);
+          border-bottom: 1px solid var(--color-primary-20op);
           transition: all .3s ease-in-out;
-          
-          .cell {
-            margin: 0 2rem 0 0;
-            padding: 2.2rem 0 1.8rem;
-            &:last-child {margin: 0;}
 
-            &.num {width: 15.53%}
-            &.proj {width: 43.44%;}
-            &.cate {width: 25.6%;}
-            &.year {width: 15.52%;}
+          .cell {
+            position: relative;
+            padding: 1.8rem 0 1.4rem;
+            z-index: 1;
+            transition: all .3s ease-in-out;
 
             & > p {
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
-              color: var(--color-black);
+              color: var(--color-primary);
               transition: all .3s ease-in-out;
             }
+
+            &.num {grid-column: 1 / span 2;}
+            &.proj {
+              grid-column: 3 / span 5;
+
+              p {
+                font-size: var(--fs-sub-title3);
+                font-weight: var(--fw-sub-title3);
+                line-height: var(--lh-sub-title3);
+              }
+            }
+            &.cate {grid-column: 8 / span 3;}
+            &.year {grid-column: 11 / span 2;}
+            &:first-child {margin: 0 0 0 2rem;}
+            &:last-child {margin: 0 2rem 0 0;}
           }
 
-          &:hover {
-            border-bottom: none;
-            background: var(--color-black);
+          /* href 값이 없는 경우 */
+          &:not([href]) {
+            &:before {
+              content: "Coming Soon";
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 0;
+              font-size: var(--fs-body1); 
+              font-weight: var(--fw-body);
+              line-height: var(--lh-body);
+              color: var(--color-white-76op);
+              background: var(--color-primary);
+              transition: all 0.3s ease-in-out;
+              z-index: 2;
+              opacity: 0;
+            }
 
-            .cell {
-              & > p {
-                color: var(--color-white);
+            &:hover::before {
+              top: 0;
+              height: 100%;
+              opacity: 1;
+            }
+          }
+        
+          /* href 값이 있는 경우 */
+          &[href] {
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 0;
+              background: var(--color-primary);
+              transition: all 0.3s ease-in-out;
+              z-index: 0;
+            }
+        
+            &:hover::before {
+              height: 100%;
+              top: 0;
+            }
+            &:hover {
+              .cell {
+                & > p {
+                  color: var(--color-white);
+                }
               }
             }
           }
@@ -110,7 +179,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        
+
         .dot {
           display: flex;
           justify-content: center;
@@ -122,18 +191,18 @@
             width: .3rem;
             height: .3rem;
             margin: 0 .2rem;
-            background: var(--color-black);
+            background: var(--color-primary);
             border-radius: 50%;
             transition: all .3s ease-in-out;
           }
         }
 
         p {
-          margin: 0 .6rem;
+          margin: 0 .8rem;
           font-size: var(--fs-btn);
           font-weight: var(--fw-btn);
           line-height: 1;
-          color: var(--color-black);
+          color: var(--color-primary);
           transition: all .3s ease-in-out;
         }
 
@@ -141,16 +210,178 @@
           .dot {
             span {
               margin: 0 .4rem;
-              background: var(--color-black-40op);
+              background: var(--color-primary-40op);
             }
           }
 
           p {
             margin: 0 .8rem;
-            color: var(--color-black-40op);
+            color: var(--color-primary-40op);
           }
         }
       }
+    }
+  }
+}
+
+.dark-mode.projects {
+  .projectsSection {
+    background: var(--color-black);
+
+    .headingTxt {
+      h2 {
+        color: var(--color-secondary);
+      }
+      span {
+        color: var(--color-secondary);
+      }
+    }
+
+    .tableWrapper {
+      .tHead {
+        border: 1px solid var(--color-secondary);
+
+        .cell {
+          &::before {background: var(--color-secondary);}
+          & > h6 {color: var(--color-secondary);}
+        }
+      }
+
+      .tBody {
+        .row {
+          border-bottom: 1px solid var(--color-secondary-20op);
+
+          .cell {
+            & > p {
+              color: var(--color-secondary);
+            }
+          }
+        
+          /* href 값이 없는 경우 */
+          &:not([href]) {
+            &:before {
+              color: var(--color-black-76op);
+              background: var(--color-secondary);
+            }
+          }
+        
+          /* href 값이 있는 경우 */
+          &[href] {
+            &::before {
+              background: var(--color-secondary);
+            }
+          }
+
+          &:hover {
+            .cell {
+              & > p {
+                color: var(--color-black);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btnArea {
+      .moreBtn {
+        .dot {
+          span {
+            background: var(--color-secondary);
+          }
+        }
+
+        p {
+          color: var(--color-secondary);
+        }
+
+        &:hover {
+          .dot {
+            span {
+              background: var(--color-secondary-40op);
+            }
+          }
+
+          p {
+            color: var(--color-secondary-40op);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px){
+  .projects {
+    .projectsSection {
+      .headingTxt {margin: 0 0 4.8rem -.6rem;}
+    }
+  }  
+}
+
+@media (max-width: 1280px){
+  .projects {
+    .projectsSection {
+      .headingTxt {margin: 0 0 4.8rem -.4rem;}
+    }
+  }
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 768px){
+  .projects {
+    .projectsSection {
+      padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
+
+      .headingTxt {margin: 0 0 clamp(2.4rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) 0;}
+  
+      .tableWrapper {
+        .tBody {
+          .row {
+            padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
+
+            .cell {
+              padding: 0;
+              
+              &:first-child {margin: 0}
+              &:last-child {margin: 0;}
+            }
+          }
+        }
+      }
+  
+      .btnArea {margin: clamp(3.2rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem) 0 0;}
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .projects {
+    .projectsSection {
+      padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+
+      .headingTxt {margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0;}
+  
+      .tableWrapper {
+        .tBody {
+          .row {
+            padding: clamp(1rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
+
+            .cell {
+              &.proj {margin: 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);}
+
+              &.cate {padding: 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem) 0 0;}
+
+              &.year {padding: 0 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);}
+            }
+          }
+        }
+      }
+  
+      .btnArea {margin: clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) 0 0;}
     }
   }
 }
