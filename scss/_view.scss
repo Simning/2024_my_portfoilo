@@ -166,21 +166,55 @@
       top: auto;
       width: 100%;
       margin: var(--header-size) 0 0;
-      padding: clamp(1.6rem,) var(--grid-margin-size) 6rem;
+      padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
 
-      #projectOverview {margin: 0 0 4rem;}
+      #projectOverview {margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem);}
   
-      .metaData {margin: 0 0 4rem;}
+      .metaData {
+        margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem);
+        
+        .dataWrap {
+          margin: 0 0 clamp(.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
+          
+          h6 {
+            margin: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0;
+          }
+        }
+      }
     }
-  
+
     .showcaseInner {
       width: 100%;
       margin: 0;
       padding: 0 .8rem .8rem;
+
+      #projectImages {
+        .halfImage {
+          grid-column: span 12;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 375px){
+  .projectView {
+    .sideInner {
+      padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem);
 
+      #projectOverview {margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);}
+  
+      .metaData {
+        margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
+      
+        .dataWrap {
+          margin: 0 0 clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);
+          
+          h6 {
+            margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0;
+          }
+        }
+      }
+    }
+  }
 }

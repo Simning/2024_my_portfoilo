@@ -328,7 +328,68 @@
 }
 
 @media (max-width: 1024px){
+  .projects {
+    .projectsSection {
+      padding: 2.4rem var(--grid-margin-size) 7.2rem;
 
+      .headingTxt {margin: 0 0 4rem -.4rem;}
+  
+      .tableWrapper {
+        .tHead {display: none;}
+  
+        .tBody {
+          margin: 0;
+          border-top: 1px solid var(--color-primary);
+  
+          .row {
+            display: block;
+            padding: 1.6rem;
+
+            .cell {
+              display: inline-block;
+              padding: 0;
+
+              & p {
+                font-size: var(--fs-body2);
+                color: var(--color-primary-76op);
+              }
+
+              &.num {display: none;}
+
+              &.proj {
+                width: 100%;
+                margin: 0 0 .8rem;
+              }
+
+              &.cate {
+                padding: 0 .8rem 0 0;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  top: 50%;
+                  right: -.3rem;
+                  transform: translateY(-50%);
+                  width: .3rem;
+                  height: .3rem;
+                  background-color: var(--color-primary-40op);
+                  border-radius: 50%;
+                }
+              }
+
+              &.year {padding: 0 0 0 .8rem;}
+
+              &:first-child {margin: 0}
+              &:last-child {margin: 0;}
+            }
+          }
+        }
+      }
+  
+      .btnArea {margin: 4rem 0 0;}
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -345,7 +406,7 @@
 
             .cell {
               padding: 0;
-              
+
               &:first-child {margin: 0}
               &:last-child {margin: 0;}
             }
@@ -363,7 +424,7 @@
     .projectsSection {
       padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
 
-      .headingTxt {margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0;}
+      .headingTxt {margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) 0;}
   
       .tableWrapper {
         .tBody {

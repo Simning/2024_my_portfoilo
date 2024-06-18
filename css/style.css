@@ -157,7 +157,7 @@ button, input {
     --fs-heading2: ;
     --fs-heading3: ;
     --fs-sub-title1: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
-    --fs-sub-title2: clamp(1.8rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem);
+    --fs-sub-title2: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem);
     --fs-sub-title3: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
     --fs-body1: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
     --fs-body2: clamp(1.2rem, calc((14 / var(--viewportWidth)) * 100vw), 1.4rem);
@@ -826,6 +826,51 @@ header {
 @media (max-width: 1280px) {
   .projects .projectsSection .headingTxt {
     margin: 0 0 4.8rem -.4rem; } }
+@media (max-width: 1024px) {
+  .projects .projectsSection {
+    padding: 2.4rem var(--grid-margin-size) 7.2rem; }
+    .projects .projectsSection .headingTxt {
+      margin: 0 0 4rem -.4rem; }
+    .projects .projectsSection .tableWrapper .tHead {
+      display: none; }
+    .projects .projectsSection .tableWrapper .tBody {
+      margin: 0;
+      border-top: 1px solid var(--color-primary); }
+      .projects .projectsSection .tableWrapper .tBody .row {
+        display: block;
+        padding: 1.6rem; }
+        .projects .projectsSection .tableWrapper .tBody .row .cell {
+          display: inline-block;
+          padding: 0; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell p {
+            font-size: var(--fs-body2);
+            color: var(--color-primary-76op); }
+          .projects .projectsSection .tableWrapper .tBody .row .cell.num {
+            display: none; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell.proj {
+            width: 100%;
+            margin: 0 0 .8rem; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell.cate {
+            padding: 0 .8rem 0 0; }
+            .projects .projectsSection .tableWrapper .tBody .row .cell.cate::after {
+              content: '';
+              position: absolute;
+              display: block;
+              top: 50%;
+              right: -.3rem;
+              transform: translateY(-50%);
+              width: .3rem;
+              height: .3rem;
+              background-color: var(--color-primary-40op);
+              border-radius: 50%; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell.year {
+            padding: 0 0 0 .8rem; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell:first-child {
+            margin: 0; }
+          .projects .projectsSection .tableWrapper .tBody .row .cell:last-child {
+            margin: 0; }
+    .projects .projectsSection .btnArea {
+      margin: 4rem 0 0; } }
 @media (max-width: 768px) {
   .projects .projectsSection {
     padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
@@ -845,7 +890,7 @@ header {
   .projects .projectsSection {
     padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .projects .projectsSection .headingTxt {
-      margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0; }
+      margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) 0; }
     .projects .projectsSection .tableWrapper .tBody .row {
       padding: clamp(1rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem); }
       .projects .projectsSection .tableWrapper .tBody .row .cell.proj {
@@ -968,38 +1013,32 @@ header {
     top: auto;
     width: 100%;
     margin: var(--header-size) 0 0;
-    padding: clamp(1.6rem) var(--grid-margin-size) 6rem; }
+    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .projectView .sideInner #projectOverview {
-      margin: 0 0 4rem; }
+      margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem); }
     .projectView .sideInner .metaData {
-      margin: 0 0 4rem; }
+      margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem); }
+      .projectView .sideInner .metaData .dataWrap {
+        margin: 0 0 clamp(0.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem); }
+        .projectView .sideInner .metaData .dataWrap h6 {
+          margin: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0; }
   .projectView .showcaseInner {
     width: 100%;
     margin: 0;
-    padding: 0 .8rem .8rem; } }
-.dark-mode.about .aboutSection {
-  background: var(--color-black); }
-  .dark-mode.about .aboutSection .headingTxt h2 {
-    color: var(--color-secondary); }
-  .dark-mode.about .aboutSection .contentsWrapper .stickyInner > figure {
-    background: #d9d9d9; }
-  .dark-mode.about .aboutSection .contentsWrapper .stickyInner > h3 {
-    color: var(--color-secondary); }
-    .dark-mode.about .aboutSection .contentsWrapper .stickyInner > h3 .lightText {
-      color: var(--color-secondary-40op); }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap h6 {
-    color: var(--color-secondary-40op); }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > p {
-    color: var(--color-secondary); }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li > p {
-    color: var(--color-secondary); }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li > span {
-    color: var(--color-secondary-76op); }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li .lightVersionLogo {
-    display: none; }
-  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li .darkVersionLogo {
-    display: block; }
-
+    padding: 0 .8rem .8rem; }
+    .projectView .showcaseInner #projectImages .halfImage {
+      grid-column: span 12; } }
+@media (max-width: 375px) {
+  .projectView .sideInner {
+    padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem); }
+    .projectView .sideInner #projectOverview {
+      margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem); }
+    .projectView .sideInner .metaData {
+      margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem); }
+      .projectView .sideInner .metaData .dataWrap {
+        margin: 0 0 clamp(0.6rem, calc((8 / var(--viewportWidth)) * 100vw), 0.8rem); }
+        .projectView .sideInner .metaData .dataWrap h6 {
+          margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0; } }
 .about .aboutSection {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1020,29 +1059,8 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 2rem; }
-    .about .aboutSection .contentsWrapper .stickyInner {
-      grid-column: 1 / span 3;
-      /* 1~3번째 컬럼 */
-      position: sticky;
-      top: var(--header-size); }
-      .about .aboutSection .contentsWrapper .stickyInner > figure {
-        display: block;
-        width: 100%;
-        margin: 0 0 2.8rem;
-        padding: 0 0 73.92%;
-        background: #d9d9d9; }
-      .about .aboutSection .contentsWrapper .stickyInner > h3 {
-        font-size: var(--fs-sub-title1);
-        font-weight: var(--fw-sub-title1);
-        line-height: var(--lh-sub-title1);
-        color: var(--color-primary); }
-        .about .aboutSection .contentsWrapper .stickyInner > h3 .lightText {
-          font-size: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-          color: var(--color-primary-40op); }
     .about .aboutSection .contentsWrapper .introInner {
-      grid-column: 7 / span 6; }
+      grid-column: 1 / span 6; }
       .about .aboutSection .contentsWrapper .introInner .contentWrap {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -1083,39 +1101,56 @@ header {
               display: block; }
             .about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea ul li .darkVersionLogo {
               display: none; }
+    .about .aboutSection .contentsWrapper .stickyInner {
+      grid-column: 10 / span 3;
+      /* 1~3번째 컬럼 */ }
+      .about .aboutSection .contentsWrapper .stickyInner .stickyWrap {
+        position: sticky;
+        top: var(--header-size); }
+        .about .aboutSection .contentsWrapper .stickyInner .stickyWrap > figure {
+          display: block;
+          width: 100%;
+          margin: 0 0 2.8rem;
+          padding: 0 0 73.92%;
+          background: #d9d9d9; }
+        .about .aboutSection .contentsWrapper .stickyInner .stickyWrap > h3 {
+          font-size: var(--fs-sub-title1);
+          font-weight: var(--fw-sub-title1);
+          line-height: var(--lh-sub-title1);
+          color: var(--color-primary); }
+          .about .aboutSection .contentsWrapper .stickyInner .stickyWrap > h3 .lightText {
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            color: var(--color-primary-40op); }
 
-.dark-mode.bookmark .bookmarkSection {
+.dark-mode.about .aboutSection {
   background: var(--color-black); }
-  .dark-mode.bookmark .bookmarkSection .headingTxt h2 {
+  .dark-mode.about .aboutSection .headingTxt h2 {
     color: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .headingTxt span {
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap h6 {
+    color: var(--color-secondary-40op); }
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > p {
     color: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .tabs .tab {
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li > p {
     color: var(--color-secondary); }
-    .dark-mode.bookmark .bookmarkSection .tabs .tab.active {
-      color: var(--color-black);
-      background: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
-    border: 1px solid rgba(166, 169, 153, 0.12); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a figure .cate {
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li > span {
+    color: var(--color-secondary-76op); }
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li .lightVersionLogo {
+    display: none; }
+  .dark-mode.about .aboutSection .contentsWrapper .introInner .contentWrap .rightArea > ul li .darkVersionLogo {
+    display: block; }
+  .dark-mode.about .aboutSection .contentsWrapper .stickyInner .stickyWrap > figure {
+    background: #d9d9d9; }
+  .dark-mode.about .aboutSection .contentsWrapper .stickyInner .stickyWrap > h3 {
+    color: var(--color-secondary); }
+    .dark-mode.about .aboutSection .contentsWrapper .stickyInner .stickyWrap > h3 .lightText {
       color: var(--color-secondary-40op); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a h6 {
-      color: var(--color-secondary); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a p {
-      color: var(--color-secondary-76op); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover {
-      background: var(--color-secondary); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover figure .cate {
-        color: var(--color-black-40op); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover h6 {
-        color: var(--color-black); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
-        color: var(--color-black-76op); }
 
 .bookmark .bookmarkSection {
   min-height: 100vh;
   margin: var(--header-size) 0 0;
-  padding: 2.4rem 4rem 8rem;
+  padding: 2.4rem var(--grid-margin-size) 8rem;
   background: var(--color-white); }
   .bookmark .bookmarkSection .headingTxt {
     margin: 0 0 6rem -.8rem; }
@@ -1128,7 +1163,15 @@ header {
   .bookmark .bookmarkSection .tabs {
     display: flex;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
+    .bookmark .bookmarkSection .tabs::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */ }
     .bookmark .bookmarkSection .tabs .tab {
       display: block;
       margin: 0 2rem 0 0;
@@ -1138,7 +1181,8 @@ header {
       line-height: 1;
       color: var(--color-primary);
       transition: all .3s ease-in-out;
-      cursor: pointer; }
+      cursor: pointer;
+      white-space: nowrap; }
       .bookmark .bookmarkSection .tabs .tab:hover {
         opacity: .4; }
       .bookmark .bookmarkSection .tabs .tab.active:hover {
@@ -1153,7 +1197,7 @@ header {
     .bookmark .bookmarkSection .listWrapper .itemsInner {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-gap: 2rem; }
+      grid-gap: var(--grid-gutter-size); }
       .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {
         grid-column: span 3; }
         .bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
@@ -1198,6 +1242,84 @@ header {
             .bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
               color: var(--color-white-76op); }
 
+.dark-mode.bookmark .bookmarkSection {
+  background: var(--color-black); }
+  .dark-mode.bookmark .bookmarkSection .headingTxt h2 {
+    color: var(--color-secondary); }
+  .dark-mode.bookmark .bookmarkSection .headingTxt span {
+    color: var(--color-secondary); }
+  .dark-mode.bookmark .bookmarkSection .tabs .tab {
+    color: var(--color-secondary); }
+    .dark-mode.bookmark .bookmarkSection .tabs .tab.active {
+      color: var(--color-black);
+      background: var(--color-secondary); }
+  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
+    border: 1px solid rgba(166, 169, 153, 0.12); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a figure .cate {
+      color: var(--color-secondary-40op); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a h6 {
+      color: var(--color-secondary); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a p {
+      color: var(--color-secondary-76op); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover {
+      background: var(--color-secondary); }
+      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover figure .cate {
+        color: var(--color-black-40op); }
+      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover h6 {
+        color: var(--color-black); }
+      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
+        color: var(--color-black-76op); }
+
+@media (max-width: 1440px) {
+  .bookmark .bookmarkSection .headingTxt {
+    margin: 0 0 4.8rem -.6rem; } }
+@media (max-width: 1280px) {
+  .bookmark .bookmarkSection .headingTxt {
+    margin: 0 0 4.8rem -.6rem; }
+  .bookmark .bookmarkSection .listWrapper {
+    margin: 3.6rem 0 0; }
+    .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {
+      grid-column: span 4; } }
+@media (max-width: 1024px) {
+  .bookmark .bookmarkSection {
+    padding: 2.4rem var(--grid-margin-size) 7.2rem; }
+    .bookmark .bookmarkSection .headingTxt {
+      margin: 0 0 4rem -.4rem; }
+    .bookmark .bookmarkSection .listWrapper {
+      margin: 3.2rem 0 0; }
+      .bookmark .bookmarkSection .listWrapper .itemsInner {
+        grid-template-columns: repeat(8, 1fr); }
+        .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {
+          grid-column: span 4; } }
+@media (max-width: 768px) {
+  .bookmark .bookmarkSection {
+    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
+    .bookmark .bookmarkSection .headingTxt {
+      margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) calc(clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem) * -1); }
+    .bookmark .bookmarkSection .tabs .tab {
+      margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0; }
+    .bookmark .bookmarkSection .listWrapper {
+      margin: clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) 0 0; }
+      .bookmark .bookmarkSection .listWrapper .itemsInner {
+        grid-template-columns: repeat(4, 1fr); }
+        .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {
+          grid-column: span 2; }
+          .bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
+            padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem); } }
+@media (max-width: 520px) {
+  .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {
+    grid-column: 1 / -1; } }
+@media (max-width: 375px) {
+  .bookmark .bookmarkSection {
+    padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
+    .bookmark .bookmarkSection .headingTxt {
+      margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0; }
+    .bookmark .bookmarkSection .tabs .tab {
+      margin: 0 clamp(0.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem) 0 0; }
+    .bookmark .bookmarkSection .listWrapper {
+      margin: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0 0; }
+      .bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
+        padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem); } }
 footer {
   position: fixed;
   bottom: 0;

@@ -118,59 +118,6 @@
 //   }
 // }
 
-.dark-mode.about {
-  .aboutSection {
-    background: var(--color-black);
-
-    .headingTxt {
-      h2 {
-        color: var(--color-secondary);
-      }
-    }
-
-    .contentsWrapper {
-      .stickyInner {
-        & > figure {
-          background: #d9d9d9;
-        }
-        & > h3 {
-          color: var(--color-secondary);
-  
-          & .lightText {
-            color: var(--color-secondary-40op);
-          }
-        }
-      }
-
-      .introInner {
-        .contentWrap {
-          h6 {
-            color: var(--color-secondary-40op);
-          }
-          .rightArea {
-            & > p {
-              color: var(--color-secondary);
-            }
-  
-            & > ul {
-              li {
-                & > p {
-                  color: var(--color-secondary);
-                }
-                & > span {
-                  color: var(--color-secondary-76op);
-                }
-                & .lightVersionLogo {display: none;}
-                & .darkVersionLogo {display: block;}
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .about {
   .aboutSection {
     display: grid;
@@ -198,35 +145,8 @@
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 0 2rem;
 
-      .stickyInner {
-        grid-column: 1 / span 3; /* 1~3번째 컬럼 */
-        position: sticky;
-        top: var(--header-size);
-
-        & > figure {
-          display: block;
-          width: 100%;
-          margin: 0 0 2.8rem;
-          padding: 0 0 73.92%;
-          background: #d9d9d9;
-        }
-        & > h3 {
-          font-size: var(--fs-sub-title1);
-          font-weight: var(--fw-sub-title1);
-          line-height: var(--lh-sub-title1);
-          color: var(--color-primary);
-  
-          & .lightText {
-            font-size: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-            color: var(--color-primary-40op);
-          }
-        }
-      }
-
       .introInner {
-        grid-column: 7 / span 6;
+        grid-column: 1 / span 6;
   
         .contentWrap {
           display: grid;
@@ -243,7 +163,7 @@
             line-height: var(--lh-sub-title3);
             color: var(--color-primary-40op);
           }
-          
+
           .rightArea {
             grid-column: 3 / span 4;
   
@@ -277,6 +197,92 @@
                 & .lightVersionLogo {display: block;}
                 & .darkVersionLogo {display: none;}
               }
+            }
+          }
+        }
+      }
+
+      .stickyInner {
+        grid-column: 10 / span 3; /* 1~3번째 컬럼 */
+
+        .stickyWrap {
+          position: sticky;
+          top: var(--header-size);
+
+          & > figure {
+            display: block;
+            width: 100%;
+            margin: 0 0 2.8rem;
+            padding: 0 0 73.92%;
+            background: #d9d9d9;
+          }
+          & > h3 {
+            font-size: var(--fs-sub-title1);
+            font-weight: var(--fw-sub-title1);
+            line-height: var(--lh-sub-title1);
+            color: var(--color-primary);
+    
+            & .lightText {
+              font-size: inherit;
+              font-weight: inherit;
+              line-height: inherit;
+              color: var(--color-primary-40op);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark-mode.about {
+  .aboutSection {
+    background: var(--color-black);
+
+    .headingTxt {
+      h2 {
+        color: var(--color-secondary);
+      }
+    }
+
+    .contentsWrapper {
+      .introInner {
+        .contentWrap {
+          h6 {
+            color: var(--color-secondary-40op);
+          }
+
+          .rightArea {
+            & > p {
+              color: var(--color-secondary);
+            }
+  
+            & > ul {
+              li {
+                & > p {
+                  color: var(--color-secondary);
+                }
+                & > span {
+                  color: var(--color-secondary-76op);
+                }
+                & .lightVersionLogo {display: none;}
+                & .darkVersionLogo {display: block;}
+              }
+            }
+          }
+        }
+      }
+
+      .stickyInner {
+        .stickyWrap {
+          & > figure {
+            background: #d9d9d9;
+          }
+          & > h3 {
+            color: var(--color-secondary);
+    
+            & .lightText {
+              color: var(--color-secondary-40op);
             }
           }
         }
