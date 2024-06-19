@@ -1,4 +1,6 @@
 :root {
+  --viewportWidth: 1920;
+
   /* layout */ 
   --header-size: 6rem;
   --grid-margin-size: 4rem;
@@ -12,7 +14,7 @@
   --color-secondary: rgb(166, 169, 153);
   --color-secondary-76op: rgba(166, 169, 153, .76);
   --color-secondary-40op: rgba(166, 169, 153, .4);
-  --color-secondary-20op: rgba(166, 169, 153, .2);
+  --color-secondary-20op: rgba(169, 153, 161, 0.2);
   --color-white: rgb(246, 242, 239);
   --color-white-76op: rgba(246, 242, 239, .76);
   --color-white-40op: rgba(246, 242, 239, .4);
@@ -21,9 +23,8 @@
   --color-black-40op: rgb(23, 23, 23, .4);
 
   /* font-size */
-  --fs-heading1: clamp(7.8rem, calc((120 / 1920) * 100vw), 12rem);
-  --fs-heading2: 6rem;
-  --fs-heading3: 4rem;
+  --fs-heading1: clamp(7.8rem, calc((120 / var(--viewportWidth)) * 100vw), 12rem);
+  --fs-heading2: clamp(4.4rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
   --fs-sub-title1: 2.4rem;
   --fs-sub-title2: 2rem;
   --fs-sub-title3: 1.6rem;
@@ -36,8 +37,8 @@
 
   /* font-weight */
   --fw-heading1: 300;
-  --fw-heading2: 500;
-  --fw-heading3: 500;
+  --fw-heading2: 400;
+  --fw-heading3: 400;
   --fw-sub-title1: 500;
   --fw-sub-title2: 500;
   --fw-sub-title3: 500;
@@ -66,7 +67,8 @@
     --viewportWidth: 1440;
 
     /* font-size */
-    --fs-heading1: clamp(7rem, calc((78 / var(--viewportWidth)) * 100vw), 7.8rem);
+    --fs-heading1: clamp(7.2rem, calc((80 / var(--viewportWidth)) * 100vw), 8rem);
+    --fs-heading2: clamp(4rem, calc((44 / var(--viewportWidth)) * 100vw), 4.4rem);
   }
 }
 
@@ -80,7 +82,8 @@
     --grid-gutter-size: 2rem;
 
     /* font-size */
-    --fs-heading1: clamp(6rem, calc((70 / var(--viewportWidth)) * 100vw), 7rem);
+    --fs-heading1: clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
+    --fs-heading2: clamp(3.2rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem);
   }
 }
 
@@ -95,6 +98,7 @@
 
     /* font-size */
     --fs-heading1: clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+    --fs-heading2: clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
   }
 }
 
@@ -108,8 +112,7 @@
 
     /* font-size */
     --fs-heading1: clamp(3.2rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem);
-    --fs-heading2: ;
-    --fs-heading3: ;
+    --fs-heading2: clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
     --fs-sub-title1: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
     --fs-sub-title2: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem);
     --fs-sub-title3: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
@@ -132,8 +135,7 @@
 
     /* font-size */
     --fs-heading1: clamp(2.4rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
-    --fs-heading2: ;
-    --fs-heading3: ;
+    --fs-heading2: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
     --fs-sub-title1: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem);
     --fs-sub-title2: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
     --fs-sub-title3: clamp(1.2rem, calc((14 / var(--viewportWidth)) * 100vw), 1.4rem);
