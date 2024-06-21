@@ -432,11 +432,19 @@
             padding: clamp(1rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
 
             .cell {
-              &.proj {margin: 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);}
+              &.proj {margin: 0 0 .4rem;}
 
-              &.cate {padding: 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem) 0 0;}
+              &.cate {
+                padding: 0 .4rem 0 0;
+                
+                &::after {
+                  right: -.2rem;
+                  width: .2rem;
+                  height: .2rem;
+                }
+              }
 
-              &.year {padding: 0 0 0 clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem);}
+              &.year {padding: 0 0 0 .4rem;}
             }
           }
         }

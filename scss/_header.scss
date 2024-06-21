@@ -7,6 +7,7 @@ header {
   transition: all .3s ease-in-out;
 
   .headerWrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,18 +16,20 @@ header {
     .logo {
       height: 2.8rem;
       opacity: 1;
+      z-index: 10;
     }
 
-    nav {
+    .primaryNav {
       display: flex;
       align-items: center;
+      z-index: 10;
 
       .gnbMenu {
         display: flex;
         margin: .2rem 0 0;
         
         li {
-          margin: 0 2rem;
+          margin: 0 1.4rem;
           cursor: pointer;
 
           .navLink {
@@ -55,7 +58,7 @@ header {
 
       .modeWrap {
         display: flex;
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 1rem;
 
         a {
           display: flex;
@@ -81,36 +84,104 @@ header {
           &.active svg {display: block;}
         }
       }
+    }
 
-      .toggleMenu {
-        position: relative;
-        display: none;
-        width: 2.4rem;
-        height: 2.4rem;
-        cursor: pointer;
+    .slideDownNav {
+      position: absolute;
+      display: none;
+      top: -200%;
+      left: 0;
+      width: 100%;
+      padding: 2rem var(--grid-margin-size) 2.4rem;
+      background: var(--color-white);
+      transition: top 0.3s ease-in-out;
+      overflow: hidden;
+      z-index: 3;
+      animation: slideDown .3s forwards;
 
-        span {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .8rem var(--grid-gutter-size);
+        margin: 0 0 1.6rem;
 
-          &::before {
-            content: '';
-            display: block;
-            width: 2rem;
-            height: .2rem;
-            background: var(--color-primary);
+        li {
+          grid-column: span 2;
+  
+          .navLink {
+            font-size: var(--fs-sub-title3);
+            font-weight: var(--fw-sub-title3);
+            line-height: var(--lh-sub-title3);
+            color: var(--color-primary);
           }
+        }
+      }
+
+      .modeWrap {
+        display: flex;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
+          height: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
+
           &::after {
             content: '';
             display: block;
-            width: 2rem;
-            height: .2rem;
-            margin: .6rem 0 0;
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
             background: var(--color-primary);
           }
+          
+          svg {display: none;}
+
+          &.active::after {
+            width: 0;
+            height: 0;
+          }
+          &.active svg {display: block;}
         }
+      }
+
+      &.open {display:block; top: 100%;}
+      &.close {display: none;}
+    }
+
+    .toggleMenu {
+      position: relative;
+      display: none;
+      width: 2.4rem;
+      height: 2.4rem;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+          content: '';
+          display: block;
+          width: 2rem;
+          height: .2rem;
+          background: var(--color-primary);
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 2rem;
+          height: .2rem;
+          margin: .6rem 0 0;
+          background: var(--color-primary);
+        }
+      }
+
+      &.open {
+        
       }
     }
   }
@@ -126,7 +197,7 @@ header {
       }
     }
 
-    nav {
+    .primaryNav {
       .gnbMenu {
         li {
           .navLink {
@@ -147,10 +218,33 @@ header {
         }
       }
     }
+
+    .slideDownNav {
+      background: var(--color-black);
+
+      ul {
+        li {
+          .navLink {color: var(--color-secondary);}
+        }
+      }
+
+      .modeWrap {
+        a {
+          &::after {background: var(--color-secondary);}
+        }
+      }
+    }
+
+    .toggleMenu {
+      span {
+        &::before {background: var(--color-secondary);}
+        &::after {background: var(--color-secondary);}
+      }
+    }
   }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 768px){
   header {
     .headerWrapper {
       padding: 1.2rem var(--grid-margin-size);
@@ -164,21 +258,58 @@ header {
         }
       }
 
-      nav {
+      .primaryNav {
         .gnbMenu {display: none;}
         .modeWrap {display: none;}
-        .toggleMenu {display: block;}
+      }
+
+      .toggleMenu {display: block;}
+    }
+  }
+}
+
+@media (max-width: 375px){
+  header {
+    .headerWrapper {
+      .slideDownNav {
+        padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
+    
+        ul {
+          grid-gap: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) var(--grid-gutter-size);
+          margin: 0 0 clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);
+        }
+    
+        .modeWrap {
+          a {
+            &::after {
+              width: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);
+              height: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);
+            }
+          }
+        }
       }
     }
   }
 }
 
-@media (max-width: 768px){
-  header {
-    .headerWrapper {
-      padding: 1.2rem var(--grid-margin-size);
-      
-      .logo {max-height: 2rem;}
-    }
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }

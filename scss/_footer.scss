@@ -113,6 +113,7 @@ footer {
 
   .copy {
     position: absolute;
+    display: inline-block;
     bottom: 4rem;
     left: var(--grid-margin-size);
     font-size: var(--fs-copy);
@@ -287,7 +288,6 @@ footer {
   
     .copy {
       position: relative;
-      display: block;
       margin: clamp(6rem, calc((80 / var(--viewportWidth)) * 100vw), 8rem) 0 0;
       bottom: auto;
       left: auto;
@@ -319,8 +319,8 @@ footer {
     }
   
     .copy {
-      position: block;
-      margin: clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+      position: relative;
+      margin: clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem) 0 0;
       bottom: auto;
       left: auto;
     }

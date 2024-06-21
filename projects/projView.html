@@ -28,10 +28,10 @@
         </svg>
       </a>
 
-      <nav>
+      <nav class="primaryNav">
         <ul class="gnbMenu">
           <li><a href="../index.html" class="navLink active">HOME</a></li>
-          <li><a href="./projects.html" class="navLink">PROJECTS</a></li>
+          <li><a href="../projects.html" class="navLink">PROJECTS</a></li>
           <li><a href="../about/about.html" class="navLink">ABOUT</a></li>
           <li><a href="../bookmark/bookmark.html" class="navLink">BOOKMARK</a></li>
           <li><a href="mailto:bobo9710@gmail.com.com" class="navLink">CONTACT</a></li>
@@ -61,8 +61,22 @@
           </a>
         </div>
         <div class="toggleMenu"><span></span></div>
+        <ul class="slideDownMenu">
+          <li><a href="../index.html" class="navLink active">HOME</a></li>
+          <li><a href="../projects.html" class="navLink">PROJECTS</a></li>
+          <li><a href="../about/about.html" class="navLink">ABOUT</a></li>
+          <li><a href="../bookmark/bookmark.html" class="navLink">BOOKMARK</a></li>
+          <li><a href="mailto:bobo9710@gmail.com.com" class="navLink">CONTACT</a></li>
+        </ul>
       </nav>
     </div>
+
+    <script>
+      document.querySelector('.toggleMenu').addEventListener('click', () => {
+        document.querySelector('.toggleMenu').classList.toggle('open');
+        document.querySelector('.primaryNav').classList.toggle('open');
+      });
+    </script>
   </header>
 
   <section class="viewWrapper footerMargin">
