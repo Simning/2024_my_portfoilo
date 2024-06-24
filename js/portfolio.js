@@ -1,5 +1,5 @@
 // portfolio.js
-import ScrollAnimation from './scroll.js';
+import ScrollAnimation from './scrollAni.js';
 import HeaderManager from './header.js';
 import MainLayout from './main.js';
 import ProjectsLayout from './projects.js';

@@ -4,7 +4,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all .3s ease-in-out;
+  transition: top .3s ease-in-out;
+  background: var(--color-white);
 
   .headerWrapper {
     position: relative;
@@ -88,16 +89,16 @@ header {
 
     .slideDownNav {
       position: absolute;
-      display: none;
-      top: -200%;
+      display: block;
+      top: 0;
       left: 0;
       width: 100%;
       padding: 2rem var(--grid-margin-size) 2.4rem;
       background: var(--color-white);
-      transition: top 0.3s ease-in-out;
+      transform: translateY(-100%);
       overflow: hidden;
       z-index: 3;
-      animation: slideDown .3s forwards;
+      
 
       ul {
         display: grid;
@@ -146,76 +147,76 @@ header {
         }
       }
 
-      &.open {display:block; top: 100%;}
-      &.close {display: none;}
+      &.open {animation: slideDown .5s forwards;}
+      &.close {animation: slideUp .5s forwards;}
     }
 
     .toggleMenu {
-      position: relative;
       display: none;
+      align-items: center;
+      justify-content: center;
       width: 2.4rem;
       height: 2.4rem;
       cursor: pointer;
-
+    
       span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        &::before {
-          content: '';
-          display: block;
-          width: 2rem;
-          height: .2rem;
-          background: var(--color-primary);
-        }
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+    
+        &::before,
         &::after {
           content: '';
-          display: block;
+          position: absolute;
           width: 2rem;
           height: .2rem;
-          margin: .6rem 0 0;
           background: var(--color-primary);
+          transform-origin: center;
+          transition: all .3s ease-in-out;
+          opacity: 1;
         }
+    
+        &::before {transform: translateY(-.4rem);}
+        &::after {transform: translateY(.4rem);}
       }
-
-      &.open {
-        
+    
+      &.open span {
+        &::before {transform: rotate(-45deg);}
+        &::after {transform: translate(200%, .4rem); opacity: 0;}
       }
     }
   }
 }
 
 .dark-mode header {
+  background: var(--color-black);
+
   .headerWrapper {
     .logo {
       max-height: 2.8rem;
       opacity: 1;
+      
       path {
         fill: var(--color-secondary);
       }
     }
 
     .primaryNav {
-      .gnbMenu {
-        li {
-          .navLink {
-            color: var(--color-secondary);
+      .gnbMenu li {
+        .navLink {
+          color: var(--color-secondary);
 
-            &::after {
-              content: url('../src/common/gnb_pin_icon_secondary.svg');
-            }
+          &::after {
+            content: url('../src/common/gnb_pin_icon_secondary.svg');
           }
         }
       }
 
-      .modeWrap {
-        a {
-          &::after {
-            background: var(--color-secondary);
-          }
-        }
+      .modeWrap a {
+        &::after {background: var(--color-secondary);}
       }
     }
 
@@ -263,7 +264,7 @@ header {
         .modeWrap {display: none;}
       }
 
-      .toggleMenu {display: block;}
+      .toggleMenu {display: flex;}
     }
   }
 }
@@ -299,14 +300,14 @@ header {
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(var(--header-size));
   }
 }
 
 @keyframes slideUp {
   0% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(var(--header-size));
   }
   100% {
     opacity: 0;

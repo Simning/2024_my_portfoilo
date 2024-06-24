@@ -1,17 +1,21 @@
 class ScrollAnimation {
-  constructor(selector) {
+  constructor(selector, eventCallback = null) {
     // 주어진 선택자에 해당하는 모든 요소를 가져와서 scrollElements에 저장합니다.
     this.scrollElements = document.querySelectorAll(selector);
+    this.eventCallback = eventCallback;
     // 초기화 함수를 호출하여 스크롤 애니메이션을 시작합니다.
     this.init();
   }
 
   init() {
-    // 요소가 화면에 표시되는지 확인하기 위한 함수입니다.
-    const elementInView = (el, dividend = 1) => {
-      const elementTop = el.getBoundingClientRect().top;
-      // 요소의 상단이 화면의 세로 중앙보다 위에 있는지를 확인합니다.
-      return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+    // 요소가 뷰포트에 포함되는지 확인하기 위한 함수입니다.
+    const elementInView = (el) => {
+      const rect = el.getBoundingClientRect();
+      // 요소의 상단이 뷰포트의 하단보다 위에 있고 요소의 하단이 뷰포트의 상단보다 아래에 있는지 확인합니다.
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
     };
 
     // 스크롤 애니메이션을 표시하는 함수입니다.
@@ -19,6 +23,10 @@ class ScrollAnimation {
       setTimeout(() => {
         // 요소에 'inView'와 'viewed' 클래스를 추가하여 애니메이션을 표시합니다.
         element.classList.add('inView', 'viewed');
+        // 이벤트 콜백이 제공되었을 경우 실행합니다.
+        if (this.eventCallback) {
+          this.eventCallback(element);
+        }
       }, delay * 1000); // 지연을 초 단위로 변환하여 setTimeout에 전달합니다.
     };
 
@@ -39,7 +47,7 @@ class ScrollAnimation {
         // 이미 표시된 요소는 건너뛰고, 아닌 경우에만 처리합니다.
         if (!el.classList.contains('viewed')) {
           // 요소가 화면에 표시되는지 확인합니다.
-          if (elementInView(el, 1.25)) {
+          if (elementInView(el)) {
             // 스크롤 요소가 화면에 표시되면 애니메이션을 표시합니다.
             displayScrollElement(el, delay);
           } else {

@@ -55,16 +55,27 @@ class HeaderManager {
     let lastScrollTop = 0;
     const header = document.querySelector('header');
     const headerHeight = header.offsetHeight;
-
+    const slideDownNav = document.querySelector('.slideDownNav');
+    const toggleMenu = document.querySelector('.toggleMenu');
+  
     window.addEventListener('scroll', () => {
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
+  
       if (currentScroll > lastScrollTop) {
         header.style.top = `-${headerHeight}px`;
       } else {
         header.style.top = '0';
       }
-
+  
+      if (slideDownNav.classList.contains('open')) {
+        slideDownNav.classList.remove('open');
+        slideDownNav.classList.add('close');
+      }
+      if (toggleMenu.classList.contains('open')) {
+        toggleMenu.classList.remove('open');
+        toggleMenu.classList.add('close');
+      }
+  
       lastScrollTop = currentScroll;
     });
   }

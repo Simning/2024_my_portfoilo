@@ -1,6 +1,5 @@
 .space {
-  height: 1.2rem;
-}
+height: 1.2rem;}
 
 .projectView {
   .viewWrapper {
@@ -157,6 +156,8 @@
 }
 
 @media (max-width: 768px){
+  .space {height: clamp(.8rem, calc((12 / var(--viewportWidth) * 100vw), 1.2rem));}
+  
   .projectView {
     .viewWrapper {display: block;}
   
@@ -198,6 +199,8 @@
 }
 
 @media (max-width: 375px){
+  .space {height: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
+
   .projectView {
     .sideInner {
       padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem);

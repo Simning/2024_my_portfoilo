@@ -45,25 +45,27 @@
           display: inline-flex;
           justify-content: flex-start;
           align-items: center;
-          padding: .4rem .8rem;
+          padding: .5rem .8rem .3rem;
           border: 1px solid var(--color-primary);
 
           a {
             display: flex;
             align-items: center;
-            margin: .1rem 0 0;
             font-size: var(--fs-body1);
             color: var(--color-primary);
             line-height: 1;
 
             &::before {
               content: '';
+              position: relative;
               display: block;
-              margin: 0 .8rem 0 0;
+              top: -.1rem;
               width: .6rem;
               height: .6rem;
+              margin: 0 .8rem 0 0;
               background: #57CE3A;
               border-radius: 50%;
+              animation: pulse 2s infinite;
             }
           }
         }
@@ -467,5 +469,20 @@
         }
       }
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
