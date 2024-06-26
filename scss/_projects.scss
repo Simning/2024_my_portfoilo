@@ -34,7 +34,7 @@
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 0 var(--grid-gutter-size);
         align-items: center;
-        border: 1px solid var(--color-primary);
+        border: .1rem solid var(--color-primary);
 
         .cell {
           position: relative;
@@ -44,10 +44,10 @@
             content: '';
             position: absolute;
             display: block;
-            bottom: -1px;
+            bottom: -.1rem;
             left: 0;
             width: 100%;
-            height: 2px;
+            height: .2rem;
             background: var(--color-primary);
           }
 
@@ -59,7 +59,7 @@
           &.cate {grid-column: 8 / span 3;}
           &.year {grid-column: 11 / span 2;}
 
-          & > h6 {
+          h6 {
             font-size: var(--fs-sub-title3);
             font-weight: var(--fw-sub-title3);
             line-height: var(--lh-sub-title3);
@@ -77,7 +77,7 @@
           grid-template-columns: repeat(12, 1fr);
           grid-gap: 0 var(--grid-gutter-size);
           align-items: center;
-          border-bottom: 1px solid var(--color-primary-20op);
+          border-bottom: .1rem solid var(--color-primary-20op);
           transition: all .3s ease-in-out;
 
           .cell {
@@ -86,7 +86,7 @@
             z-index: 1;
             transition: all .3s ease-in-out;
 
-            & > p {
+            p {
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
@@ -95,15 +95,7 @@
             }
 
             &.num {grid-column: 1 / span 2;}
-            &.proj {
-              grid-column: 3 / span 5;
-
-              p {
-                font-size: var(--fs-sub-title3);
-                font-weight: var(--fw-sub-title3);
-                line-height: var(--lh-sub-title3);
-              }
-            }
+            &.proj {grid-column: 3 / span 5;}
             &.cate {grid-column: 8 / span 3;}
             &.year {grid-column: 11 / span 2;}
             &:first-child {margin: 0 0 0 2rem;}
@@ -159,9 +151,7 @@
             }
             &:hover {
               .cell {
-                & > p {
-                  color: var(--color-white);
-                }
+                p {color: var(--color-white);}
               }
             }
           }
@@ -229,32 +219,26 @@
     background: var(--color-black);
 
     .headingTxt {
-      h2 {
-        color: var(--color-secondary);
-      }
-      span {
-        color: var(--color-secondary);
-      }
+      h2 {color: var(--color-secondary);}
+      span {color: var(--color-secondary);}
     }
 
     .tableWrapper {
       .tHead {
-        border: 1px solid var(--color-secondary);
+        border: .1rem solid var(--color-secondary);
 
         .cell {
           &::before {background: var(--color-secondary);}
-          & > h6 {color: var(--color-secondary);}
+          h6 {color: var(--color-secondary);}
         }
       }
 
       .tBody {
         .row {
-          border-bottom: 1px solid var(--color-secondary-20op);
+          border-bottom: .1rem solid var(--color-secondary-20op);
 
           .cell {
-            & > p {
-              color: var(--color-secondary);
-            }
+            p {color: var(--color-secondary);}
           }
         
           /* href 값이 없는 경우 */
@@ -267,16 +251,12 @@
         
           /* href 값이 있는 경우 */
           &[href] {
-            &::before {
-              background: var(--color-secondary);
-            }
+            &::before {background: var(--color-secondary);}
           }
 
           &:hover {
             .cell {
-              & > p {
-                color: var(--color-black);
-              }
+              p {color: var(--color-black);}
             }
           }
         }
@@ -286,25 +266,17 @@
     .btnArea {
       .moreBtn {
         .dot {
-          span {
-            background: var(--color-secondary);
-          }
+          span {background: var(--color-secondary);}
         }
 
-        p {
-          color: var(--color-secondary);
-        }
+        p {color: var(--color-secondary);}
 
         &:hover {
           .dot {
-            span {
-              background: var(--color-secondary-40op);
-            }
+            span {background: var(--color-secondary-40op);}
           }
 
-          p {
-            color: var(--color-secondary-40op);
-          }
+          p {color: var(--color-secondary-40op);}
         }
       }
     }
@@ -339,7 +311,7 @@
   
         .tBody {
           margin: 0;
-          border-top: 1px solid var(--color-primary);
+          border-top: .1rem solid var(--color-primary);
   
           .row {
             display: block;
@@ -359,6 +331,8 @@
               &.proj {
                 width: 100%;
                 margin: 0 0 .8rem;
+
+                p {color: var(--color-primary);}
               }
 
               &.cate {
@@ -390,6 +364,24 @@
       .btnArea {margin: 4rem 0 0;}
     }
   }
+
+  .dark-mode.projects {
+    .projectsSection {
+      .tableWrapper {
+        .tBody {
+          .row {
+            .cell {
+              p {color: var(--color-secondary-76op);}
+
+              &.proj {
+                p {color: var(--color-secondary);}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px){
@@ -407,6 +399,14 @@
             .cell {
               padding: 0;
 
+              &:first-child {margin: 0}
+              &:last-child {margin: 0;}
+            }
+
+            .cell {
+              &.proj {margin: 0 0 clamp(.4rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
+              &.cate {padding: 0 clamp(.4rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) 0 0;}
+              &.year {padding: 0 0 0 clamp(.8rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
               &:first-child {margin: 0}
               &:last-child {margin: 0;}
             }

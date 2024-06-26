@@ -33,14 +33,14 @@ class ProjectsLayout {
 
   //////////* 'MORE PROJECT' 버튼 클릭 시 실행 *//////////
   initializeShowMoreRows() {
-    const moreBtn = document.querySelector('.moreBtn'); // 'MORE PROJECT' 버튼 선택
+    const moreBtn = document.querySelector('.moreBtn');
     const rowsPerPage = 12; // 한 번에 보여줄 행의 개수
     let visibleRows = rowsPerPage; // 현재까지 보이는 행의 개수
 
-    const showMoreRows = () => { // 함수를 화살표 함수로 변경
+    const showMoreRows = () => {
       const rows = this.tBody.querySelectorAll('.row'); // 모든 행 선택
       const isSmallScreen = window.matchMedia("(max-width: 1024px)").matches;
-      
+
       for (let i = visibleRows; i < visibleRows + rowsPerPage; i++) {
         if (rows[i]) {
           rows[i].style.display = isSmallScreen ? 'block' : 'grid';
@@ -57,12 +57,11 @@ class ProjectsLayout {
     };
 
     // 초기에는 추가 행을 보이지 않도록 설정
-    const allRows = this.tBody.querySelectorAll('.row'); // tBody 내의 모든 행 선택
+    const allRows = this.tBody.querySelectorAll('.row');
     for (let i = rowsPerPage; i < allRows.length; i++) {
-      allRows[i].style.display = 'none'; // 추가 행을 숨김
+      allRows[i].style.display = 'none';
     }
 
-    // 'MORE PROJECT' 버튼 클릭 시 showMoreRows 함수 호출
     moreBtn.addEventListener('click', showMoreRows);
   }
 }

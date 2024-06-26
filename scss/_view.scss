@@ -1,6 +1,3 @@
-.space {
-height: 1.2rem;}
-
 .projectView {
   .viewWrapper {
     display: flex;
@@ -48,6 +45,7 @@ height: 1.2rem;}
           line-height: var(--lh-sub-title3);
           color: var(--color-primary-40op);
         }
+
         p {
           font-size: var(--fs-sub-title3);
           font-weight: var(--fw-sub-title3);
@@ -66,15 +64,37 @@ height: 1.2rem;}
       padding: .5rem .8rem .3rem;
       text-align: right;
       background: var(--color-primary);
-      transition: all .3s ease-in-out;
+      transition: opacity .6s ease-in-out .7s, transform .6s ease-in-out .7s, padding .3s ease-in-out;
 
       span {
+        position: relative;
         font-size: var(--fs-btn);
         font-weight: var(--fw-btn);
         line-height: 1;
         color: var(--color-white);
-        transition: all .3s ease-in-out;
+        transition: color .3s ease-in-out;
         z-index: 3;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white);
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+        z-index: 1;
+      }
+
+      &:hover {
+        padding: .5rem 0rem .3rem;
+
+        span {color: var(--color-primary);}
+        &::before {transform: translateX(0);}
       }
     }
   }
@@ -90,13 +110,11 @@ height: 1.2rem;}
       grid-gap: .8rem;
     
       img {
-        grid-column: span 12;
+        grid-column: 1 / -1;
         background: rgba(23, 23, 23, 0.04);
       }
     
-      .halfImage {
-        grid-column: span 6;
-      }
+      .halfImage {grid-column: span 6;}
     }
   }
 }
@@ -106,29 +124,28 @@ height: 1.2rem;}
     background: var(--color-black);
 
     .sideInner {
-      #projectTitle {
-        color: var(--color-secondary);
-      }
-      #projectOverview {
-        color: var(--color-secondary-76op);
-      }
+      #projectTitle {color: var(--color-secondary);}
+      #projectOverview {color: var(--color-secondary-76op);}
 
       .metaData {
         .dataWrap {
-          h6 {
-            color: var(--color-secondary-40op);
-          }
-          p {
-            color: var(--color-secondary);
-          }
+          h6 {color: var(--color-secondary-40op);}
+          p {color: var(--color-secondary);}
         }
       }
 
       .listBtn {
         background: var(--color-secondary);
 
-        span {
-          color: var(--color-black);
+        span {color: var(--color-black);}
+
+        &::before {background: var(--color-black);}
+  
+        &:hover {
+          padding: .5rem 0rem .3rem;
+          
+          span {color: var(--color-secondary);}
+          &::before {transform: translateX(0);}
         }
       }
     }
@@ -141,6 +158,8 @@ height: 1.2rem;}
   }
 }
 
+.space {height: 1.2rem;}
+
 @media (max-width: 1280px){
   .projectView {
     .sideInner {width: 43.2rem;}
@@ -151,13 +170,19 @@ height: 1.2rem;}
 @media (max-width: 1024px){ 
   .projectView {
     .sideInner {width: 36.8rem;}
-    .showcaseInner {width: calc(100% - 36.8rem);}
+    .showcaseInner {
+      width: calc(100% - 36.8rem);
+      
+      #projectImages {
+        grid-template-columns: repeat(8, 1fr);
+      
+        .halfImage {grid-column: span 4;}
+      }
+    }
   }
 }
 
-@media (max-width: 768px){
-  .space {height: clamp(.8rem, calc((12 / var(--viewportWidth) * 100vw), 1.2rem));}
-  
+@media (max-width: 768px){  
   .projectView {
     .viewWrapper {display: block;}
   
@@ -177,9 +202,7 @@ height: 1.2rem;}
         .dataWrap {
           margin: 0 0 clamp(.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
           
-          h6 {
-            margin: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0;
-          }
+          h6 {margin: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0;}
         }
       }
     }
@@ -190,17 +213,17 @@ height: 1.2rem;}
       padding: 0 .8rem .8rem;
 
       #projectImages {
-        .halfImage {
-          grid-column: span 12;
-        }
+        grid-template-columns: repeat(4, 1fr);
+      
+        .halfImage {grid-column: 1 / -1;}
       }
     }
   }
+
+  .space {height: clamp(.8rem, calc((12 / var(--viewportWidth) * 100vw), 1.2rem));}
 }
 
 @media (max-width: 375px){
-  .space {height: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
-
   .projectView {
     .sideInner {
       padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem);
@@ -213,11 +236,11 @@ height: 1.2rem;}
         .dataWrap {
           margin: 0 0 clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);
           
-          h6 {
-            margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0;
-          }
+          h6 {margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0;}
         }
       }
     }
   }
+
+  .space {height: clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
 }

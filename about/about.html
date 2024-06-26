@@ -129,7 +129,7 @@
         </h4>
       </div>
 
-      <div class="contentsInner scrollIn" data-delay=".3">
+      <div class="contentsInner scrollIn" data-delay-class="delay300">
         <article class="contentWrap">
           <h6>ABOUT</h6>
           <div class="rightArea">
@@ -341,11 +341,41 @@
       </div>
     </div>
 
-    <div class="stickyWrapper scrollIn" data-delay=".5">
+    <div class="stickyWrapper scrollIn" data-delay-class="delay500">
       <div class="stickyWrap">
         <figure></figure>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 요소와 관련된 클래스 처리
+        const handleStickyWrapperClasses = () => {
+          const myStickyWrapper = document.querySelector('stickyWrapper');
+          const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+
+          if (isSmallScreen) {
+            myStickyWrapper.classList.remove('delay500');
+            myStickyWrapper.classList.add('delay300');
+          } else {
+            myStickyWrapper.classList.remove('delay300');
+            myStickyWrapper.classList.add('delay500');
+          }
+        };
+
+        // 초기 실행
+        handleStickyWrapperClasses();
+
+        // ResizeObserver를 사용하여 화면 크기 변화 감지
+        const resizeObserver = new ResizeObserver(entries => {
+          entries.forEach(entry => {
+          handleStickyWrapperClasses();
+          });
+        });
+
+        resizeObserver.observe(document.body);
+      });
+    </script>
   </section>
 
   <footer id="footer">

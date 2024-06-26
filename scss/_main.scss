@@ -1,7 +1,5 @@
 .main {
-  & section {
-    background: var(--color-white);
-  }
+  & section {background: var(--color-white);}
 
   .heroSection {
     height: calc(100vh - var(--header-size));
@@ -24,6 +22,7 @@
           line-height: var(--lh-highlight-body);
           color: var(--color-primary);
         }
+
         p {
           margin: 2rem 0 0;
           font-size: var(--fs-body1);
@@ -46,7 +45,7 @@
           justify-content: flex-start;
           align-items: center;
           padding: .5rem .8rem .3rem;
-          border: 1px solid var(--color-primary);
+          border: .1rem solid var(--color-primary);
 
           a {
             display: flex;
@@ -65,7 +64,7 @@
               margin: 0 .8rem 0 0;
               background: #57CE3A;
               border-radius: 50%;
-              animation: pulse 2s infinite;
+              animation: pulse 2s ease-in-out 0.5s infinite;
             }
           }
         }
@@ -127,9 +126,7 @@
           color: var(--color-primary);
           transition: all .3s ease-in-out;
 
-          &:hover {
-            color: var(--color-primary-40op);
-          }
+          &:hover {color: var(--color-primary-40op);}
         }
       }
 
@@ -206,31 +203,21 @@
               height: 100%;
               object-fit: cover;
               transform: scale(1.2);
-              filter: blur(8px);
+              filter: blur(.8rem);
             }
           }
 
           &:hover {
-            .customCursor {
-              visibility: visible;
-            }
+            .customCursor {visibility: visible;}
 
-            .thumbnail {
-              transform: scale(.92);
-            }
+            .thumbnail {transform: scale(.92);}
 
             .txtWrap {
-              h6 {
-                color: var(--color-white);
-              }
-              p {
-                color: var(--color-white-40op);
-              }
+              h6 {color: var(--color-white);}
+              p {color: var(--color-white-40op);}
             }
 
-            .hoverBg {
-              opacity: 1;
-            }
+            .hoverBg {opacity: 1;}
           }
         }
       }
@@ -244,32 +231,22 @@
   .heroSection {
     .wrapper {
       .txtWrap {
-        h5 {
-          color: var(--color-secondary);
-        }
-        p {
-          color: var(--color-secondary-40op);
-        }
+        h5 {color: var(--color-secondary);}
+        p {color: var(--color-secondary-40op);}
       }
   
       .botArea {
         .status {
-          border: 1px solid var(--color-secondary);
+          border: .1rem solid var(--color-secondary);
 
-          a {
-            color: var(--color-secondary);
-          }
+          a {color: var(--color-secondary);}
         }
 
         .largeLogo {
-          path {
-            stroke: var(--color-secondary);
-          }
+          path {stroke: var(--color-secondary);}
   
           &.on {          
-            path {
-              fill: var(--color-secondary);
-            }
+            path {fill: var(--color-secondary);}
           }
         }
       }
@@ -279,9 +256,8 @@
   .projSection {
     .wrapper {
       .topArea {
-        h6 {
-          color: var(--color-secondary);
-        }
+        h6 {color: var(--color-secondary);}
+
         .moreBtn {
           color: var(--color-secondary);
           &:hover {color: var(--color-secondary-40op);}
@@ -293,16 +269,26 @@
           background: rgba(166, 169, 153, .04);
 
           .txtWrap {
-            h6 {
-              color: var(--color-white);
-            }
-            p {
-              color: var(--color-white-40op);
-            }
+            h6 {color: var(--color-white);}
+            p {color: var(--color-white-40op);}
           }
         }
       }
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+    filter: blur(.4rem);
   }
 }
 
@@ -390,6 +376,10 @@
           grid-column: 1 / span 2;
   
           p {margin: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0;}
+
+          &.delay2000 {
+            transition-delay: 0s;
+          }
         }
   
         .botArea {
@@ -400,12 +390,24 @@
             position: relative;
             display: inline-block;
             margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
-            padding: clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem) clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) ;
+            padding: clamp(.3rem, calc((5 / var(--viewportWidth)) * 100vw), .5rem) clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) clamp(.1rem, calc((3 / var(--viewportWidth)) * 100vw), .3rem);
+
+            a {
+              &::before {
+                animation: pulse 2s ease-in-out 0.3s infinite;
+              }
+            }
           }
   
           .largeLogo {
             width: 100%;
+
+            svg {
+              path {transition: none;}
+            }
           }
+
+          &.delay500 {transition-delay: .3s;}
         }
       }
     }
@@ -414,7 +416,10 @@
       .wrapper {
         padding: clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem) 0 0;
   
-        .topArea {margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);}
+        .topArea {
+          margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
+          transition-delay: .5s;
+        }
   
         .projInner {
           display: grid;
@@ -425,9 +430,25 @@
             padding: clamp(4rem, calc((80 / var(--viewportWidth)) * 100vw), 8rem) clamp(6rem, calc((100 / var(--viewportWidth)) * 100vw), 10rem) clamp(6rem, calc((100 / var(--viewportWidth)) * 100vw), 10rem);
   
             .txtWrap {padding: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem);}
+
+            &.delay300 {transition-delay: .7s;}
           }
         }
       }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+      filter: blur(0);
+    }
+  
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+      filter: blur(.2rem);
     }
   }
 }
@@ -469,20 +490,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.6);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }

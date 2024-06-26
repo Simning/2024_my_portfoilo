@@ -15,7 +15,7 @@ footer {
       grid-template-columns: repeat(12, 1fr);
       gap: 0 var(--grid-gutter-size);
 
-      & > h2 {
+      h2 {
         grid-column: 1 / span 9;
         font-family: 'roc-grotesk-wide';
         font-size: var(--fs-heading1);
@@ -32,7 +32,7 @@ footer {
           margin: 0 0 4rem;
 
           &:last-of-type {margin: 0;}
-          & > h6 {
+          h6 {
             margin: 0 0 1.2rem;
             font-size: var(--fs-sub-title3);
             font-weight: var(--fw-sub-title3);
@@ -46,12 +46,14 @@ footer {
             margin: 0 0 .4rem;
 
             &:last-of-type {margin: 0;}
+
             p {
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
               color: var(--color-primary);
             }
+
             svg {
               max-width: 1.6rem;
               max-height: 1.6rem;
@@ -63,6 +65,7 @@ footer {
             }
           }
         }
+        
         .topBtn {
           position: relative;
           display: block;
@@ -72,7 +75,7 @@ footer {
           background: var(--color-primary);
           transition: all .3s ease-in-out;
 
-          & > span {
+          span {
             position: relative;
             font-size: var(--fs-btn);
             font-weight: var(--fw-btn);
@@ -99,12 +102,8 @@ footer {
           &:hover {
             padding: .5rem 0rem .3rem;
 
-            span {
-              color: var(--color-primary);
-            }
-            &::before {
-              transform: translateX(0);
-            }
+            span {color: var(--color-primary);}
+            &::before {transform: translateX(0);}
           }
         }
       }
@@ -128,54 +127,41 @@ footer {
 
   .footWrapper {
     .footInner {
-      & > h2 {
-        color: var(--color-secondary);
-      }
+      h2 {color: var(--color-secondary);}
 
       .footRightArea {
         .connectItemWrap {
           &:last-of-type {margin: 0;}
-          & > h6 {
-            color: var(--color-secondary-40op);
-          }
+
+          h6 {color: var(--color-secondary-40op);}
 
           .item {
-            p {
-              color: var(--color-secondary);
-            }
+            p {color: var(--color-secondary);}
           }
         }
         .topBtn {
           background: var(--color-secondary);
 
-          & > span {
-            color: var(--color-primary);
-          }
+          span {color: var(--color-primary);}
 
-          &::before {
-            background: var(--color-primary);
-          }
+          &::before {background: var(--color-primary);}
 
           &:hover {
-            span {
-              color: var(--color-secondary);
-            }
+            span {color: var(--color-secondary);}
           }
         }
       }
     }
   }
 
-  .copy {
-    color: var(--color-secondary-40op);
-  }
+  .copy {color: var(--color-secondary-40op);}
 }
 
 @media (max-width: 1440px){
   footer {
     .footWrapper {
       .footInner {
-        & > h2 {grid-column: 1 / span 8;}
+        h2 {grid-column: 1 / span 8;}
 
         .footRightArea {grid-column: 9 / span 4;}
       }
@@ -189,7 +175,7 @@ footer {
       padding: 4rem var(--grid-margin-size) 3.2rem;
   
       .footInner {
-        & > h2 {grid-column: 1 / span 8;}
+        h2 {grid-column: 1 / span 8;}
   
         .footRightArea {
           grid-column: 9 / span 4;
@@ -204,9 +190,7 @@ footer {
       }
     }
   
-    .copy {
-      bottom: 3.2rem;
-    }
+    .copy {bottom: 3.2rem;}
   }
 }
 
@@ -218,7 +202,7 @@ footer {
       .footInner {
         grid-template-columns: repeat(8, 1fr);
   
-        & > h2 {grid-column: 1 / span 5;}
+        h2 {grid-column: 1 / span 5;}
   
         .footRightArea {
           grid-column: 6 / span 3;
@@ -249,7 +233,7 @@ footer {
         display: block;
         width: 100%;
   
-        & > h2 {
+        h2 {
           width: 100%;
           margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
         }
@@ -260,7 +244,7 @@ footer {
           .connectItemWrap {
             margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
 
-            & > h6 {
+            h6 {
               margin: 0 0 clamp(.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem);
               
             }
@@ -302,7 +286,7 @@ footer {
       padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) 2rem;
   
       .footInner {
-        & > h2 {
+        h2 {
           width: 100%;
           margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);
         }

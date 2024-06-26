@@ -173,7 +173,10 @@
       padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
   
       .contentsWrapper {
-        .headingTxt {margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);}
+        .headingTxt {
+          margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
+          transition-delay: .3s;
+        }
         
         .contentsInner {
           .contentWrap {
@@ -182,6 +185,8 @@
   
             h6 {margin: 0 0 clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem)}
           }
+
+          &.delay300 {transition-delay: .5s;}
         }
       }
   
@@ -193,6 +198,8 @@
           position: relative;
           top: auto;
         }
+
+        &.delay500 {transition-delay: 0s;}
       }
     }
 

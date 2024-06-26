@@ -25,9 +25,7 @@
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
     
-      &::-webkit-scrollbar {
-        display: none;  /* Chrome, Safari, Opera */
-      }
+      &::-webkit-scrollbar {display: none;  /* Chrome, Safari, Opera */}
 
       .tab {
         display: block;
@@ -67,7 +65,7 @@
             width: 100%;
             height: 100%;
             padding: 2rem;
-            border: 1px solid rgba(45, 49, 42, .12);
+            border: .1rem solid rgba(45, 49, 42, .12);
             transition: all .3s ease-in-out;
 
             figure {
@@ -143,7 +141,7 @@
       .itemsInner {
         .listItem {
           a {
-            border: 1px solid rgba(166, 169, 153, .12);
+            border: .1rem solid rgba(166, 169, 153, .12);
             
             figure {.cate {color: var(--color-secondary-40op);}}
             h6 {color: var(--color-secondary);}
@@ -236,7 +234,17 @@
 }
 
 @media (max-width: 520px){
-  .bookmark .bookmarkSection .listWrapper .itemsInner .listItem {grid-column: 1 / -1;}
+  .bookmark {
+    .bookmarkSection {
+      .listWrapper {
+        .itemsInner {
+          .listItem {
+            grid-column: 1 / -1;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 375px){
