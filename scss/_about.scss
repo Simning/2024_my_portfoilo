@@ -63,10 +63,13 @@
             }
   
             p {
+              margin: 0 0 .8rem;
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
               color: var(--color-primary);
+
+              &:last-of-type {margin: 0;}
             }
   
             span {
@@ -170,6 +173,7 @@
     .aboutSection {
       display: flex;
       flex-direction: column-reverse;
+      justify-content: start;
       padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
   
       .contentsWrapper {
@@ -232,6 +236,8 @@
               ul {
                 li {margin: 0 0 clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
               }
+
+              p {margin: 0 0 clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
             }
           }
         }

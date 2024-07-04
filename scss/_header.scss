@@ -30,7 +30,7 @@ header {
         margin: .2rem 0 0;
         
         li {
-          margin: 0 1.4rem;
+          margin: 0 2rem;
           cursor: pointer;
 
           .navLink {
@@ -59,7 +59,7 @@ header {
 
       .modeWrap {
         display: flex;
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 2rem;
 
         a {
           display: flex;
@@ -240,6 +240,34 @@ header {
       span {
         &::before {background: var(--color-secondary);}
         &::after {background: var(--color-secondary);}
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px){
+  header {
+    .headerWrapper {
+      .primaryNav {
+        .gnbMenu {
+          li {margin: 0 1.6rem;}
+        }
+  
+        .modeWrap {margin: 0 0 0 1.6rem;}
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  header {
+    .headerWrapper {
+      .primaryNav {
+        .gnbMenu {
+          li {margin: 0 1.4rem;}
+        }
+  
+        .modeWrap {margin: 0 0 0 1.4rem;}
       }
     }
   }

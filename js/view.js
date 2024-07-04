@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
           projectTitle.classList.remove('korLs');
         }
 
-        // 개행 문자를 <br> 태그로 변환
-        projectOverview.innerHTML = project.overview.replace(/\n/g, '<div class="space"></div>');
-
         // 프로젝트 개요 설정
         projectOverview.textContent = project.overview;
+
+        // 개행 문자를 .space 클래스로 변환
+        projectOverview.innerHTML = project.overview.replace(/\n/g, '<div class="space"></div>');
 
         // 프로젝트 클라이언트 설정
         projectClient.textContent = project.client;

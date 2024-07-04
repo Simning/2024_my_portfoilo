@@ -2,7 +2,7 @@
   {
     "id": "wegamer",
     "title": "위게이머",
-    "overview": "게임 외 환경에서도 활발한 소통을 원하는 유저가 많습니다. 사람들은 소통할 수 있는 플랫폼에 접근하기 쉽고, 명확한 특징을 가진 모임을 찾는 것을 번거롭게 느낍니다.\n위게이머는 공통된 관심사를 가진 사람들이 소통할 수 있도록 연결해주는 커뮤니티 앱입니다. 위게이머는 그룹을 쉽게 운영할 수 있게 도와주며, 같은 목적을 가진 높은 결속력의 그룹을 쉽게 찾을 수 있도록 디자인되었습니다.",
+    "overview": "게임 외 환경에서도 활발한 소통을 원하는 유저가 많습니다. 사람들은 소통할 수 있는 플랫폼에 접근하기 쉽고, 명확한 특징을 가진 모임을 찾는 것을 번거롭게 느낍니다.\n위게이머는 공통된 관심사를 가진 사람들이 소통할 수 있도록 연결해 주는 커뮤니티 앱으로 그룹을 쉽게 운영할 수 있게 도와주며, 같은 목적을 가진 높은 결속력의 그룹을 쉽게 찾을 수 있도록 디자인되었습니다.",
     "client": "None Client",
     "category": "App Concept Design",
     "year": "2022",
@@ -42,13 +42,54 @@
       {"src": "calmcalm_section08_img_full.png", "type": "full"},
       {"src": "calmcalm_section09_img_full.png", "type": "full"},
       {"src": "calmcalm_section10_img_full.png", "type": "full"}
-
+    ]
+  },
+  {
+    "id": "mrleebeer",
+    "title": "이선생맥주",
+    "overview": "",
+    "client": "이선생맥주",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "mrleebeer_section01_img_full.png", "type": "full"},
+      {"src": "mrleebeer_section02_img_full.png", "type": "full"},
+      {"src": "mrleebeer_section03_img_full.png", "type": "full"},
+      {"src": "mrleebeer_section04_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "seogwangSystem",
+    "title": "서광시스템",
+    "overview": "",
+    "client": "(주)서광시스템",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "seogwang_system_section01_img_full.png", "type": "full"},
+      {"src": "seogwang_system_section02_img_full.png", "type": "full"},
+      {"src": "seogwang_system_section03_img_full.png", "type": "full"},
+      {"src": "seogwang_system_section04_img_full.png", "type": "full"},
+      {"src": "seogwang_system_section05_img_full.png", "type": "full"},
+      {"src": "seogwang_system_section06_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "azothbio",
+    "title": "에이조스바이오",
+    "overview": "",
+    "client": "에이조스바이오",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "azothbio_section01_img_full.png", "type": "full"},
+      {"src": "azothbio_section02_img_full.png", "type": "full"}
     ]
   },
   {
     "id": "ulNewMaterials",
     "title": "UL New Materials",
-    "overview": "국제산공은 발전소, 석유화학, 정유, 시멘트, 저장탱크 등의 보온 및 보냉 단열시공을 전문으로 하는 플랜트설비 전문건설회사입니다. 30년 이상의 업력을 바탕으로, 국내외에서 다양한 프로젝트를 성공적으로 수행해왔습니다.\n국제산공은 글로벌 시장에서의 기반을 다지고자 웹사이트를 리뉴얼했습니다. 이미지를 활용한 풀페이지 스크롤 형식을 채택하여 사용자의 몰입도를 높였습니다. 직관적인 콘텐츠 구성을 통해 회사의 전문성과 신뢰성을 명확히 전달하며, 효과적인 기업 홍보를 목표로 하였습니다.",
+    "overview": "",
     "client": "UL New Materials",
     "category": "Web Design",
     "year": "2023",
@@ -59,6 +100,41 @@
       {"src": "ul_new_materials_section04_img_full.png", "type": "full"},
       {"src": "ul_new_materials_section05_img_full.png", "type": "full"},
       {"src": "ul_new_materials_section06_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "kosystech",
+    "title": "코시스테크",
+    "overview": "",
+    "client": "(주)코시스테크",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "kosystech_section01_img_full.png", "type": "full"},
+      {"src": "kosystech_section02_img_full.png", "type": "full"},
+      {"src": "kosystech_section03_img_full.png", "type": "full"},
+      {"src": "kosystech_section04_img_full.png", "type": "full"},
+      {"src": "kosystech_section05_img_full.png", "type": "full"},
+      {"src": "kosystech_section06_img_full.png", "type": "full"},
+      {"src": "kosystech_section07_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "ulsanUniversityResearch",
+    "title": "울산대학교 의과대학 소화기병연구소",
+    "overview": "울산대학교 의과대학 소화기병연구소는 임상 정보를 활용 및 분석을 통해 소화기 질환에 대한 혁신적인 치료제 개발을 목표로 하는 선도적인 연구소입니다. 연구소는 최신 의료 기술과 데이터를 바탕으로 환자 중심의 연구를 수행하며, 의학 발전에 기여하고 있습니다.\n깔끔하고 전문적인 느낌을 강조하여 방문자에게 신뢰감을 주도록 디자인되었습니다. 특히, 사용자가 쉽게 정보를 탐색하고 이해할 수 있도록 컨텐츠를 카드 UI로 구성하였습니다. 카드 UI는 각각의 연구 주제, 프로젝트, 연구 결과 등을 시각적으로 분리하여 깔끔하게 정리하였으며, 직관적인 사용자 경험을 제공합니다.",
+    "client": "울산대학교 의과대학 소화기병연구소",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "ulsan_university_research_section01_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section02_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section03_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section04_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section05_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section06_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section07_img_full.png", "type": "full"},
+      {"src": "ulsan_university_research_section08_img_full.png", "type": "full"}
     ]
   },
   {
@@ -78,9 +154,51 @@
     ]
   },
   {
+    "id": "yaco",
+    "title": "야코",
+    "overview": "야코는 자동화 기기 및 반도체 관련 산업군에 적용되는 공압기기, 제어기기를 취급하는 제조판매기업입니다.\n심플함과 깔끔함을 중심으로 제작되어, 고객이 필요한 정보를 빠르고 쉽게 찾을 수 있도록 했습니다. 브랜드 컬러를 효과적으로 사용하여 통일된 시각적 경험을 제공하고, 전문성과 신뢰감을 강조했습니다. 직관적인 레이아웃과 명확한 네비게이션을 통해 사용자의 편의성을 높이고, 브랜드의 가치를 효과적으로 전달하고 있습니다.",
+    "client": "(주)야코",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "yaco_section01_img_full.png", "type": "full"},
+      {"src": "yaco_section02_img_full.png", "type": "full"},
+      {"src": "yaco_section03_img_full.png", "type": "full"},
+      {"src": "yaco_section04_img_full.png", "type": "full"},
+      {"src": "yaco_section05_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "wise",
+    "title": "와이즈보험중개",
+    "overview": "와이즈보험중개는 보험 자문, 보험 중개, 보험사고 컨설팅 등 기업보험의 다양한 자문 경력을 지닌 회사입니다.\n심플하고 직관적인 웹사이트 디자인을 통해 고객이 필요한 정보를 쉽게 찾을 수 있도록 하였고, CI색상과 세련된 타이포그래피를 사용하여 신뢰감을 전달하였습니다.\n각 섹션은 명확하게 구분되어 있으며, 고해상도 이미지와 실제 사례 사진을 활용하여 고객이 서비스를 보다 실감나게 이해할 수 있도록 구성하였습니다.",
+    "client": "와이즈보험중개",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "wise_section01_img_full.png", "type": "full"},
+      {"src": "wise_section02_img_full.png", "type": "full"},
+      {"src": "wise_section03_img_full.png", "type": "full"},
+      {"src": "wise_section04_img_full.png", "type": "full"},
+      {"src": "wise_section05_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "gigolf",
+    "title": "지아이골프",
+    "overview": "기존에 Hero Image만 존재했던 지아이골프 메인 페이지에서 신상품, 추천 상품, 베스트 상품 등의 섹션과 띠배너를 추가로 구성하여 메인 페이지에서도 충분히 탐색이 가능하도록 구성하였습니다.\n추가로, 고객센터와 계좌 정보, 매장 위치 등 필수적으로 필요한 정보를 배치하여 더욱 쉽게 탐색이 가능하도록 리뉴얼하였습니다.",
+    "client": "(주)지아이골프",
+    "category": "Web Design",
+    "year": "2023",
+    "images": [
+      {"src": "gigolf_section01_img_full.png", "type": "full"},
+      {"src": "gigolf_section02_img_full.png", "type": "full"}
+    ]
+  },
+  {
     "id": "ztsecu",
     "title": "지티시큐",
-    "overview": "",
+    "overview": "지티시큐는 개인정보 처리 및 보호에 대한 컨설팅을 수행하여 고객의 안전한 정보시스템 구축에 기여하는 개인정보 영향평가 전문기관입니다.\n전문적인 기술과 신뢰도가 높은 기업의 가치를 담아내기 위해 그리드를 사용해 정돈된 레이아웃을 구성하였으며, 그리드에서 벗어난 요소로 지루함을 덜었습니다.",
     "client": "(주)지티시큐",
     "category": "Web Design",
     "year": "2023",
@@ -94,7 +212,7 @@
   {
     "id": "bsgm",
     "title": "BSG Materials",
-    "overview": "",
+    "overview": "비에스지머티리얼즈는 열플라즈마 기반 나노소재를 통해 배터리 업계에서 경쟁력을 갖춘 기업입니다.\n핵심 기술에 대한 이미지로 전문성과 신뢰도를 제고하였으며, CI색상과 타이포를 통해 핵심 내용을 강조하고, 라인과 면을 사용하여 콘텐츠를 구성해 전달하였습니다.",
     "client": "BSG Materials",
     "category": "Web Design",
     "year": "2023",
@@ -107,6 +225,23 @@
       {"src": "bsg_materials_section06_img_full.png", "type": "full"},
       {"src": "bsg_materials_section07_img_full.png", "type": "full"},
       {"src": "bsg_materials_section08_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "seinmetal",
+    "title": "Sein Metal",
+    "overview": "Sein Metal은 IT, 산업용품, 자동차산업, 각종 생활용품을 생산하는 기업으로, 전문적인 기업의 가치를 고객에게 전달하는 것을 목표로 합니다.\n이를 위해 CI색상을 적극적으로 사용하여 브랜드를 각인시켰으며, 표를 통해 관련 내용을 구성하였습니다.",
+    "client": "(주)세인금속",
+    "category": "Web Design",
+    "year": "2024",
+    "images": [
+      {"src": "seinmetal_section01_img_full.png", "type": "full"},
+      {"src": "seinmetal_section02_img_full.png", "type": "full"},
+      {"src": "seinmetal_section03_img_full.png", "type": "full"},
+      {"src": "seinmetal_section04_img_full.png", "type": "full"},
+      {"src": "seinmetal_section05_img_full.png", "type": "full"},
+      {"src": "seinmetal_section06_img_full.png", "type": "full"},
+      {"src": "seinmetal_section07_img_full.png", "type": "full"}
     ]
   },
   {
@@ -128,7 +263,7 @@
   {
     "id": "dowon",
     "title": "도원엔지니어링 건축사사무소",
-    "overview": "전문성과 경험을 바탕으로 건축 설계와 감리 서비스를 제공하는 도원엔지니어링 건축사사무소를 새롭게 리뉴얼하였습니다. 기존 사이트의 브랜드 정보와 서비스를 더욱 쉽게 탐색할 수 있도록 변경하고, 정돈된 디자인으로 전문성과 신뢰도를 더욱 부각시켰습니다.",
+    "overview": "전문성과 경험을 바탕으로 건축 설계와 감리 서비스를 제공하는 도원엔지니어링 건축사사무소를 새롭게 리뉴얼하였습니다.\n기존 사이트의 브랜드 정보와 서비스를 더욱 쉽게 탐색할 수 있도록 변경하고, 정돈된 디자인으로 전문성과 신뢰도를 더욱 부각시켰습니다.",
     "client": "도원엔지니어링건축사사무소",
     "category": "Web Design",
     "year": "2024",
@@ -140,6 +275,18 @@
       {"src": "dowon_section05_img_full.png", "type": "full"},
       {"src": "dowon_section06_img_full.png", "type": "full"},
       {"src": "dowon_section07_img_full.png", "type": "full"}
+    ]
+  },
+  {
+    "id": "samdafood",
+    "title": "삼다푸드",
+    "overview": "삼다푸드는 오피스, 산업체, 병원, 학교 등 다양한 환경에서 급식 서비스를 제공합니다. 넓은 여백과 직관적인 레이아웃으로 사용자 친화적으로 제작되었습니다.",
+    "client": "삼다푸드",
+    "category": "Web Design",
+    "year": "2024",
+    "images": [
+      {"src": "samdafood_section01_img_full.png", "type": "full"},
+      {"src": "samdafood_section02_img_full.png", "type": "full"}
     ]
   }
 ]
