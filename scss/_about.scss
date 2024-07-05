@@ -63,7 +63,7 @@
             }
   
             p {
-              margin: 0 0 .8rem;
+              margin: 0 0 1.2rem;
               font-size: var(--fs-body1);
               font-weight: var(--fw-body);
               line-height: var(--lh-body);
@@ -97,8 +97,8 @@
         figure {
           display: block;
           width: 100%;
-          padding: 0 0 73.92%;
-          background: #d9d9d9;
+          // padding: 0 0 73.92%;
+          // background: #d9d9d9;
         }
       }
     }
@@ -188,6 +188,10 @@
             margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
   
             h6 {margin: 0 0 clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem)}
+
+            .rightArea {
+              p {margin: 0 0 clamp(.8rem, calc((8 / var(--viewportWidth)) * 100vw), 1.2rem);}
+            }
           }
 
           &.delay300 {transition-delay: .5s;}

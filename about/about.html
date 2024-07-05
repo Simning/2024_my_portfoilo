@@ -124,7 +124,7 @@
     <div class="contentsWrapper">
       <div class="headingTxt scrollIn">
         <h4>
-          HELLO! <br class="flexibleBr" /><span class="lightText">MY NAME IS </span>MINGI KIM<br />
+          HELLO! <br class="flexibleBr" /><span class="lightText">MY NAME IS </span>MINKI KIM<br />
           <span class="lightText">I’M </span>WEB & UX/UI DESIGNER
         </h4>
       </div>
@@ -133,8 +133,9 @@
         <article class="contentWrap">
           <h6>ABOUT</h6>
           <div class="rightArea">
-            <p class="korLs">안녕하세요. 웹/앱 디자인 및 퍼블리싱을 하고 있는 김민기입니다. 고객의 요구를 최우선으로 생각하며, 브랜드를 반영한 감각적인 디자인과 UX를 고려하여 직관적이고 쉬운 UI를 제공합니다.</p>
-            <p class="korLs">다양한 환경에 적합한 반응형 디자인을 구현하며, 웹 표준과 접근성을 준수합니다. 업무와 관련된 분야를 지속적으로 탐구하고 있으며, 디자이너와의 원활한 협업을 위해 체계적인 스타일 가이드를 제작하여 디자인합니다.</p>
+            <p class="korLs">안녕하세요. 웹/앱 디자인 및 퍼블리싱을 하고 있는 김민기입니다. 고객의 요구를 최우선으로 생각하며, 브랜드의 정체성을 반영한 감각적인 디자인과 사용자 경험을 고려하여 직관적이고 쉬운 UI를 제작하고 있습니다.</p>
+            <p class="korLs">체계적인 스타일 가이드를 중심으로 하여 일관성 있는 디자인을 구현하고, 다양한 디바이스 환경에 적합한 반응형 디자인과 웹 표준, 접근성을 준수한 디자인을 제공합니다.</p>
+            <p class="korLs">저는 프로젝트 진행에 있어 관련된 분야를 지속적으로 탐구하고, 팀원들과 원활한 협업을 위한 커뮤니케이션을 중요시 여기고 있습니다.</p>
           </div>
         </article>
     
@@ -365,7 +366,9 @@
 
     <div class="stickyWrapper scrollIn" data-delay-class="delay500">
       <div class="stickyWrap">
-        <figure></figure>
+        <figure>
+          <img src="../src/about/sticky_img.jpeg" alt="">
+        </figure>
       </div>
     </div>
 
@@ -373,7 +376,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         // 요소와 관련된 클래스 처리
         const handleStickyWrapperClasses = () => {
-          const myStickyWrapper = document.querySelector('stickyWrapper');
+          const myStickyWrapper = document.querySelector('.stickyWrapper'); // 수정된 선택자
           const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 
           if (isSmallScreen) {
@@ -391,7 +394,7 @@
         // ResizeObserver를 사용하여 화면 크기 변화 감지
         const resizeObserver = new ResizeObserver(entries => {
           entries.forEach(entry => {
-          handleStickyWrapperClasses();
+            handleStickyWrapperClasses();
           });
         });
 
@@ -437,7 +440,7 @@
           <a href="javascript:void(0)" class="topBtn"><span>SCROLL TO TOP</span></a>
         </article>
       </div>
-      <span class="copy">© 2024 KIMMINKI PORTFOLIO.</span>
+      <span class="copy">© 2024 KIMKI PORTFOLIO.</span>
     </div>
   </footer>
 </body>

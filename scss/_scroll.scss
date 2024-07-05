@@ -1,6 +1,6 @@
 .scrollIn {
   opacity: 0;
-  filter: blur(2rem);
+  filter: blur(4rem);
   transform: translateY(2rem);
   transition: opacity .6s ease-in-out, filter .6s ease-in-out, transform .6s ease-in-out;
 }

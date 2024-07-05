@@ -1263,7 +1263,7 @@ header {
           .about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea ul li:last-child {
             margin: 0; }
         .about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea p {
-          margin: 0 0 .8rem;
+          margin: 0 0 1.2rem;
           font-size: var(--fs-body1);
           font-weight: var(--fw-body);
           line-height: var(--lh-body);
@@ -1286,9 +1286,7 @@ header {
       top: var(--header-size); }
       .about .aboutSection .stickyWrapper .stickyWrap figure {
         display: block;
-        width: 100%;
-        padding: 0 0 73.92%;
-        background: #d9d9d9; }
+        width: 100%; }
 .about .flexibleBr {
   display: none; }
 
@@ -1337,6 +1335,8 @@ header {
       margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem); }
       .about .aboutSection .contentsWrapper .contentsInner .contentWrap h6 {
         margin: 0 0 clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem); }
+      .about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea p {
+        margin: 0 0 clamp(0.8rem, calc((8 / var(--viewportWidth)) * 100vw), 1.2rem); }
     .about .aboutSection .contentsWrapper .contentsInner.delay300 {
       transition-delay: .5s; }
     .about .aboutSection .stickyWrapper {
@@ -1750,7 +1750,7 @@ footer {
     left: auto; } }
 .scrollIn {
   opacity: 0;
-  filter: blur(2rem);
+  filter: blur(4rem);
   transform: translateY(2rem);
   transition: opacity .6s ease-in-out, filter .6s ease-in-out, transform .6s ease-in-out; }
 
