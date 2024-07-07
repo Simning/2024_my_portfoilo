@@ -390,8 +390,7 @@
             position: relative;
             display: inline-block;
             margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
-            padding: clamp(.3rem, calc((5 / var(--viewportWidth)) * 100vw), .5rem) clamp(.6rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) clamp(.1rem, calc((3 / var(--viewportWidth)) * 100vw), .3rem);
-
+            
             a {
               &::before {
                 animation: pulse 2s ease-in-out 0.3s infinite;

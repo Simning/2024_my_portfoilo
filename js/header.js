@@ -67,41 +67,43 @@ class HeaderManager {
     localStorage.setItem('color-mode', mode);
   }
 
-  //////////* 헤더 스크롤 제어 *//////////
-  setupHeaderScroll() {
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    const headerHeight = header.offsetHeight;
-    const slideDownNav = document.querySelector('.slideDownNav');
-    const toggleMenu = document.querySelector('.toggleMenu');
-  
-    window.addEventListener('scroll', () => {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-      // 스크롤이 내려가는 경우
-      if (currentScroll > lastScrollTop) {
-        // 스크롤 다운 헤더 숨김
-        header.style.top = `-${headerHeight}px`;
-      } else {
-        // 스크롤 업 헤더 보임
+// 헤더 스크롤 제어 함수
+setupHeaderScroll() {
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+  const headerHeight = header.offsetHeight;
+  const slideDownNav = document.querySelector('.slideDownNav');
+  const toggleMenu = document.querySelector('.toggleMenu');
+
+  window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // 스크롤이 내려가는 경우
+    if (currentScroll > lastScrollTop) {
+      // 스크롤 다운 헤더 숨김
+      header.style.top = `-${headerHeight}px`;
+    } else {
+      // 스크롤 업 헤더 보임, 단 스크롤이 최상단이 아닌 경우에만
+      if (currentScroll > 0) {
         header.style.top = '0';
       }
-  
-      // 슬라이드다운 내비게이션이 열려 있는 경우 닫음
-      if (slideDownNav.classList.contains('open')) {
-        slideDownNav.classList.remove('open');
-        slideDownNav.classList.add('close');
-      }
-      // 토글 메뉴가 열려 있는 경우 닫음
-      if (toggleMenu.classList.contains('open')) {
-        toggleMenu.classList.remove('open');
-        toggleMenu.classList.add('close');
-      }
-  
-      // 마지막 스크롤 위치를 업데이트
-      lastScrollTop = currentScroll;
-    });
-  }
+    }
+
+    // 슬라이드다운 내비게이션이 열려 있는 경우 닫음
+    if (slideDownNav.classList.contains('open')) {
+      slideDownNav.classList.remove('open');
+      slideDownNav.classList.add('close');
+    }
+    // 토글 메뉴가 열려 있는 경우 닫음
+    if (toggleMenu.classList.contains('open')) {
+      toggleMenu.classList.remove('open');
+      toggleMenu.classList.add('close');
+    }
+
+    // 마지막 스크롤 위치를 업데이트
+    lastScrollTop = currentScroll;
+  });
+}
 }
 
 new HeaderManager();

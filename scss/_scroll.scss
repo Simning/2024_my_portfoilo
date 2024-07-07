@@ -31,3 +31,10 @@
 .delay1800 {transition: opacity .6s ease-in-out 1.8s, filter .6s ease-in-out 1.8s, transform .6s ease-in-out 1.8s}
 .delay1900 {transition: opacity .6s ease-in-out 1.9s, filter .6s ease-in-out 1.9s, transform .6s ease-in-out 1.9s}
 .delay2000 {transition: opacity .6s ease-in-out 2s, filter .6s ease-in-out 2s, transform .6s ease-in-out 2s}
+
+@media (max-width: 768px){
+  .scrollIn { 
+    filter: blur(2rem);
+    transform: translateY(4rem);
+  }
+}

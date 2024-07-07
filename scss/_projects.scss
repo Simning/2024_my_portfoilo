@@ -149,10 +149,11 @@
               height: 100%;
               top: 0;
             }
-            &:hover {
-              .cell {
-                p {color: var(--color-white);}
-              }
+          }
+
+          &:hover {
+            .cell {
+              p {color: var(--color-white);}
             }
           }
         }
@@ -321,7 +322,7 @@
               display: inline-block;
               padding: 0;
 
-              & p {
+              p {
                 font-size: var(--fs-body2);
                 color: var(--color-primary-76op);
               }
@@ -357,6 +358,22 @@
               &:first-child {margin: 0}
               &:last-child {margin: 0;}
             }
+
+            &:hover {
+              .cell {
+                p {color: var(--color-white-76op);}
+
+                &.proj {
+                  p {color: var(--color-white);}
+                }
+
+                &.cate {
+                  &::after {
+                    background-color: var(--color-white-40op);
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -373,8 +390,26 @@
             .cell {
               p {color: var(--color-secondary-76op);}
 
-              &.proj {
-                p {color: var(--color-secondary);}
+              &.num {display: none;}
+
+              &.proj {p {color: var(--color-secondary);}}
+
+              &.cate {
+                &::after {background-color: var(--color-secondary-40op);}
+              }
+            }
+
+            &:hover {
+              .cell {
+                p {color: var(--color-black-76op);}
+
+                &.proj {
+                  p {color: var(--color-black);}
+                }
+
+                &.cate {
+                  &::after {background-color: var(--color-black-40op);}
+                }
               }
             }
           }
@@ -406,7 +441,7 @@
             .cell {
               &.proj {margin: 0 0 clamp(.4rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
               &.cate {padding: 0 clamp(.4rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem) 0 0;}
-              &.year {padding: 0 0 0 clamp(.8rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
+              &.year {padding: 0 0 0 clamp(.4rem, calc((8 / var(--viewportWidth)) * 100vw), .8rem);}
               &:first-child {margin: 0}
               &:last-child {margin: 0;}
             }
