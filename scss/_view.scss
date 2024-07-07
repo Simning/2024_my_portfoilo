@@ -220,7 +220,7 @@
     }
   }
 
-  .space {height: clamp(.8rem, calc((12 / var(--viewportWidth) * 100vw), 1.2rem));}
+  .space {height: clamp(.8rem, calc((8 / var(--viewportWidth)) * 100vw), 1.2rem);}
 }
 
 @media (max-width: 375px){

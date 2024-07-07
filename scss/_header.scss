@@ -30,7 +30,7 @@ header {
         margin: .2rem 0 0;
         
         li {
-          margin: 0 2rem;
+          margin: 0 1.4rem;
           cursor: pointer;
 
           .navLink {
@@ -59,7 +59,7 @@ header {
 
       .modeWrap {
         display: flex;
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 1.4rem;
 
         a {
           display: flex;
@@ -249,10 +249,6 @@ header {
   header {
     .headerWrapper {
       .primaryNav {
-        .gnbMenu {
-          li {margin: 0 1.6rem;}
-        }
-  
         .modeWrap {margin: 0 0 0 1.6rem;}
       }
     }
@@ -263,10 +259,6 @@ header {
   header {
     .headerWrapper {
       .primaryNav {
-        .gnbMenu {
-          li {margin: 0 1.4rem;}
-        }
-  
         .modeWrap {margin: 0 0 0 1.4rem;}
       }
     }

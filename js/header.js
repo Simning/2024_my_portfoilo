@@ -24,7 +24,7 @@ class HeaderManager {
       const isActive = linkFileName === currentFileName || 
                       (linkFileName === '' && currentFileName === 'index.html') ||
                       (link.textContent.trim().toLowerCase() === 'projects' && 
-                        (currentFileName === 'projects.html' || currentFileName.startsWith('projView')));
+                      (currentFileName === 'projects.html' || currentFileName.startsWith('projView')));
 
       // 링크에 'active' 클래스를 토글
       link.classList.toggle('active', isActive);
@@ -83,7 +83,7 @@ setupHeaderScroll() {
       // 스크롤 다운 헤더 숨김
       header.style.top = `-${headerHeight}px`;
     } else {
-      // 스크롤 업 헤더 보임, 단 스크롤이 최상단이 아닌 경우에만
+      // top 0일 경우에 스크롤 헤더 보임
       if (currentScroll > 0) {
         header.style.top = '0';
       }

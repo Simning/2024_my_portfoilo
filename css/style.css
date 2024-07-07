@@ -230,7 +230,7 @@ header {
         display: flex;
         margin: .2rem 0 0; }
         header .headerWrapper .primaryNav .gnbMenu li {
-          margin: 0 2rem;
+          margin: 0 1.4rem;
           cursor: pointer; }
           header .headerWrapper .primaryNav .gnbMenu li .navLink {
             position: relative;
@@ -253,7 +253,7 @@ header {
               opacity: 1; }
       header .headerWrapper .primaryNav .modeWrap {
         display: flex;
-        margin: 0 0 0 2rem; }
+        margin: 0 0 0 1.4rem; }
         header .headerWrapper .primaryNav .modeWrap a {
           display: flex;
           justify-content: center;
@@ -381,13 +381,9 @@ header {
     background: var(--color-secondary); }
 
 @media (max-width: 1280px) {
-  header .headerWrapper .primaryNav .gnbMenu li {
-    margin: 0 1.6rem; }
   header .headerWrapper .primaryNav .modeWrap {
     margin: 0 0 0 1.6rem; } }
 @media (max-width: 1024px) {
-  header .headerWrapper .primaryNav .gnbMenu li {
-    margin: 0 1.4rem; }
   header .headerWrapper .primaryNav .modeWrap {
     margin: 0 0 0 1.4rem; } }
 @media (max-width: 768px) {
@@ -1215,7 +1211,7 @@ header {
         grid-column: 1 / -1; }
 
   .space {
-    height: clamp(0.8rem, calc((12 / var(--viewportWidth) * 100vw), 1.2rem)); } }
+    height: clamp(0.8rem, calc((8 / var(--viewportWidth)) * 100vw), 1.2rem); } }
 @media (max-width: 375px) {
   .projectView .sideInner {
     padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem); }
