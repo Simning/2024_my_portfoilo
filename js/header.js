@@ -6,7 +6,7 @@ class HeaderManager {
 
     this.setupNavigation();
     this.setupDarkMode();
-    this.setupHeaderScroll();
+    this.setupHeaderScroll(); 
   }
 
   //////////* 네비게이션 메서드 *//////////
@@ -22,7 +22,7 @@ class HeaderManager {
       const linkFileName = linkPath.substring(linkPath.lastIndexOf('/') + 1);
       // 현재 링크가 활성화 상태인지 확인
       const isActive = linkFileName === currentFileName || 
-                      (linkFileName === '' && currentFileName === 'index.html') ||
+                      linkFileName === '' ||
                       (link.textContent.trim().toLowerCase() === 'projects' && 
                       (currentFileName === 'projects.html' || currentFileName.startsWith('projView')));
 
@@ -67,43 +67,41 @@ class HeaderManager {
     localStorage.setItem('color-mode', mode);
   }
 
-// 헤더 스크롤 제어 함수
-setupHeaderScroll() {
-  let lastScrollTop = 0;
-  const header = document.querySelector('header');
-  const headerHeight = header.offsetHeight;
-  const slideDownNav = document.querySelector('.slideDownNav');
-  const toggleMenu = document.querySelector('.toggleMenu');
+  // 헤더 스크롤 제어 함수
+  setupHeaderScroll() {
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const headerHeight = header.offsetHeight;
+    const slideDownNav = document.querySelector('.slideDownNav');
+    const toggleMenu = document.querySelector('.toggleMenu');
 
-  window.addEventListener('scroll', () => {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    window.addEventListener('scroll', () => {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    // 스크롤이 내려가는 경우
-    if (currentScroll > lastScrollTop) {
-      // 스크롤 다운 헤더 숨김
-      header.style.top = `-${headerHeight}px`;
-    } else {
-      // top 0일 경우에 스크롤 헤더 보임
-      if (currentScroll > 0) {
+      // 스크롤이 내려가는 경우
+      if (currentScroll > lastScrollTop) {
+        // 스크롤 다운 시 헤더 숨김
+        header.style.top = `-${headerHeight}px`;
+      } else if (currentScroll > 0) {
+        // 스크롤이 올라가고 스크롤 위치가 0보다 큰 경우 헤더 보임
         header.style.top = '0';
       }
-    }
 
-    // 슬라이드다운 내비게이션이 열려 있는 경우 닫음
-    if (slideDownNav.classList.contains('open')) {
-      slideDownNav.classList.remove('open');
-      slideDownNav.classList.add('close');
-    }
-    // 토글 메뉴가 열려 있는 경우 닫음
-    if (toggleMenu.classList.contains('open')) {
-      toggleMenu.classList.remove('open');
-      toggleMenu.classList.add('close');
-    }
+      // 슬라이드다운 내비게이션이 열려 있는 경우 닫음
+      if (slideDownNav.classList.contains('open')) {
+        slideDownNav.classList.remove('open');
+        slideDownNav.classList.add('close');
+      }
+      // 토글 메뉴가 열려 있는 경우 닫음
+      if (toggleMenu.classList.contains('open')) {
+        toggleMenu.classList.remove('open');
+        toggleMenu.classList.add('close');
+      }
 
-    // 마지막 스크롤 위치를 업데이트
-    lastScrollTop = currentScroll;
-  });
-}
+      // 마지막 스크롤 위치를 업데이트
+      lastScrollTop = currentScroll;
+    });
+  }
 }
 
 new HeaderManager();
