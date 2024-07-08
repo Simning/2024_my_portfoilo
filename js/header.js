@@ -22,7 +22,7 @@ class HeaderManager {
       const linkFileName = linkPath.substring(linkPath.lastIndexOf('/') + 1);
       // 현재 링크가 활성화 상태인지 확인
       const isActive = linkFileName === currentFileName || 
-                      linkFileName === '' ||
+                      (linkFileName === '' && currentFileName === '') ||
                       (link.textContent.trim().toLowerCase() === 'projects' && 
                       (currentFileName === 'projects.html' || currentFileName.startsWith('projView')));
 
