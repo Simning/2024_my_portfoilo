@@ -187,6 +187,12 @@ button, input {
     --fs-btn: clamp(1.1rem, calc((15 / var(--viewportWidth)) * 100vw), 1.3rem); } }
 * {
   font-family: 'roc-grotesk', 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* 모든 WebKit 기반 브라우저에서 부드러운 폰트 렌더링 설정 */
+  -moz-osx-font-smoothing: grayscale;
+  /* macOS에서 폰트 부드럽게 설정 */
+  text-rendering: optimizeLegibility;
+  /* 폰트 렌더링 최적화 */
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.5;
@@ -1291,7 +1297,7 @@ header {
         margin: 0; }
   .about .aboutSection .stickyWrapper {
     position: relative;
-    grid-column: 9 / span 4; }
+    grid-column: 10 / span 3; }
     .about .aboutSection .stickyWrapper .stickyInner {
       position: sticky;
       top: var(--header-size); }
@@ -1335,6 +1341,9 @@ header {
   .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea span {
     color: var(--color-secondary-76op); }
 
+@media (max-width: 1280px) {
+  .about .aboutSection .stickyWrapper {
+    grid-column: 9 / span 4; } }
 @media (max-width: 1024px) {
   .about .aboutSection {
     grid-template-columns: repeat(8, 1fr);

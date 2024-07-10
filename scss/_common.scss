@@ -150,6 +150,9 @@
 
 * {
   font-family: 'roc-grotesk', 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased; /* 모든 WebKit 기반 브라우저에서 부드러운 폰트 렌더링 설정 */
+  -moz-osx-font-smoothing: grayscale; /* macOS에서 폰트 부드럽게 설정 */
+  text-rendering: optimizeLegibility; /* 폰트 렌더링 최적화 */
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.5;

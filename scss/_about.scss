@@ -88,7 +88,7 @@
 
     .stickyWrapper {
       position: relative;
-      grid-column: 9 / span 4;
+      grid-column: 10 / span 3;
       
       .stickyInner {
         position: sticky;
@@ -155,6 +155,16 @@
           }
         }
       }
+    }
+  }
+}
+
+
+
+@media (max-width: 1280px){
+  .about {
+    .aboutSection {
+      .stickyWrapper {grid-column: 9 / span 4;}
     }
   }
 }
