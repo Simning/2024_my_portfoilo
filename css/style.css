@@ -1700,11 +1700,6 @@ footer {
   .dark-mode footer .copy {
     color: var(--color-secondary-40op); }
 
-@media (max-width: 1440px) {
-  footer .footWrapper .footInner h2 {
-    grid-column: 1 / span 8; }
-  footer .footWrapper .footInner .footRightArea {
-    grid-column: 9 / span 4; } }
 @media (max-width: 1280px) {
   footer .footWrapper {
     padding: 4rem var(--grid-margin-size) 3.2rem; }
