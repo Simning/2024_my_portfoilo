@@ -468,22 +468,36 @@ header {
         padding: .5rem .8rem .3rem;
         border: 0.1rem solid var(--color-primary); }
         .main .heroSection .wrapper .botArea .status a {
+          position: relative;
           display: flex;
           align-items: center;
+          padding: 0 0 0 1.6rem;
           font-size: var(--fs-body1);
           color: var(--color-primary);
           line-height: 1; }
           .main .heroSection .wrapper .botArea .status a::before {
             content: '';
-            position: relative;
+            position: absolute;
             display: block;
-            top: -.1rem;
-            width: .6rem;
-            height: .6rem;
-            margin: 0 .8rem 0 0;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: .8rem;
+            height: .8rem;
             background: #57CE3A;
             border-radius: 50%;
             animation: pulse 2s ease-in-out 0.5s infinite; }
+          .main .heroSection .wrapper .botArea .status a::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: .8rem;
+            height: .8rem;
+            background: #57CE3A;
+            border-radius: 50%; }
       .main .heroSection .wrapper .botArea .largeLogo {
         grid-column: 7 / span 6;
         display: flex;
@@ -624,13 +638,13 @@ header {
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: translateY(-50%) scale(1);
     opacity: 1;
     filter: blur(0); }
   100% {
-    transform: scale(1.6);
+    transform: translateY(-50%) scale(3);
     opacity: 0;
-    filter: blur(0.4rem); } }
+    filter: blur(0.2rem); } }
 @media (max-width: 1440px) {
   .main .projSection .wrapper {
     padding: 10rem 0 0; }
@@ -685,7 +699,11 @@ header {
           display: inline-block;
           margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem); }
           .main .heroSection .wrapper .botArea .status a::before {
-            animation: pulse 2s ease-in-out 0.3s infinite; }
+            width: .6rem;
+            height: .6rem; }
+          .main .heroSection .wrapper .botArea .status a::after {
+            width: .6rem;
+            height: .6rem; }
         .main .heroSection .wrapper .botArea .largeLogo {
           width: 100%; }
           .main .heroSection .wrapper .botArea .largeLogo svg path {
@@ -710,13 +728,13 @@ header {
 
   @keyframes pulse {
     0% {
-      transform: scale(1);
+      transform: translateY(-50%) scale(1);
       opacity: 1;
       filter: blur(0); }
     100% {
-      transform: scale(1.2);
+      transform: translateY(-50%) scale(3);
       opacity: 0;
-      filter: blur(0.2rem); } } }
+      filter: blur(0.12rem); } } }
 @media (max-width: 520px) {
   .main .heroSection .wrapper .txtWrap {
     grid-column: 1 / -1; } }
@@ -1085,17 +1103,17 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0 0 1.2rem; }
+      margin: 0 0 .8rem; }
       .projectView .sideInner .metaData .dataWrap h6 {
         margin: 0 2rem 0 0;
-        font-size: var(--fs-sub-title3);
-        font-weight: var(--fw-sub-title3);
-        line-height: var(--lh-sub-title3);
+        font-size: var(--fs-body1);
+        font-weight: var(--fw-body);
+        line-height: var(--lh-body);
         color: var(--color-primary-40op); }
       .projectView .sideInner .metaData .dataWrap p {
-        font-size: var(--fs-sub-title3);
-        font-weight: var(--fw-sub-title3);
-        line-height: var(--lh-sub-title3);
+        font-size: var(--fs-body1);
+        font-weight: var(--fw-body);
+        line-height: var(--lh-body);
         color: var(--color-primary); }
       .projectView .sideInner .metaData .dataWrap:last-child {
         margin: 0; }
@@ -1204,7 +1222,7 @@ header {
     .projectView .sideInner .metaData {
       margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem); }
       .projectView .sideInner .metaData .dataWrap {
-        margin: 0 0 clamp(0.8rem, calc((12 / var(--viewportWidth)) * 100vw), 1.2rem); }
+        margin: 0 0 clamp(0.6rem, calc((8 / var(--viewportWidth)) * 100vw), 0.8rem); }
         .projectView .sideInner .metaData .dataWrap h6 {
           margin: 0 clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) 0 0; }
   .projectView .showcaseInner {
@@ -1226,7 +1244,7 @@ header {
     .projectView .sideInner .metaData {
       margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem); }
       .projectView .sideInner .metaData .dataWrap {
-        margin: 0 0 clamp(0.6rem, calc((8 / var(--viewportWidth)) * 100vw), 0.8rem); }
+        margin: 0 0 clamp(0.4rem, calc((6 / var(--viewportWidth)) * 100vw), 0.6rem); }
         .projectView .sideInner .metaData .dataWrap h6 {
           margin: 0 clamp(1.2rem, calc((20 / var(--viewportWidth)) * 100vw), 1.6rem) 0 0; }
 
