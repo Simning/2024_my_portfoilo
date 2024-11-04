@@ -804,10 +804,16 @@ header {
         grid-column: 1 / span 2; }
       .projects .projectsSection .tableWrapper .tHead .cell.proj {
         grid-column: 3 / span 5; }
-      .projects .projectsSection .tableWrapper .tHead .cell.cate {
-        grid-column: 8 / span 3; }
       .projects .projectsSection .tableWrapper .tHead .cell.year {
         grid-column: 11 / span 2; }
+      .projects .projectsSection .tableWrapper .tHead .cell.cate {
+        grid-column: 8 / span 3; }
+        .projects .projectsSection .tableWrapper .tHead .cell.cate select {
+          width: 100%;
+          font-size: var(--fs-sub-title3);
+          font-weight: var(--fw-sub-title3);
+          line-height: var(--lh-sub-title3);
+          color: var(--color-primary); }
       .projects .projectsSection .tableWrapper .tHead .cell h6 {
         font-size: var(--fs-sub-title3);
         font-weight: var(--fw-sub-title3);
