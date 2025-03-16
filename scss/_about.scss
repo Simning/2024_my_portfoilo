@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     min-height: 100vh;
-    // margin: var(--header-size) 0 0;
     padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 8rem;
     gap: 0 var(--grid-gutter-size);
     background: var(--color-white);
@@ -126,8 +125,6 @@
 
 .dark-mode.about {
   .aboutSection {
-    background: var(--color-black);
-
     .contentsWrapper {
       .headingTxt {
         h4 {
@@ -173,7 +170,7 @@
   .about {
     .aboutSection {
       grid-template-columns: repeat(8, 1fr);
-      padding: 3.2rem var(--grid-margin-size) 7.2rem;
+      padding: calc(var(--header-size) + 3.2rem) var(--grid-margin-size) 7.2rem;
   
       .contentsWrapper {
         grid-column: 1 / span 4;
@@ -207,8 +204,8 @@
       display: flex;
       flex-direction: column-reverse;
       justify-content: start;
-      padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
-  
+      padding: clamp(calc(var(--header-size) + 2rem), calc((72 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2.4rem)) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
+      
       .contentsWrapper {
         .headingTxt {
           margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
@@ -257,7 +254,7 @@
 @media (max-width: 375px){
   .about {
     .aboutSection {
-      padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+      padding: clamp(calc(var(--header-size) + 1.2rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
   
       .contentsWrapper {
         .headingTxt {margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem);}

@@ -1,8 +1,5 @@
 .main {
-  // & section {background: var(--color-white);}
-
   .heroSection {
-    // height: calc(100vh - var(--header-size));
     height: 100vh;
 
     .wrapper {
@@ -11,7 +8,6 @@
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 0 var(--grid-gutter-size);
       height: 100%;
-      // margin: var(--header-size) 0 0;
       padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 4.8rem;
 
       .txtWrap {
@@ -242,8 +238,6 @@
 }
 
 .dark-mode.main {
-  & section {background: var(--color-black);}
-
   .heroSection {
     .wrapper {
       .txtWrap {
@@ -326,7 +320,8 @@
 @media (max-width: 1280px){
   .main {
     .heroSection {
-      .wrapper {padding: 2.4rem var(--grid-margin-size) 3.6rem;}
+      .wrapper {padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 3.6rem;}
+      
     }
   
     .projSection {
@@ -349,6 +344,7 @@
       .wrapper {
         grid-template-columns: repeat(8, 1fr);
         padding: 2.4rem var(--grid-margin-size) 3.2rem;
+        padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 3.2rem;
   
         .txtWrap {grid-column: 1 / span 4;}
   
@@ -387,8 +383,7 @@
       .wrapper {
         grid-template-columns: repeat(4, 1fr);
         height: auto;
-        padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
-  
+        padding: clamp(calc(var(--header-size) + 1.6rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2rem)) var(--grid-margin-size) clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem);
         .txtWrap {
           grid-column: 1 / span 2;
   
@@ -482,8 +477,9 @@
   .main {
     .heroSection {
       .wrapper {
-        padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem);
+        padding: clamp(calc(var(--header-size) + 1.2rem), calc((60 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
   
+        
         .txtWrap {
           p {margin: clamp(1.2rem, calc((14 / var(--viewportWidth)) * 100vw), 1.4rem) 0 0;}
         }

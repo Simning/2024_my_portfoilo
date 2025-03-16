@@ -1,7 +1,6 @@
 .projects {
   .projectsSection {
     min-height: 100vh;
-    // margin: var(--header-size) 0 0;
     padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 8rem;
     background: var(--color-white);
 
@@ -227,8 +226,6 @@
 
 .dark-mode.projects {
   .projectsSection {
-    background: var(--color-black);
-
     .headingTxt {
       h2 {color: var(--color-secondary);}
       span {color: var(--color-secondary);}
@@ -313,7 +310,7 @@
 @media (max-width: 1024px){
   .projects {
     .projectsSection {
-      padding: 2.4rem var(--grid-margin-size) 7.2rem;
+      padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 7.2rem;
 
       .headingTxt {margin: 0 0 4rem -.4rem;}
   
@@ -432,8 +429,8 @@
 @media (max-width: 768px){
   .projects {
     .projectsSection {
-      padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
-
+      padding: clamp(calc(var(--header-size) + 1.6rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2rem)) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem);
+      
       .headingTxt {margin: 0 0 clamp(2.4rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) 0;}
   
       .tableWrapper {
@@ -467,8 +464,8 @@
 @media (max-width: 375px){
   .projects {
     .projectsSection {
-      padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
-
+      padding: clamp(calc(var(--header-size) + 1.2rem), calc((64 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+      
       .headingTxt {margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) 0;}
   
       .tableWrapper {

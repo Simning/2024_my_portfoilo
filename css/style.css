@@ -668,8 +668,6 @@ header {
       .main .projSection .wrapper .projInner .projItem:hover .hoverBg {
         opacity: 1; }
 
-.dark-mode.main section {
-  background: var(--color-black); }
 .dark-mode.main .heroSection .wrapper .txtWrap h5 {
   color: var(--color-secondary); }
 .dark-mode.main .heroSection .wrapper .txtWrap p {
@@ -711,7 +709,7 @@ header {
       padding: 8rem 10rem 10rem; } }
 @media (max-width: 1280px) {
   .main .heroSection .wrapper {
-    padding: 2.4rem var(--grid-margin-size) 3.6rem; }
+    padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 3.6rem; }
   .main .projSection .wrapper {
     padding: 8.8rem 0 0; }
     .main .projSection .wrapper .topArea {
@@ -721,7 +719,8 @@ header {
 @media (max-width: 1024px) {
   .main .heroSection .wrapper {
     grid-template-columns: repeat(8, 1fr);
-    padding: 2.4rem var(--grid-margin-size) 3.2rem; }
+    padding: 2.4rem var(--grid-margin-size) 3.2rem;
+    padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 3.2rem; }
     .main .heroSection .wrapper .txtWrap {
       grid-column: 1 / span 4; }
     .main .heroSection .wrapper .botArea {
@@ -743,7 +742,7 @@ header {
     .main .heroSection .wrapper {
       grid-template-columns: repeat(4, 1fr);
       height: auto;
-      padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem); }
+      padding: clamp(calc(var(--header-size) + 1.6rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2rem)) var(--grid-margin-size) clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem); }
       .main .heroSection .wrapper .txtWrap {
         grid-column: 1 / span 2; }
         .main .heroSection .wrapper .txtWrap p {
@@ -799,7 +798,7 @@ header {
     grid-column: 1 / -1; } }
 @media (max-width: 375px) {
   .main .heroSection .wrapper {
-    padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem); }
+    padding: clamp(calc(var(--header-size) + 1.2rem), calc((60 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .main .heroSection .wrapper .txtWrap p {
       margin: clamp(1.2rem, calc((14 / var(--viewportWidth)) * 100vw), 1.4rem) 0 0; }
     .main .heroSection .wrapper .botArea {
@@ -985,39 +984,37 @@ header {
         margin: 0 .8rem;
         color: var(--color-primary-40op); }
 
-.dark-mode.projects .projectsSection {
-  background: var(--color-black); }
-  .dark-mode.projects .projectsSection .headingTxt h2 {
-    color: var(--color-secondary); }
-  .dark-mode.projects .projectsSection .headingTxt span {
-    color: var(--color-secondary); }
-  .dark-mode.projects .projectsSection .tableWrapper .tHead {
-    border: 0.1rem solid var(--color-secondary); }
-    .dark-mode.projects .projectsSection .tableWrapper .tHead .cell::before {
-      background: var(--color-secondary); }
-    .dark-mode.projects .projectsSection .tableWrapper .tHead .cell h6 {
-      color: var(--color-secondary); }
-  .dark-mode.projects .projectsSection .tableWrapper .tBody .row {
-    border-bottom: 0.1rem solid var(--color-secondary-20op);
-    /* href 값이 없는 경우 */
-    /* href 값이 있는 경우 */ }
-    .dark-mode.projects .projectsSection .tableWrapper .tBody .row .cell p {
-      color: var(--color-secondary); }
-    .dark-mode.projects .projectsSection .tableWrapper .tBody .row:not([href]):before {
-      color: var(--color-black-76op);
-      background: var(--color-secondary); }
-    .dark-mode.projects .projectsSection .tableWrapper .tBody .row[href]::before {
-      background: var(--color-secondary); }
-    .dark-mode.projects .projectsSection .tableWrapper .tBody .row:hover .cell p {
-      color: var(--color-black); }
-  .dark-mode.projects .projectsSection .btnArea .moreBtn .dot span {
+.dark-mode.projects .projectsSection .headingTxt h2 {
+  color: var(--color-secondary); }
+.dark-mode.projects .projectsSection .headingTxt span {
+  color: var(--color-secondary); }
+.dark-mode.projects .projectsSection .tableWrapper .tHead {
+  border: 0.1rem solid var(--color-secondary); }
+  .dark-mode.projects .projectsSection .tableWrapper .tHead .cell::before {
     background: var(--color-secondary); }
-  .dark-mode.projects .projectsSection .btnArea .moreBtn p {
+  .dark-mode.projects .projectsSection .tableWrapper .tHead .cell h6 {
     color: var(--color-secondary); }
-  .dark-mode.projects .projectsSection .btnArea .moreBtn:hover .dot span {
-    background: var(--color-secondary-40op); }
-  .dark-mode.projects .projectsSection .btnArea .moreBtn:hover p {
-    color: var(--color-secondary-40op); }
+.dark-mode.projects .projectsSection .tableWrapper .tBody .row {
+  border-bottom: 0.1rem solid var(--color-secondary-20op);
+  /* href 값이 없는 경우 */
+  /* href 값이 있는 경우 */ }
+  .dark-mode.projects .projectsSection .tableWrapper .tBody .row .cell p {
+    color: var(--color-secondary); }
+  .dark-mode.projects .projectsSection .tableWrapper .tBody .row:not([href]):before {
+    color: var(--color-black-76op);
+    background: var(--color-secondary); }
+  .dark-mode.projects .projectsSection .tableWrapper .tBody .row[href]::before {
+    background: var(--color-secondary); }
+  .dark-mode.projects .projectsSection .tableWrapper .tBody .row:hover .cell p {
+    color: var(--color-black); }
+.dark-mode.projects .projectsSection .btnArea .moreBtn .dot span {
+  background: var(--color-secondary); }
+.dark-mode.projects .projectsSection .btnArea .moreBtn p {
+  color: var(--color-secondary); }
+.dark-mode.projects .projectsSection .btnArea .moreBtn:hover .dot span {
+  background: var(--color-secondary-40op); }
+.dark-mode.projects .projectsSection .btnArea .moreBtn:hover p {
+  color: var(--color-secondary-40op); }
 
 @media (max-width: 1440px) {
   .projects .projectsSection .headingTxt {
@@ -1027,7 +1024,7 @@ header {
     margin: 0 0 4.8rem -.4rem; } }
 @media (max-width: 1024px) {
   .projects .projectsSection {
-    padding: 2.4rem var(--grid-margin-size) 7.2rem; }
+    padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 7.2rem; }
     .projects .projectsSection .headingTxt {
       margin: 0 0 4rem -.4rem; }
     .projects .projectsSection .tableWrapper .tHead {
@@ -1095,7 +1092,7 @@ header {
     background-color: var(--color-black-40op); } }
 @media (max-width: 768px) {
   .projects .projectsSection {
-    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
+    padding: clamp(calc(var(--header-size) + 1.6rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2rem)) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
     .projects .projectsSection .headingTxt {
       margin: 0 0 clamp(2.4rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) 0; }
     .projects .projectsSection .tableWrapper .tBody .row {
@@ -1120,7 +1117,7 @@ header {
       margin: clamp(3.2rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem) 0 0; } }
 @media (max-width: 375px) {
   .projects .projectsSection {
-    padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
+    padding: clamp(calc(var(--header-size) + 1.2rem), calc((64 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .projects .projectsSection .headingTxt {
       margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem) 0; }
     .projects .projectsSection .tableWrapper .tBody .row {
@@ -1141,16 +1138,15 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 100vh;
-  background: var(--color-white); }
+  min-height: 100vh; }
 .projectView .sideInner {
   position: sticky;
   display: block;
   top: 0;
   width: 48rem;
-  padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 4.8rem; }
+  padding: calc(var(--header-size) + 1.6rem) var(--grid-margin-size) 4.8rem; }
   .projectView .sideInner #projectTitle {
-    margin: 0 0 1.6rem;
+    margin: 0 0 1.2rem;
     font-size: var(--fs-sub-title1);
     font-weight: var(--fw-sub-title1);
     line-height: var(--lh-sub-title1);
@@ -1229,30 +1225,28 @@ header {
     .projectView .showcaseInner #projectImages .halfImage {
       grid-column: span 6; }
 
-.dark-mode.projectView .viewWrapper {
-  background: var(--color-black); }
-  .dark-mode.projectView .viewWrapper .sideInner #projectTitle {
-    color: var(--color-secondary); }
-  .dark-mode.projectView .viewWrapper .sideInner #projectOverview {
-    color: var(--color-secondary-76op); }
-  .dark-mode.projectView .viewWrapper .sideInner .metaData .dataWrap h6 {
-    color: var(--color-secondary-40op); }
-  .dark-mode.projectView .viewWrapper .sideInner .metaData .dataWrap p {
-    color: var(--color-secondary); }
-  .dark-mode.projectView .viewWrapper .sideInner .listBtn {
-    background: var(--color-secondary); }
-    .dark-mode.projectView .viewWrapper .sideInner .listBtn span {
-      color: var(--color-black); }
-    .dark-mode.projectView .viewWrapper .sideInner .listBtn::before {
-      background: var(--color-black); }
-    .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover {
-      padding: .5rem 0rem .3rem; }
-      .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover span {
-        color: var(--color-secondary); }
-      .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover::before {
-        transform: translateX(0); }
-  .dark-mode.projectView .viewWrapper .showcaseInner #projectImages img {
-    background: rgba(246, 242, 239, 0.04); }
+.dark-mode.projectView .viewWrapper .sideInner #projectTitle {
+  color: var(--color-secondary); }
+.dark-mode.projectView .viewWrapper .sideInner #projectOverview {
+  color: var(--color-secondary-76op); }
+.dark-mode.projectView .viewWrapper .sideInner .metaData .dataWrap h6 {
+  color: var(--color-secondary-40op); }
+.dark-mode.projectView .viewWrapper .sideInner .metaData .dataWrap p {
+  color: var(--color-secondary); }
+.dark-mode.projectView .viewWrapper .sideInner .listBtn {
+  background: var(--color-secondary); }
+  .dark-mode.projectView .viewWrapper .sideInner .listBtn span {
+    color: var(--color-black); }
+  .dark-mode.projectView .viewWrapper .sideInner .listBtn::before {
+    background: var(--color-black); }
+  .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover {
+    padding: .5rem 0rem .3rem; }
+    .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover span {
+      color: var(--color-secondary); }
+    .dark-mode.projectView .viewWrapper .sideInner .listBtn:hover::before {
+      transform: translateX(0); }
+.dark-mode.projectView .viewWrapper .showcaseInner #projectImages img {
+  background: rgba(246, 242, 239, 0.04); }
 
 .space {
   height: 1.2rem; }
@@ -1279,8 +1273,10 @@ header {
     display: block;
     top: auto;
     width: 100%;
-    margin: var(--header-size) 0 0;
-    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
+    padding: clamp(calc(var(--header-size) + 1.2rem), calc((64 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4.8rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem);
+    margin: 0 0 1.2rem; }
+    .projectView .sideInner #projectTitle {
+      margin: 0 0 0.8rem; }
     .projectView .sideInner #projectOverview {
       margin: 0 0 clamp(2.8rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem); }
     .projectView .sideInner .metaData {
@@ -1302,7 +1298,9 @@ header {
     height: clamp(0.8rem, calc((8 / var(--viewportWidth)) * 100vw), 1.2rem); } }
 @media (max-width: 375px) {
   .projectView .sideInner {
-    padding: clamp(1.2rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(4rem, calc((48 / var(--viewportWidth)) * 100vw), 4.8rem); }
+    padding: clamp(calc(var(--header-size) + .8rem), calc((60 / var(--viewportWidth)) * 100vw), 1.2rem) var(--grid-margin-size) clamp(3.2rem, calc((40 / var(--viewportWidth)) * 100vw), 4rem); }
+    .projectView .sideInner #projectTitle {
+      margin: 0 0 0.4rem; }
     .projectView .sideInner #projectOverview {
       margin: 0 0 clamp(2rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem); }
     .projectView .sideInner .metaData {
@@ -1405,22 +1403,20 @@ header {
 .about .flexibleBr {
   display: none; }
 
-.dark-mode.about .aboutSection {
-  background: var(--color-black); }
-  .dark-mode.about .aboutSection .contentsWrapper .headingTxt h4 {
-    color: var(--color-secondary); }
-    .dark-mode.about .aboutSection .contentsWrapper .headingTxt h4 span {
-      color: var(--color-secondary-40op); }
-  .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap h6 {
+.dark-mode.about .aboutSection .contentsWrapper .headingTxt h4 {
+  color: var(--color-secondary); }
+  .dark-mode.about .aboutSection .contentsWrapper .headingTxt h4 span {
     color: var(--color-secondary-40op); }
-  .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea ul li .lightTypeLogo {
-    display: none; }
-  .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea ul li .darkTypeLogo {
-    display: block; }
-  .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea p {
-    color: var(--color-secondary); }
-  .dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea span {
-    color: var(--color-secondary-76op); }
+.dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap h6 {
+  color: var(--color-secondary-40op); }
+.dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea ul li .lightTypeLogo {
+  display: none; }
+.dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea ul li .darkTypeLogo {
+  display: block; }
+.dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea p {
+  color: var(--color-secondary); }
+.dark-mode.about .aboutSection .contentsWrapper .contentsInner .contentWrap .rightArea span {
+  color: var(--color-secondary-76op); }
 
 @media (max-width: 1280px) {
   .about .aboutSection .stickyWrapper {
@@ -1428,7 +1424,7 @@ header {
 @media (max-width: 1024px) {
   .about .aboutSection {
     grid-template-columns: repeat(8, 1fr);
-    padding: 3.2rem var(--grid-margin-size) 7.2rem; }
+    padding: calc(var(--header-size) + 3.2rem) var(--grid-margin-size) 7.2rem; }
     .about .aboutSection .contentsWrapper {
       grid-column: 1 / span 4; }
       .about .aboutSection .contentsWrapper .headingTxt {
@@ -1448,7 +1444,7 @@ header {
     display: flex;
     flex-direction: column-reverse;
     justify-content: start;
-    padding: clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
+    padding: clamp(calc(var(--header-size) + 2rem), calc((72 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2.4rem)) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
     .about .aboutSection .contentsWrapper .headingTxt {
       margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem);
       transition-delay: .3s; }
@@ -1476,7 +1472,7 @@ header {
     display: block; } }
 @media (max-width: 375px) {
   .about .aboutSection {
-    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
+    padding: clamp(calc(var(--header-size) + 1.2rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .about .aboutSection .contentsWrapper .headingTxt {
       margin: 0 0 clamp(2.4rem, calc((28 / var(--viewportWidth)) * 100vw), 2.8rem); }
     .about .aboutSection .contentsWrapper .contentsInner .contentWrap {
@@ -1585,33 +1581,31 @@ header {
             .bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
               color: var(--color-white-76op); }
 
-.dark-mode.bookmark .bookmarkSection {
-  background: var(--color-black); }
-  .dark-mode.bookmark .bookmarkSection .headingTxt h2 {
+.dark-mode.bookmark .bookmarkSection .headingTxt h2 {
+  color: var(--color-secondary); }
+.dark-mode.bookmark .bookmarkSection .headingTxt span {
+  color: var(--color-secondary); }
+.dark-mode.bookmark .bookmarkSection .tabs .tab {
+  color: var(--color-secondary); }
+  .dark-mode.bookmark .bookmarkSection .tabs .tab.active {
+    color: var(--color-black);
+    background: var(--color-secondary); }
+.dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
+  border: 0.1rem solid rgba(166, 169, 153, 0.12); }
+  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a figure .cate {
+    color: var(--color-secondary-40op); }
+  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a h6 {
     color: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .headingTxt span {
-    color: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .tabs .tab {
-    color: var(--color-secondary); }
-    .dark-mode.bookmark .bookmarkSection .tabs .tab.active {
-      color: var(--color-black);
-      background: var(--color-secondary); }
-  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a {
-    border: 0.1rem solid rgba(166, 169, 153, 0.12); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a figure .cate {
-      color: var(--color-secondary-40op); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a h6 {
-      color: var(--color-secondary); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a p {
-      color: var(--color-secondary-76op); }
-    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover {
-      background: var(--color-secondary); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover figure .cate {
-        color: var(--color-black-40op); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover h6 {
-        color: var(--color-black); }
-      .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
-        color: var(--color-black-76op); }
+  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a p {
+    color: var(--color-secondary-76op); }
+  .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover {
+    background: var(--color-secondary); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover figure .cate {
+      color: var(--color-black-40op); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover h6 {
+      color: var(--color-black); }
+    .dark-mode.bookmark .bookmarkSection .listWrapper .itemsInner .listItem a:hover p {
+      color: var(--color-black-76op); }
 
 @media (max-width: 1440px) {
   .bookmark .bookmarkSection .headingTxt {
@@ -1625,7 +1619,7 @@ header {
       grid-column: span 4; } }
 @media (max-width: 1024px) {
   .bookmark .bookmarkSection {
-    padding: 2.4rem var(--grid-margin-size) 7.2rem; }
+    padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 7.2rem; }
     .bookmark .bookmarkSection .headingTxt {
       margin: 0 0 4rem -.4rem; }
     .bookmark .bookmarkSection .listWrapper {
@@ -1636,7 +1630,7 @@ header {
           grid-column: span 4; } }
 @media (max-width: 768px) {
   .bookmark .bookmarkSection {
-    padding: clamp(1.6rem, calc((20 / var(--viewportWidth)) * 100vw), 2rem) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
+    padding: clamp(calc(var(--header-size) + 1.6rem), calc((68 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 2rem)) var(--grid-margin-size) clamp(6rem, calc((72 / var(--viewportWidth)) * 100vw), 7.2rem); }
     .bookmark .bookmarkSection .headingTxt {
       margin: 0 0 clamp(2.8rem, calc((32 / var(--viewportWidth)) * 100vw), 3.2rem) calc(clamp(.2rem, calc((4 / var(--viewportWidth)) * 100vw), .4rem) * -1); }
     .bookmark .bookmarkSection .tabs .tab {
@@ -1654,7 +1648,7 @@ header {
     grid-column: 1 / -1; } }
 @media (max-width: 375px) {
   .bookmark .bookmarkSection {
-    padding: clamp(1.4rem, calc((16 / var(--viewportWidth)) * 100vw), 1.6rem) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
+    padding: clamp(calc(var(--header-size) + 1.2rem), calc((64 / var(--viewportWidth)) * 100vw), calc(var(--header-size) + 1.6rem)) var(--grid-margin-size) clamp(5.6rem, calc((60 / var(--viewportWidth)) * 100vw), 6rem); }
     .bookmark .bookmarkSection .headingTxt {
       margin: 0 0 clamp(2rem, calc((24 / var(--viewportWidth)) * 100vw), 2.4rem) 0; }
     .bookmark .bookmarkSection .tabs .tab {

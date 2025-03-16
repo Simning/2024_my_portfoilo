@@ -1,4 +1,4 @@
-@mixin noise-bg-overlay($image-path, $size: 250px, $opacity: .6) {
+@mixin noise-bg-overlay($image-path, $size: 350px, $opacity: .6) {
   content: "";
   position: absolute;
   top: 0;
@@ -12,7 +12,7 @@
   opacity: $opacity;
   z-index: 0;
 }
-@mixin noise-bg-multiply($image-path, $size: 250px, $opacity: .6) {
+@mixin noise-bg-multiply($image-path, $size: 350px, $opacity: .6) {
   content: "";
   position: absolute;
   top: 0;
