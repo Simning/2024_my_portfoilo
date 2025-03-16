@@ -5,7 +5,7 @@ header {
   width: 100%;
   z-index: 1000;
   transition: top .3s ease-in-out;
-  background: var(--color-white);
+  // background: var(--color-white);
 
   .headerWrapper {
     position: relative;
@@ -192,8 +192,6 @@ header {
 }
 
 .dark-mode header {
-  background: var(--color-black);
-
   .headerWrapper {
     .logo {
       max-height: 2.8rem;

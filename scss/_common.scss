@@ -1,3 +1,32 @@
+@mixin noise-bg-overlay($image-path, $size: 250px, $opacity: .6) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url($image-path);
+  background-size: $size $size;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  opacity: $opacity;
+  z-index: 0;
+}
+@mixin noise-bg-multiply($image-path, $size: 250px, $opacity: .6) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url($image-path);
+  background-size: $size $size;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  opacity: $opacity;
+  z-index: 0;
+}
+
 :root {
   --viewportWidth: 1920;
 
@@ -158,7 +187,44 @@
   line-height: 1.5;
   color: var(--color-black);
 }
-body {background: var(--color-white);}
-body.dark-mode {background: var(--color-black);}
+body {
+  background-color: var(--color-white);
+
+  & section {position: relative;}
+  & section.bgCont {
+    background-color: var(--color-white);
+    
+    &::before {
+      @include noise-bg-multiply("../src/common/bg_noise.gif", 250px, 0.6);
+    }
+  }
+  & section.bgFoot {
+    background-color: var(--color-secondary);
+    
+    &::before {
+      @include noise-bg-multiply("../src/common/bg_noise.gif", 250px, 0.8);
+    }
+  }
+}
+body.dark-mode {
+  background-color: var(--color-black);
+
+  & section {position: relative;}
+  & section.bgCont {
+    background-color: var(--color-black);
+    filter: brightness(.9);
+    
+    &::before {
+      @include noise-bg-overlay("../src/common/bg_noise.gif", 400px, .8);
+    }
+  }
+  & section.bgFoot {
+    background-color: var(--color-primary);
+    
+    &::before {
+      @include noise-bg-multiply("../src/common/bg_noise.gif", 400px, .9);
+    }
+  }
+}
 figure {font-size: 0;}
 .korLs {letter-spacing: var(--letter-spacing-kr);}

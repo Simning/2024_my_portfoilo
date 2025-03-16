@@ -1,8 +1,8 @@
 .projects {
   .projectsSection {
     min-height: 100vh;
-    margin: var(--header-size) 0 0;
-    padding: 2.4rem var(--grid-margin-size) 8rem;
+    // margin: var(--header-size) 0 0;
+    padding: calc(var(--header-size) + 2.4rem) var(--grid-margin-size) 8rem;
     background: var(--color-white);
 
     .headingTxt {
